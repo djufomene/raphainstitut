@@ -233,8 +233,6 @@ const Accueil = () => {
 
   //Fin Galérie
 
-
-
   // Début Partenaires
       const imageList = [images.home7, images.home8, images.home5, images.home10, images.home11];
     const settings = {
@@ -251,13 +249,10 @@ const Accueil = () => {
 
     // Fin Partenaires
 
-
     const [isHovered, setIsHovered] = useState(false);
 
   
   return (
-
-    
     <div className="accueil">
         <div className="home-container">
             {/* Fond dégradé avec image */}

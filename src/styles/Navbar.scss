@@ -89,7 +89,6 @@ $mobile-breakpoint: 992px;
 
     .navbar--scrolled & {
       font-size: 1.1rem;
-     
     }
   }
 
@@ -196,6 +195,10 @@ $mobile-breakpoint: 992px;
     @media (max-width: $mobile-breakpoint) {
       display: block;
     }
+    
+    //  @media (max-width: 420px) {
+    //  margin-right: 80px;
+    // }
 
     &--open {
       .navbar__toggle-icon {
@@ -340,3 +343,10 @@ $mobile-breakpoint: 992px;
     }
   }
 }
+
+ @media (max-width: 420px) {
+      .navbar__title {
+        font-size:17px ;
+        margin-left: -12px;
+      }
+    }
