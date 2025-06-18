@@ -1,0 +1,296 @@
+/* Variables */
+$primary-color: #2c3e50;
+$secondary-color: #7f8c8d;
+$accent-color: #3498db;
+$background-color: #f5f7fa;
+$text-color: #333;
+$card-bg: #ffffff;
+$banner-text-color: #fff;
+
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+
+$border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+/* Styles de base */
+.laboratoires-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+/* Bannière */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  
+  .banner-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    &.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: $spacing-large;
+      text-align: center;
+      color: $banner-text-color;
+      transform: translateY(20px);
+      transition: transform 0.8s ease;
+      
+      h2 {
+        font-size: 3rem;
+        margin-bottom: $spacing-medium;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+      
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+    }
+    
+    &.active .banner-content {
+      transform: translateY(0);
+    }
+  }
+  
+  .banner-controls {
+    position: absolute;
+    bottom: $spacing-large;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    
+    .banner-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid $banner-text-color;
+      margin: 0 $spacing-small;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &.active {
+        background: $banner-text-color;
+        transform: scale(1.2);
+      }
+      
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/* Contenu principal */
+.laboratoires-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-large;
+}
+
+/* Animations de base */
+.page-title {
+  font-size: 2.5rem;
+  color: $primary-color;
+  margin-bottom: $spacing-small;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: $secondary-color;
+  margin-bottom: $spacing-large;
+  text-align: center;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Grille des laboratoires */
+.laboratoires-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-large;
+  padding: $spacing-medium;
+}
+
+/* Carte de laboratoire avec animations */
+.laboratory-card {
+  background: $card-bg;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  &:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    
+    .card-icon {
+      transform: scale(1.2) rotate(10deg);
+      opacity: 0.9;
+    }
+    
+    .card-image img {
+      transform: scale(1.1);
+    }
+  }
+  
+  .card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+  
+  .card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+  }
+  
+  .card-content {
+    padding: $spacing-medium;
+    
+    h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-small;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+    
+    .description {
+      color: $text-color;
+      margin-bottom: $spacing-medium;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    .equipment {
+      padding-top: $spacing-small;
+      border-top: 1px solid rgba($secondary-color, 0.2);
+      font-size: 0.9rem;
+      color: $secondary-color;
+      
+      strong {
+        color: $primary-color;
+        transition: color 0.3s ease;
+      }
+    }
+    .lien{
+      text-decoration: none;
+      color: #ab1bc5;
+      text-align: right; // Aligne le texte à droite
+      padding-top: 10px; // Espacement au-dessus du lien
+
+      &:hover{
+        color: #d8b951;
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner {
+    height: 400px;
+    
+    .banner-item .banner-content {
+      h2 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  .laboratoires-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .laboratoires-main {
+    padding: 1rem;
+    
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .page-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  .laboratory-card {
+    &:hover {
+      transform: translateY(-3px) scale(1.01) !important;
+    }
+  }
+}

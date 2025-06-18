@@ -1,0 +1,264 @@
+.tableau-contacts-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    padding-top:100px ;
+    margin: 0 auto;
+    color: #333;
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #2c3e50;
+      font-weight: 600;
+      text-align: center;
+    }
+  
+    .content-layout {
+      display: flex;
+      gap: 30px;
+    }
+  
+    .table-section {
+      flex: 1;
+      min-width: 0; // Pour éviter les problèmes de débordement
+    }
+  
+    .table-responsive {
+      overflow-x: auto;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  
+    .contacts-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+  
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+  
+      th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+        color: #495057;
+      }
+  
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+  
+      td {
+        div {
+          margin: 5px 0;
+        }
+      }
+    }
+  
+    .articles-section {
+      width: 30%;
+      height: 230px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px 0px 20px;
+      min-width: 300px; // Largeur minimale pour éviter que ça devienne trop étroit
+  
+      .section-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    
+            h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin: 0; // Enlève la marge par défaut
+            }
+
+            .arrows-container {
+                display: flex;
+                gap: 8px;
+        
+                .arrow {
+                cursor: pointer;
+                font-size: 18px;
+                background-color: rgb(237, 182, 237);
+                text-align: center;
+                color: #337fcc;
+                transition: color 0.2s;
+                width: 20px;
+                height: 25px;
+
+                &:hover {
+                    color: #3498db;
+                }
+                }
+            }
+
+        }
+
+  
+      .article-card {
+         
+        h3 {
+          font-size: 18px;
+          margin-bottom: 15px;
+          color: #3498db;
+        }
+  
+        .article-content {
+          strong {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+          }
+  
+          .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+  
+            span {
+              color: #8a74d8;
+              font-size: 13px;
+              background-color:#87cdfc;
+              padding: 7px 10px 7px 10px;
+            }
+  
+            .voir-button {
+              background-color: transparent;
+              border: 1px solid #eae2e2;
+              font-size: 12px;
+              text-decoration: none;
+              color: #3498db;
+              font-weight: 600;
+              cursor: pointer;
+              padding: 5px 10px;
+              border-radius: 4px;
+              transition: background 0.2s;
+  
+              &:hover {
+                background-color: rgb(237, 182, 237) ;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 900px) {
+      .content-layout {
+        flex-direction: column;
+      }
+  
+      .articles-section {
+        width: calc(100% - 40px); // laisse de l’espace pour la marge
+        margin-bottom: 20px;
+      }
+      
+    }
+  }
+
+
+  @media (max-width: 1200px) {
+    .articles-section {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .tableau-contacts-container {
+      padding: 80px 15px 0 15px; // espace pour mobile sans écraser
+    }
+    
+    
+    .articles-section {
+      width: 100%;
+      height: auto; // autorise le contenu à s'étirer
+      padding: 20px 15px;
+      
+    }
+  
+    .article-card {
+      h3 {
+        font-size: 16px;
+      }
+  
+      .article-content {
+        .article-meta {
+          span {
+            font-size: 12px;
+          }
+  
+          .voir-button {
+            font-size: 11px;
+            padding: 4px 8px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contacts-table {
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  
+    .section-title-container h2 {
+      font-size: 18px;
+    }
+  
+    .arrows-container .arrow {
+      width: 18px;
+      height: 22px;
+      font-size: 16px;
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .article-card {
+      h3 {
+        font-size: 15px;
+      }
+  
+      .article-content {
+        strong {
+          font-size: 14px;
+        }
+  
+        .article-meta {
+          span {
+            font-size: 11px;
+            padding: 5px 8px;
+          }
+  
+          .voir-button {
+            font-size: 10px;
+            padding: 3px 6px;
+          }
+        }
+      }
+    }
+  
+    .contacts-table {
+      th, td {
+        font-size: 12px;
+        padding: 8px;
+      }
+    }
+  
+    .section-title-container h2 {
+      font-size: 16px;
+    }
+  }
+  

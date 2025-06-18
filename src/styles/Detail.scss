@@ -1,0 +1,379 @@
+.content{
+margin-top: 100px;
+
+}
+
+
+
+.formation-header {
+  margin-left: 100px;
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.75rem;
+    margin-top: 8rem;
+    position: relative;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50%;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      border-radius: 2px;
+    }
+  }
+
+  .formation-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white;
+    background-color: #2563eb;
+    padding: 0.35rem 0.8rem;
+    margin-left: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  }
+}
+
+
+
+.formation-page {
+    display: flex;
+    gap: 30px;
+    padding: 50px 60px 0px 0px;
+    background-color: #f7f8fc;
+  
+    
+    .timeline {
+        flex: 0 0 66%;
+        padding: 10px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        width: 95%;
+        position: relative;
+        margin-bottom: 10px;
+      }
+      
+      .timeline-left {
+        position: relative;
+        width: 200px; // légèrement élargi pour que le point ne colle pas au chiffre
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .number-dot {
+            display: flex;
+            align-items: center;
+            gap: 10px; // espace entre le chiffre et le point
+            position: relative;
+            z-index: 2;
+          }
+      
+        .number {
+          font-size: 35px;
+          font-weight: bold;
+          margin-left: 50px;
+          background-color: #2563eb;
+          border-radius: 40px;
+          color: #ffffff;
+        }
+      
+        .dot {
+          width: 12px;
+          height: 12px;
+          margin-left: 20px;
+          background-color: #10357b;
+          border-radius: 50%;
+        }
+      
+      }
+      
+      .timeline-content {
+        flex: 1;
+        padding-left: 30px;
+      
+        h2 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          margin-left: -30px;
+          color: #1c1c1c;
+        }
+      
+        h4 {
+          font-weight: bold;
+          color: #444;
+          margin: 20px -10px 10px;
+        }
+      
+        p,
+        li {
+          font-size: 16px;
+          line-height: 1.6;
+          margin-left: -80px;
+          text-align: justify;
+          color: #555;
+        }
+      
+        ul {
+          list-style-type: circle;
+          padding-left: 20px;
+          margin-left: 90px;
+
+        }
+    } 
+  
+    .sidebar {
+       
+        flex: 0 0 32%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  
+      .sidebar-box {
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  
+        h3 {
+          margin-top: 0;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+  
+        button {
+          border: none;
+          margin: 5px 0;
+          padding: 10px;
+          width: 100%;
+          border-radius: 6px;
+          text-align: left;
+          font-weight: 500;
+          cursor: pointer;
+  
+          .new-tag {
+            background: #ff2b75;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: 8px;
+          }
+        }
+
+        .medico-formations-list {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          
+          li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+        
+        .formation-link {
+          color: #006400;
+          text-decoration: none;
+          display: block;
+          padding: 0.5rem;
+          border-radius: 4px;
+          transition: all 0.2s;
+          
+          &:hover {
+            background-color: #f0f0f0;
+            color: darken(#006400, 10%);
+          }
+        }
+  
+        .facebook-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+  
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+  
+          button {
+            background: #3b5998;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-box1 {
+    .DownloadButton{
+      background-color: #ad61dc;
+      width: 100px;
+    }
+  }
+
+  /* Ajoutez ces règles à la fin de votre fichier SCSS */
+
+  .sidebar-box1{
+    margin: 2rem 0;
+    padding-left: 6rem;
+  }
+
+  
+.download-header {
+    margin: 2rem 0;
+    border-radius: 8px;
+    
+    .download-button {
+      background-color: #2e3339;
+      color: white;
+      border: none;
+      padding: 22px 14px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-decoration: none;
+  
+      &:hover {
+        background-color: #ad61dc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+  
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  /* Version responsive */
+  @media (max-width: 768px) {
+    .download-header {
+      margin: 1rem -0.5rem;
+      padding: 0.5rem;
+      
+      .download-button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  // Styles existants conservés...
+// Ajoutez seulement ces médias queries à la fin
+
+@media (max-width: 1024px) {
+  .formation-page {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-box1 {
+    margin-top: 2rem;
+    margin-left: -70px;
+  }
+
+  .formation-header {
+    h1 {
+      font-size: 1.8rem;
+      margin-left: -70px;
+    }
+  }
+
+  .timeline{
+    margin-left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    
+    .timeline-left {
+      flex-direction: row;
+      margin-bottom: 1rem;
+      align-items: center;
+      
+      .line {
+        display: none;
+      }
+    }
+  }
+
+  .timeline-content {
+  
+    p{
+      padding-left: 60px;
+     
+    }
+} 
+
+  
+}
+
+@media (max-width: 480px) {
+  .formation-header {
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .formation-category {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* Ajoutez cette media query à la fin de votre fichier */
+@media (max-width: 983px) {
+  .sidebar {
+    display: none !important; /* Le !important garantit que ça s'appliquera */
+  }
+  
+  .formation-page {
+    /* Optionnel : ajustez la largeur du contenu principal quand la sidebar disparaît */
+    .timeline {
+      width: 100%;
+    }
+  }
+}
+  

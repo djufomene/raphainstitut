@@ -1,0 +1,412 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$accent-color: #e74c3c;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Styles
+.bibliotheque-accueil {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $dark-color;
+  line-height: 1.6;
+
+  // Animation pour les sections lorsqu'elles apparaissent
+  section {
+    overflow: hidden;
+  }
+
+  // Hero Section
+  .hero-section {
+    background: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), 
+                url('/bibliotheque-hero.jpg') center/cover no-repeat;
+    color: $light-color;
+    height: 60vh;
+    min-height: 600px;
+     max-width: 1500px;
+    @include flex-center;
+    text-align: center;
+    padding: 0 20px;
+
+    .hero-content {
+      max-width: 800px;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .search-bar {
+        display: flex;
+        max-width: 600px;
+        margin: 0 auto;
+
+        input {
+          flex: 1;
+          padding: 12px 15px;
+          border: none;
+          border-radius: 4px 0 0 4px;
+          font-size: 1rem;
+        }
+
+        button {
+          background-color: $accent-color;
+          color: white;
+          border: none;
+          padding: 0 20px;
+          border-radius: 0 4px 4px 0;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: darken($accent-color, 10%);
+          }
+        }
+
+         // Animation des icônes
+        .info-card i {
+            display: inline-block;
+        }
+      }
+    }
+  }
+
+  // Sections communes
+  section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: $primary-color;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: $secondary-color;
+        margin: 15px auto;
+      }
+    }
+  }
+
+  // Livres section
+  .livres-section {
+    background-color: $light-color;
+
+    .livres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+
+      .livre-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        @include card-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+          transform: translateY(-10px) !important;
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .livre-image {
+          height: 200px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+
+        .livre-info {
+          padding: 20px;
+
+          h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+          }
+
+          p {
+            color: #666;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 8.5rem 0px 8.5rem;
+    
+    &.fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 30%;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      h3 {
+        font-size: 2rem;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        color: lighten($dark-color, 20%);
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+      margin: 0px 4rem 0px 1rem;
+      
+      .stat-card {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    
+  }
+  
+
+  // Événements section
+  .evenements-section {
+    .evenements-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+
+      .event-card {
+        display: flex;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        @include card-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        padding: 15px;
+
+  
+        &:hover {
+          transform: translateY(-5px) !important;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .event-date {
+          background-color: $primary-color;
+          color: white;
+          font-weight: bold;
+          padding: 10px;
+          text-align: center;
+          min-width: 70px;
+          @include flex-center;
+          flex-direction: column;
+          border-radius: 6px;
+        
+
+          .day {
+            font-size: 1.8rem;
+            font-weight: bold;
+          }
+
+          .month {
+            font-size: 1rem;
+          }
+        }
+
+        .event-info {
+          padding: 15px;
+          flex: 1;
+
+          h3 {
+            margin-bottom: 10px;
+          }
+
+          p {
+            color: #666;
+            margin-bottom: 15px;
+          }
+
+          .btn-inscription {
+            background-color: $accent-color;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: darken($accent-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Infos pratiques
+  .infos-section {
+    background-color: $light-color;
+
+    .infos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+
+      .info-card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 8px;
+        @include card-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-5px) !important;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+          
+          i {
+            animation: pulse 1s infinite;
+          }
+        }
+
+        i {
+          font-size: 2.5rem;
+          color: $secondary-color;
+          margin-bottom: 15px;
+        }
+
+        h3 {
+          margin-bottom: 15px;
+          color: $primary-color;
+        }
+
+        p {
+          color: #666;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .bibliotheque-accueil {
+    .hero-section {
+      height: 50vh;
+      min-height: 300px;
+
+      .hero-content {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    section {
+      padding: 40px 15px;
+    }
+
+    .livres-section .livres-grid,
+    .evenements-section .evenements-list,
+    .infos-section .infos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bibliotheque-accueil {
+    .hero-section {
+      .hero-content {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .search-bar {
+          flex-direction: column;
+
+          input {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+    
+            &:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 2px rgba($secondary-color, 0.3);
+            }
+          }
+
+          button {
+            width: 100%;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}

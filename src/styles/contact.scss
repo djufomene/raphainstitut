@@ -1,0 +1,494 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$font-main: 'Open Sans', sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+// Base Styles
+.contact-page {
+  font-family: $font-main;
+  color: $dark-color;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+/* ==================== */
+/* HERO SECTION */
+/* ==================== */
+.contact-hero {
+    height: 50vh;
+    min-height: 400px;
+    background: linear-gradient(135deg, rgba($primary-color, 0.9), rgba($secondary-color, 0.8)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($primary-color, 0.6);
+      z-index: 1;
+    }
+  
+    .hero-content {
+      z-index: 2;
+      max-width: 800px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      margin-left: -419px;
+      
+      h1 {
+        font-size: 3rem;
+        margin-bottom: -20px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        opacity: 0.9;
+        
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+/* ==================== */
+/* MAIN CONTENT CONTAINER */
+/* ==================== */
+.contact-container {
+  max-width: 1200px;
+  margin: -80px auto 60px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ==================== */
+/* CONTACT INFO SECTION */
+/* ==================== */
+.contact-info {
+  background: white;
+  padding: 40px;
+  margin-top: 150px;
+  border-radius: 10px;
+  @include box-shadow;
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: $primary-color;
+    position: relative;
+    padding-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: $accent-color;
+    }
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    .icon-circle {
+      @include flex-center;
+      width: 50px;
+      height: 50px;
+      background: $light-color;
+      border-radius: 50%;
+      margin-right: 20px;
+      color: $accent-color;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.2rem;
+      color: $primary-color;
+    }
+
+    p {
+      margin: 0;
+      color: lighten($dark-color, 20%);
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+
+    .facebook {
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #006eff;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgb(255, 255, 255);
+        color: rgb(167, 146, 236);
+      }
+    }
+
+    .twitter{
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #657789;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    
+      &:hover {
+        background:white;
+      color:rgb(167, 146, 236) ;
+       
+      }
+    }
+
+    .instagram{
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    
+      &:hover {
+        background:white;
+        color: #E1306C;
+       
+      }
+    }
+
+    .linkedin{
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0A66C2;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    
+      &:hover {
+        background:white;
+        color: #E1306C;
+       
+      }
+    }
+  }
+}
+
+/* ==================== */
+/* CONTACT FORM SECTION */
+/* ==================== */
+.contact-form-container {
+  background: white;
+  padding: 40px;
+  margin-top: 150px;
+  border-radius: 10px;
+  @include box-shadow;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: $primary-color;
+    position: relative;
+    padding-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: $accent-color;
+    }
+  }
+
+  .alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &.success {
+      background: rgba(#4CAF50, 0.1);
+      color: #2E7D32;
+    }
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.contact-form {
+  .form-group {
+    position: relative;
+    margin-bottom: 25px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 12px 15px 12px 40px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: $font-main;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: $accent-color;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($accent-color, 0.2);
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    i {
+      position: absolute;
+      left: 15px;
+      top: 40px;
+      color: lighten($dark-color, 40%);
+    }
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: $accent-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    @include flex-center;
+    gap: 10px;
+
+    &:hover {
+      background: darken($accent-color, 10%);
+    }
+
+    &:disabled {
+      background: lighten($accent-color, 20%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* ==================== */
+/* ADDRESS CARD SECTION */
+/* ==================== */
+.address-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 60px;
+  
+  .address-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    @include box-shadow;
+    
+    h3 {
+      color: $primary-color;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    
+    .address-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      
+      i {
+        color: $accent-color;
+        font-size: 1.8rem;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.6;
+      }
+    }
+    
+    .transport-options {
+      margin-top: 25px;
+      
+      .transport-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        color: lighten($dark-color, 20%);
+        font-size: 0.95rem;
+        
+        i {
+          color: $secondary-color;
+          font-size: 1.2rem;
+          width: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* ==================== */
+/* RESPONSIVE DESIGN */
+/* ==================== */
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 40vh;
+    min-height: 300px;
+
+    .hero-content {
+      margin-left: -240px;
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .contact-form-container {
+   
+    margin-top: 20px;
+  }
+  .contact-container {
+    margin-top: -90px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .address-container {
+    padding: 0 15px;
+    
+    .address-card {
+      padding: 20px;
+      
+      .transport-options {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info, .contact-form-container {
+    padding: 25px;
+  }
+
+  .info-item {
+    flex-direction: column;
+
+    .icon-circle {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .address-content {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+}
+
+
+.map-container {
+  margin-bottom: -67px;
+ 
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #07135e;
+  }
+
+  .map-embed {
+    width: 100%; 
+    max-width: 2000px;
+    margin-top: -50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+  }
+}

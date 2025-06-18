@@ -1,0 +1,342 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$white: #ffffff;
+$black: #000000;
+$transition-speed: 0.3s;
+$navbar-height: 60px;
+$navbar-height-scrolled: 60px;
+$mobile-breakpoint: 992px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($property: all) {
+  transition: $property $transition-speed ease;
+}
+
+// Navbar styles
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navbar-height;
+  background-color: rgba($white, 0.95);
+  box-shadow: 0 2px 10px rgba($black, 0.1);
+  z-index: 1000;
+  @include transition;
+
+  &--scrolled {
+    height: $navbar-height-scrolled;
+    background-color: $white;
+    box-shadow: 0 4px 12px rgba($black, 0.1);
+  }
+
+  &__container {
+    max-width: 1200px;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center; // Centre verticalement tous les éléments
+
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+  height: 100%;
+  }
+
+  &__logo {
+    height: 55px;
+    width: auto;
+    margin-right: 12px; // Espacement entre logo et texte
+    @include transition;
+
+    .navbar--scrolled & {
+      height: 55px;
+      margin-top: 5px;
+      
+
+    }
+  }
+
+  &__title {
+    margin-left: 12px;
+    margin-top: 35px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $primary-color;
+    
+   
+    line-height: 1; // Évite le décalage vertical
+    position: relative;
+    top: -18px; // Réinitialise le positionnement
+
+
+    .navbar--scrolled & {
+      font-size: 1.1rem;
+     
+    }
+  }
+
+  &__nav {
+    @media (max-width: $mobile-breakpoint) {
+      position: fixed;
+      top: $navbar-height;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - #{$navbar-height});
+      background-color: $white;
+      transform: translateX(100%);
+      @include transition(transform);
+      overflow-y: auto;
+      padding: 20px;
+      margin-bottom: 110px;
+
+      &--open {
+        transform: translateX(0);
+      }
+    }
+
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    margin: 10px 0;
+
+    @media (min-width: $mobile-breakpoint + 1) {
+      margin: 0 15px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center; // Centre verticalement le texte
+    height: 100%; // Prend toute la hauteur disponible
+    padding: 2px 10px;
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+   
+
+    &:hover {
+      color: $secondary-color;
+      background-color: rgba($secondary-color, 0.1);
+    }
+
+    @media (min-width: $mobile-breakpoint + 1) {
+      font-size: 0.95rem;
+    }
+  }
+
+  &__auth {
+    margin-top: 20px;
+
+    @media (min-width: $mobile-breakpoint + 1) {
+      margin-top: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 4px;
+    text-decoration: none;
+    @include transition;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: block;
+    }
+
+    &--open {
+      .navbar__toggle-icon {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &__toggle-icon {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $primary-color;
+    position: relative;
+    @include transition;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+      left: 0;
+      @include transition;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+}
+
+// Ajoutez ces styles à la fin de votre fichier SCSS
+
+.navbar {
+  &__item--has-submenu {
+    position: relative;
+  }
+
+  &__link--with-arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 0.9em;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Cacher/montrer les liens appropriés selon le device
+  &__desktop-link {
+    display: none;
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: flex;
+    }
+  }
+
+  &__mobile-link {
+    display: flex;
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: none;
+    }
+  }
+
+  // Sous-menu desktop
+  &__submenu--desktop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 10px 0;
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    display: none;
+    
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: block;
+    }
+  }
+
+  // Sous-menu mobile
+  &__submenu--mobile {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 20px;
+    list-style: none;
+    margin: 0;
+    display: block;
+    
+    @media (min-width: $mobile-breakpoint + 1) {
+      display: none;
+    }
+  }
+
+  &__subitem {
+    margin: 0;
+  }
+
+  &__sublink {
+    display: block;
+    padding: 8px 15px;
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($secondary-color, 0.1);
+      color: $secondary-color;
+    }
+
+    .navbar__submenu--mobile & {
+      padding: 8px 0;
+    }
+  }
+}

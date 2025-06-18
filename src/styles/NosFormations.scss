@@ -1,0 +1,219 @@
+.page-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #575da9 0%, #bac3ea 100%);
+  color: white;
+  
+  h1 {
+      font-size: 2.5rem;
+      margin-top: 7rem;
+      animation: fadeInDown 1s ease;
+  }
+  
+  p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s ease;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #f9f9fc;
+  
+  .search-input {
+      padding: 0.8rem 1.5rem;
+      width: 60%;
+      max-width: 600px;
+      border: 2px solid #006400;
+      border-radius: 30px 0 0 30px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s;
+      
+      &:focus {
+          border-color: #bac3ea;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+  }
+  
+  .search-button {
+      background: #5763b0;
+      border: none;
+      padding: 0 1.5rem;
+      border-radius: 0 30px 30px 0;
+      cursor: pointer;
+      transition: all 0.3s;
+      
+      &:hover {
+          background: #00354d;
+      }
+      
+      svg {
+          fill: rgb(255, 255, 255);
+      }
+  }
+}
+
+.titel1 {
+  padding: 0rem 6rem 4rem 6rem;
+
+  .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      background-color: #f9f9fc;
+
+      .card {
+          display: flex;
+          background: white;
+          padding: 1rem;
+          gap: 20px;
+          box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          animation: cardAppear 0.5s ease forwards;
+          opacity: 0;
+
+          @for $i from 1 through 20 {
+              &:nth-child(#{$i}) {
+                  animation-delay: $i * 0.1s;
+              }
+          }
+
+          &:hover {
+              transform: translateY(-5px);
+          }
+
+          .logo {
+              width: 65px;
+              padding-top: 18px;
+          }
+
+          h3 {
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: #333;
+              margin-bottom: 1rem;
+          }
+
+          .category {
+              font-size: 0.8rem;
+              color: #666;
+              margin-bottom: 0.5rem;
+          }
+
+          button {
+              background-color: #bac3ea;
+              border: none;
+              color: #006400;
+              padding: 0.6rem 1.2rem;
+              border-radius: 6px;
+              border: 1px solid  #bac3ea;
+              font-weight: bold;
+              cursor: pointer;
+              transition: all 0.3s;
+              font-size: 12px;
+
+              &:hover {
+                  background-color: transparent;
+              }
+          }
+
+          .card-right {
+              margin-top: 5px;
+              .btn{
+                  margin-top: -10px;
+              }
+          }
+      }
+  }
+}
+
+.ha {
+  background-color: #ded1cd;
+  padding: 20px 60px 0px 50px;
+  justify-content: center;
+  animation: fadeIn 1s ease;
+
+  h2 {
+      text-align: center;
+      font-size: 30px;
+  }
+
+  .liste {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      padding: 2rem;
+      line-height: 2;
+
+      p {
+          font-size: 25px;
+          font-weight: bold;
+      }
+
+      .puces {
+          .liste-puces {
+              font-size: 15px;
+
+              li {
+                  animation: fadeIn 0.5s ease forwards;
+                  opacity: 0;
+                  
+                  @for $i from 1 through 10 {
+                      &:nth-child(#{$i}) {
+                          animation-delay: $i * 0.2s;
+                      }
+                  }
+              }
+          }
+      }
+
+      @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+
+          p {
+              font-size: 24px;
+              margin-top: -20px;
+          }
+
+          .puces .liste-puces {
+              margin-top: -50px;
+              font-size: 14px;
+          }
+      }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes cardAppear {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

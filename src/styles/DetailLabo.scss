@@ -1,0 +1,130 @@
+.detail-labo-wrapper {
+    padding: 7rem 5rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  
+    @media (max-width: 1200px) {
+      padding: 5rem 4rem 2rem;
+    }
+  
+    @media (max-width: 768px) {
+      padding: 10rem 3rem 2rem 1rem;
+    }
+  
+    @media (max-width: 480px) {
+      padding: 3rem 0rem;
+    }
+  }
+  
+  .image-texte-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem; // contrôle de l'espace entre image et texte
+    flex-wrap: wrap;
+  
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+  
+      img {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+      }
+    }
+  
+    .texte-section {
+      flex: 1;
+      padding: 1rem;
+  
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+  
+      p {
+        text-align: justify;
+
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  
+    @media (max-width: 992px) {
+      flex-direction: column;
+
+      .image-section,
+      .texte-section {
+        width: 100%;
+        margin-top: -70px;
+
+        img{
+            max-width:900px;
+            height: 500px;
+        }
+      }
+  
+      .texte-section {
+        margin-top: -50px;
+        h2 {
+          font-size: 1.6rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .texte-section {
+        h2 {
+          font-size: 1.4rem;
+        }
+  
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+
+
+  // Animation de base
+  .image-texte-container {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    &.fade-up.visible {
+      animation: fadeUp 0.8s ease forwards;
+    }
+  
+    &.slide-left.visible {
+      animation: slideLeft 0.8s ease forwards;
+    }
+  
+    &.slide-right.visible {
+      animation: slideRight 0.8s ease forwards;
+    }
+  
+    &.zoom-in.visible {
+      animation: zoomIn 0.8s ease forwards;
+    }
+  
+    &.flip.visible {
+      animation: flipIn 0.8s ease forwards;
+    }
+  }
+  
