@@ -61,13 +61,12 @@ $mobile-breakpoint: 992px;
   }
 
   &__logo {
-    height: 55px;
+    height: 85px;
     width: auto;
-    margin-right: 12px; // Espacement entre logo et texte
     @include transition;
 
     .navbar--scrolled & {
-      height: 55px;
+      height: 75px;
       margin-top: 5px;
       
 
