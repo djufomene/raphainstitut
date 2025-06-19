@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { images } from "../autres/data"; // Importation des images depuis un fichier de données
 import "../styles/Navbar.scss";
 
 const Navbar = () => {
@@ -67,7 +68,7 @@ const Navbar = () => {
       <div className="navbar__container">
         <div className="navbar__brand">
           <Link to="/" className="navbar__logo-link">
-            <img src="/src/assets/images/home11.PNG" alt="Logo" className="navbar__logo" />
+            <img src={images.home11} alt="Rapha Logo" className="navbar__logo" />
           </Link>
           <span className="navbar__title">Institut Supérieur Rapha</span>
         </div>
