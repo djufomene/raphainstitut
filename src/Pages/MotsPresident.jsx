@@ -21,7 +21,7 @@ const MotsPresident = () => {
                     </span>
                 </div>
                 <div className="separator" />
-                <div className="title">Bienvenue à l'institut supérieur Rapha</div>
+                <div className="title">Mots du Président Fondateur</div>
             </header>
             <main className="content">
             <div className="lettrine-wrapper">
