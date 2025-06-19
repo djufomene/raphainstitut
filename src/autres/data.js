@@ -8,7 +8,7 @@ import home7 from '../assets/images/home7.jpg';
 import home8 from '../assets/images/home8.jpg';
 import home9 from '../assets/images/home9.jpg';
 import home10 from '../assets/images/home10.jpg';
-import home11 from '../assets/images/home11.png';
+import home11 from '../assets/images/home11.jpg';
 import home12 from '../assets/images/home12.png';
 import home13 from '../assets/images/home13.png';
 import home14 from '../assets/images/home14.png';
