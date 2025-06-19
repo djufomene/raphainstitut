@@ -245,6 +245,15 @@ const Accueil = () => {
       slidesToScroll: 1, // Défilement image par image
       arrows: false, // Supprime les flèches de navigation
       dots: false, // Supprime les petits points en bas
+
+       responsive: [
+        {
+          breakpoint: 429,
+          settings: {
+            slidesToShow: 3,
+          },
+        }
+      ],
     };
 
     // Fin Partenaires
