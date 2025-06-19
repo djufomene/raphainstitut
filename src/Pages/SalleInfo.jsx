@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import "../styles/SalleInfo.scss";
 import { images } from '../autres/data';
+import { FaHome } from "react-icons/fa";
+import "../styles/SalleInfo.scss";
 
 
 export default function SalleInformatique() {
@@ -26,7 +27,15 @@ export default function SalleInformatique() {
                 <p>Un espace conçu pour apprendre, créer et innover</p>
             </div>
        </header>
-
+       <section className="header">
+          <div className="logo">
+              <span className="home-logo">
+                  Home <FaHome />
+              </span>
+          </div>
+          <div className="separator" />
+          <div className="title">Salle d'informatique</div>
+        </section>
 
       {/* Section présentation */}
       <section className="presentation">

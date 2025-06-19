@@ -4,6 +4,19 @@
     background-color: #f9f9f9;
     padding-bottom: 4rem;
   
+     .hero-video-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      
+        iframe {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -58,6 +71,26 @@
         }
       }
     }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 40px 0px 0px 18px;
+
+    .title {
+      font-size: 17px;
+      color: rgb(104, 104, 219);
+    }
+
+    .separator {
+      width: 2px;
+      height: 20px;
+      background-color: black;
+    }
+  }
   
     .equipements {
         margin-top: -40px;
@@ -85,15 +118,16 @@
     }
   
     .galerie {
-        margin-top: -30px;
+      margin-top: -40px;
       .images {
         display: grid;
-        height: 22rem;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1rem;
+     
   
         img {
           width: 100%;
+          height: 20rem;
           border-radius: 8px;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease;
@@ -106,7 +140,7 @@
     }
   
     .temoignages {
-        margin-top: 350px;
+       
 
       blockquote {
         background: #fff;
@@ -145,16 +179,4 @@
   }
 
   
-  .hero-video-wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  
-    iframe {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  
+ 
