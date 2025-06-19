@@ -1731,7 +1731,6 @@ html, body {
   }
 
   .hero-content {
-    margin-top: str-index($string: "", $substring: "s");
     width: 95%;
   }
 
@@ -1741,12 +1740,11 @@ html, body {
 
   .subtitle{
     font-size: 20px;
-    margin-top: -20px;
   }
 
   .cta-buttons {
     flex-direction: column;
-    margin-top: -50px;
+   
     gap: 1rem;
   }
 
