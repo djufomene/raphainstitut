@@ -152,7 +152,7 @@ const NosFormations = () => {
         ) : (
           <>
             <div className="titel1">
-              <h2>Sciences Médico-sanitaire</h2>
+              <h2>Sciences Médico-sanitairennnn</h2>
               <div className="program-grid">
                 {programs.map((title, index) => (
                   <div className="card" key={index}>
