@@ -88,26 +88,26 @@ const ActualiteDetail = () => {
         </div>
 
         {/* File d'actualités */}
-        <div className="articles-section">
-          <div className="section-title-container">
+        <div className="articles-section1">
+          <div className="section-title-container1">
                 <h2>ARTICLES RÉCENTS</h2>
-                <div className="arrows-container">
+                <div className="arrows-container1">
                     <span className="arrow">❮</span>
                     <span className="arrow">❯</span>
                 </div>
           </div>
           <Slider {...sliderSettings} className="actualite-slider">
           {actualites.map((article) => (
-              <div key={article.id} className="article-card">
+              <div key={article.id} className="article-card1">
                 <h3>{article.titre}</h3>
-                <div className="article-content">
+                <div className="article-content1">
                   <strong>{article.titre}</strong>
-                  <div className="article-meta">
+                  <div className="article-meta1">
                     <span>{article.date}</span>
                     <Link
                       to={`/actualite/${article.id}`}
                       state={{ actu: article }}
-                      className="voir-button"
+                      className="voir-button1"
                     >
                       VOIR
                     </Link>

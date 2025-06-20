@@ -150,16 +150,12 @@
           }
         }
       }
+
     }
   
     @media (max-width: 900px) {
       .content-layout {
         flex-direction: column;
-      }
-  
-      .articles-section {
-        width: calc(100% - 40px); // laisse de l’espace pour la marge
-        margin-bottom: 20px;
       }
       
     }
@@ -225,7 +221,7 @@
     
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 470px) {
     .article-card {
       h3 {
         font-size: 15px;
@@ -260,5 +256,7 @@
     .section-title-container h2 {
       font-size: 16px;
     }
+
   }
+   
   

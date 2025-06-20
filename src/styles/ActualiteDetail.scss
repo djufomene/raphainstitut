@@ -4,13 +4,10 @@
      
       .school{
         .schoolPath{
-          
-
           .schoollink{
               text-decoration: none;
               color: #8a74d8;
           }
-
         }
       }
 
@@ -28,8 +25,8 @@
       }
 
         .actualite-detail {
-          flex: 1;
-          
+          flex: 0 0 70%; // occupe 70%
+          max-width: 100%;
           
           .grid-2x2-images {
             display: grid;
@@ -46,97 +43,99 @@
           }
         }
 
-        .articles-section {
+        .articles-section1 {
           width: 30%;
-          height: 230px;
+          height: 200px;
           background-color: #ffffff;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           padding: 30px 20px 0px 20px;
-          min-width: 300px; // Largeur minimale pour éviter que ça devienne trop étroit
-        
-          .section-title-container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          padding-bottom: 10px;
+          margin-bottom: 70px;
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 96% !important;
+          .section-title-container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
       
-          h2 {
-          font-size: 20px;
-          color: #2c3e50;
-          margin: 0; // Enlève la marge par défaut
-          }
-  
-          .arrows-container {
-              display: flex;
-              gap: 8px;
-      
-              .arrow {
-              cursor: pointer;
-              font-size: 18px;
-              background-color: rgb(237, 182, 237);
-              text-align: center;
-              color: #337fcc;
-              transition: color 0.2s;
-              width: 20px;
-              height: 25px;
-  
-              &:hover {
-                  color: #3498db;
-              }
-              }
-          }
-        }
-  
-  
-        .article-card {
-            
-            h3 {
-              font-size: 18px;
-              margin-bottom: 15px;
-              color: #3498db;
+            h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin: 0; // Enlève la marge par défaut
             }
-      
-            .article-content {
-              strong {
-                display: block;
-                margin-bottom: 10px;
-                font-weight: 600;
-              }
-      
-              .article-meta {
+  
+            .arrows-container1 {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 15px;
-      
-                span {
-                  color: #8a74d8;
-                  font-size: 13px;
-                  background-color:#87cdfc;
-                  padding: 7px 10px 7px 10px;
+                gap: 8px;
+        
+                .arrow {
+                cursor: pointer;
+                font-size: 18px;
+                background-color: rgb(237, 182, 237);
+                text-align: center;
+                color: #337fcc;
+                transition: color 0.2s;
+                width: 20px;
+                height: 25px;
+    
+                &:hover {
+                    color: #3498db;
                 }
-      
-                .voir-button {
-                  background-color: transparent;
-                  border: 1px solid #eae2e2;
-                  font-size: 12px;
-                  text-decoration: none;
-                  color: #3498db;
+                }
+            }
+          }
+  
+  
+          .article-card1 {
+              
+              h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: #3498db;
+              }
+        
+              .article-content1 {
+                strong {
+                  display: block;
+                  margin-bottom: 10px;
                   font-weight: 600;
-                  cursor: pointer;
-                  padding: 5px 10px;
-                  border-radius: 4px;
-                  transition: background 0.2s;
-      
-                  &:hover {
-                    background-color: rgb(237, 182, 237) ;
-                    color: #333;
+                }
+        
+                .article-meta1 {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 15px;
+        
+                  span {
+                    color: #8a74d8;
+                    font-size: 13px;
+                    background-color:#87cdfc;
+                    padding: 7px 10px 7px 10px;
+                  }
+        
+                  .voir-button1 {
+                    background-color: transparent;
+                    border: 1px solid #eae2e2;
+                    font-size: 12px;
+                    text-decoration: none;
+                    color: #3498db;
+                    font-weight: 600;
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    transition: background 0.2s;
+        
+                    &:hover {
+                      background-color: rgb(237, 182, 237) ;
+                      color: #333;
+                    }
                   }
                 }
               }
             }
-          }
         }
         
       }
@@ -158,26 +157,29 @@
         flex-direction: column;
       }
   
-      .articles-section {
-        width: calc(100% - 40px); // laisse de l’espace pour la marge
+      .articles-section1 {
         margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .actualite-detail {
+        width: 100%;
       }
       
     }
   
   @media (max-width: 1200px) {
-    .articles-section {
+    .articles-section1 {
       width: 35%;
     }
   }
   
   @media (max-width: 1024px) {
     
-    .articles-section {
+    .articles-section1 {
       width: 100%;
       height: auto; // autorise le contenu à s'étirer
       padding: 20px 15px;
-      
     }
   
     .article-card {
@@ -185,13 +187,13 @@
         font-size: 16px;
       }
   
-      .article-content {
-        .article-meta {
+      .article-content1 {
+        .article-meta1 {
           span {
             font-size: 12px;
           }
   
-          .voir-button {
+          .voir-button1 {
             font-size: 11px;
             padding: 4px 8px;
           }
@@ -202,36 +204,45 @@
   
   @media (max-width: 768px) {
   
-    .section-title-container h2 {
+    .section-title-container1 h2 {
       font-size: 18px;
     }
   
-    .arrows-container .arrow {
+    .arrows-container1 .arrow {
       width: 18px;
       height: 22px;
       font-size: 16px;
     }
     
+     .tableau-contacts-container {
+    .content-layout {
+      .actualite-detail {
+        .grid-2x2-images {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    }
+  }
   }
   
   @media (max-width: 480px) {
-    .article-card {
+    .article-card1 {
       h3 {
         font-size: 15px;
       }
   
-      .article-content {
+      .article-content1 {
         strong {
           font-size: 14px;
         }
   
-        .article-meta {
+        .article-meta1 {
           span {
             font-size: 11px;
             padding: 5px 8px;
           }
   
-          .voir-button {
+          .voir-button1 {
             font-size: 10px;
             padding: 3px 6px;
           }
@@ -239,10 +250,48 @@
       }
     }
   
-  
-    .section-title-container h2 {
+    .section-title-container1 h2 {
       font-size: 16px;
     }
+ 
+     .tableau-contacts-container {
+    .content-layout {
+      .actualite-detail {
+        .grid-2x2-images {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    }
   }
+  }
+
+
+  @media (max-width: 400px) {
+  .tableau-contacts-container {
+    .content-layout {
+      .actualite-detail {
+        .grid-2x2-images {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    }
+  }
+  
+
+  .tableau-contacts-container {
+    .content-layout {
+      .articles-section1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 7px;
+        padding-right: 7px;
+        
+      }
+    }
+  }
+}
 
   
