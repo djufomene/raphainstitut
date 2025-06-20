@@ -19,8 +19,8 @@
     }
   
     .table-section {
-      flex: 1;
-      min-width: 0; // Pour éviter les problèmes de débordement
+       flex: 0 0 70%; // occupe 70%
+          max-width: 100%;
     }
   
     .table-responsive {
@@ -60,12 +60,14 @@
   
     .articles-section {
       width: 30%;
-      height: 230px;
+      height: 200px;
       background-color: #ffffff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       padding: 30px 20px 0px 20px;
-      min-width: 300px; // Largeur minimale pour éviter que ça devienne trop étroit
-  
+      margin-bottom: 70px;
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 96% !important;
       .section-title-container {
         display: flex;
         justify-content: space-between;
@@ -100,8 +102,7 @@
             }
 
         }
-
-  
+        
       .article-card {
          
         h3 {
@@ -156,6 +157,15 @@
     @media (max-width: 900px) {
       .content-layout {
         flex-direction: column;
+      }
+  
+      .articles-section {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .actualite-detail {
+        width: 100%;
       }
       
     }
