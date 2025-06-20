@@ -172,6 +172,23 @@
     .articles-section1 {
       width: 35%;
     }
+
+      .tableau-contacts-container {
+      .content-layout {
+        .actualite-detail {
+            h1 {
+              font-size: 20px; // ou une taille plus petite si nécessaire
+              white-space: normal;
+              word-break: break-word;
+              overflow-wrap: break-word;
+              margin-right: 0; // enlève le grand margin inutilisé
+              text-align: left; // ou "center" selon ton design
+              margin-top: -35px;
+            }
+         
+        }
+      }
+    }
   }
   
   @media (max-width: 1024px) {
@@ -200,6 +217,22 @@
         }
       }
     }
+
+      .tableau-contacts-container {
+      .content-layout {
+        .actualite-detail {
+            h1 {
+              font-size: 20px; // ou une taille plus petite si nécessaire
+              white-space: normal;
+              word-break: break-word;
+              overflow-wrap: break-word;
+              margin-right: 0; // enlève le grand margin inutilisé
+              text-align: left; // ou "center" selon ton design
+              margin-top: -35px;
+            }
+        }
+      }
+    }
   }
   
   @media (max-width: 768px) {
@@ -215,14 +248,23 @@
     }
     
      .tableau-contacts-container {
-    .content-layout {
-      .actualite-detail {
-        .grid-2x2-images {
-          grid-template-columns: 1fr !important;
+      .content-layout {
+        .actualite-detail {
+            h1 {
+              font-size: 20px; // ou une taille plus petite si nécessaire
+              white-space: normal;
+              word-break: break-word;
+              overflow-wrap: break-word;
+              margin-right: 0; // enlève le grand margin inutilisé
+              text-align: left; // ou "center" selon ton design
+              margin-top: -35px;
+            }
+          .grid-2x2-images {
+            grid-template-columns: 1fr !important;
+          }
         }
       }
     }
-  }
   }
   
   @media (max-width: 480px) {
@@ -257,6 +299,15 @@
      .tableau-contacts-container {
     .content-layout {
       .actualite-detail {
+          h1 {
+            font-size: 20px; // ou une taille plus petite si nécessaire
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            margin-right: 0; // enlève le grand margin inutilisé
+            text-align: left; // ou "center" selon ton design
+            margin-top: -35px;
+          }
         .grid-2x2-images {
           grid-template-columns: 1fr !important;
         }
@@ -270,6 +321,16 @@
   .tableau-contacts-container {
     .content-layout {
       .actualite-detail {
+
+         h1 {
+            font-size: 20px; // ou une taille plus petite si nécessaire
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            margin-right: 0; // enlève le grand margin inutilisé
+            text-align: left; // ou "center" selon ton design
+            margin-top: -35px;
+          }
         .grid-2x2-images {
           grid-template-columns: 1fr !important;
         }
@@ -286,8 +347,8 @@
         min-width: 0 !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        padding-left: 7px;
-        padding-right: 7px;
+        padding-left: 9px;
+        padding-right: 5px;
         
       }
     }
