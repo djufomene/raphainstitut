@@ -188,7 +188,55 @@
           }
       }
   }
+
+  
+
 }
+
+@media (max-width: 400px) {
+  .titel1 {
+    padding: 0 0 2rem 0; // Retire les paddings latéraux
+
+    h2{
+        text-align: center;
+    }
+    .program-grid {
+      padding: 0 1rem; // Optionnel : un petit padding interne
+      grid-template-columns: 1fr; // 1 colonne pleine largeur
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .ha {
+    padding: 20px 0 0 0; // Supprime les padding gauche/droite
+
+   
+    .liste {
+      padding: 1rem; // Ajoute un peu de respiration à l'intérieur
+      flex-direction: column;
+      gap: 0rem;
+
+       h4{
+        margin-top: -30px;
+        margin-bottom: -10px;
+        }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+
+      }
+
+      .puces .liste-puces {
+        font-size: 14px;
+        padding-left: 1rem; // pour décaler un peu les puces
+
+      }
+    }
+  }
+}
+
 
 // Animations
 @keyframes fadeIn {
