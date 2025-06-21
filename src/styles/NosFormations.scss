@@ -215,7 +215,7 @@
     .liste {
       padding: 1rem; // Ajoute un peu de respiration à l'intérieur
       flex-direction: column;
-      gap: 2rem;
+      gap: 0rem;
 
        h4{
         margin-top: -30px;
@@ -223,13 +223,13 @@
         }
 
       p {
-        font-size: 80px;
+        font-size: 20px;
         text-align: center;
 
       }
 
       .puces .liste-puces {
-        font-size: 19px;
+        font-size: 14px;
         padding-left: 1rem; // pour décaler un peu les puces
 
       }
