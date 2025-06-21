@@ -378,7 +378,7 @@ const Accueil = () => {
 
         {/* Début Visitez notre campus */}
 
-       <motion.div 
+          <motion.div 
             className="campus-visit"
             initial={{ opacity: 0, y: 50 }} // Commence en bas avec opacité 0
             animate={{ opacity: 1, y: 0 }} // Remonte et devient visible
@@ -420,7 +420,7 @@ const Accueil = () => {
               <iframe 
                 width="100%" 
                 height="315" 
-                src="https://www.youtube.com/watch?v=T2t1hehwmzA" 
+                src="https://www.youtube.com/embed/T2t1hehwmzA" 
                 title="YouTube video player" 
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
