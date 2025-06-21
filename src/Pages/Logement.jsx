@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import "../styles/Logement.scss";
-
+import FacebookFeed from "../components/FacebookFeed";
 const actualites = [
     {
       id: "1",
@@ -84,7 +84,9 @@ const Logement = () => {
   return (
     <div className="tableau-contacts-container">
       <h1>Situations géographiques et contacts des bailleurs.</h1>
-
+<div className="facebook-section">
+        <FacebookFeed />
+      </div>
       <div className="content-layout">
         {/* Tableau des bailleurs */}
         <div className="table-section">
