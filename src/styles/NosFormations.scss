@@ -207,35 +207,35 @@
   }
 }
 
-// @media (max-width: 400px) {
-//   .ha {
-//     padding: 20px 0 0 0; // Supprime les padding gauche/droite
+@media (max-width: 400px) {
+  .ha {
+    padding: 20px 0 0 0; // Supprime les padding gauche/droite
 
    
-//     .liste {
-//       padding: 1rem; // Ajoute un peu de respiration à l'intérieur
-//       flex-direction: column;
-//       gap: 2rem;
+    .liste {
+      padding: 1rem; // Ajoute un peu de respiration à l'intérieur
+      flex-direction: column;
+      gap: 2rem;
 
-//        h4{
-//         margin-top: -30px;
-//         margin-bottom: -10px;
-//         }
+       h4{
+        margin-top: -30px;
+        margin-bottom: -10px;
+        }
 
-//       p {
-//         font-size: 80px;
-//         text-align: center;
+      p {
+        font-size: 80px;
+        text-align: center;
 
-//       }
+      }
 
-//       .puces .liste-puces {
-//         font-size: 19px;
-//         padding-left: 1rem; // pour décaler un peu les puces
+      .puces .liste-puces {
+        font-size: 19px;
+        padding-left: 1rem; // pour décaler un peu les puces
 
-//       }
-//     }
-//   }
-// }
+      }
+    }
+  }
+}
 
 
 // Animations
