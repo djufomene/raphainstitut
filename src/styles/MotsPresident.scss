@@ -92,14 +92,19 @@
       }
 
       .image-flottante {
-        width: 320px;
-        height: 400px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
+      
+    float: none;              // Ne pas flotter à gauche
+    display: block;           // Pour que margin auto fonctionne
+    margin: 0 auto 1rem auto; // Centre horizontalement
+    width: 280px;             // Taille adaptée (tu peux ajuster)
+    height: 350px;             // Garde le ratio
+
+
       }
 
 
     }
   
   }
+
+
