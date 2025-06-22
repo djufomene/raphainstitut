@@ -32,16 +32,18 @@ $font-heading: 'Montserrat', sans-serif;
 .contact-hero {
     height: 50vh;
     min-height: 400px;
-    background: linear-gradient(135deg, rgba($primary-color, 0.9), rgba($secondary-color, 0.8)), 
+    background: linear-gradient(135deg, rgba($primary-color, 0.5), rgba($secondary-color, 0.4)), 
                 url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
     background-size: cover;
+    color: white;
+    overflow: hidden;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-align: center;
     position: relative;
-    overflow: hidden;
+    text-align: center;
+ 
   
     &::before {
       content: '';
@@ -57,10 +59,11 @@ $font-heading: 'Montserrat', sans-serif;
     .hero-content {
       z-index: 2;
       max-width: 800px;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
-      margin-left: -419px;
+      text-align: center; // ✅ Pour centrer le texte
+
       
       h1 {
         font-size: 3rem;
@@ -84,6 +87,34 @@ $font-heading: 'Montserrat', sans-serif;
       }
     }
   }
+
+ @media (max-width: 768px) {
+  .contact-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-content {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 429px) {
+  .contact-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero-content {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+
 
 /* ==================== */
 /* MAIN CONTENT CONTAINER */
@@ -414,7 +445,6 @@ $font-heading: 'Montserrat', sans-serif;
     min-height: 300px;
 
     .hero-content {
-      margin-left: -240px;
       h1 {
         font-size: 2.5rem;
       }

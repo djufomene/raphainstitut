@@ -36,6 +36,7 @@ import home37 from '../assets/images/home37.jpg';
 import home38 from '../assets/images/home38.jpg';
 import home39 from '../assets/images/home39.jpg';
 import home40 from '../assets/images/home40.png';
+import home41 from '../assets/images/home41.jpg';
 
 export const images = {
    home1,
@@ -76,6 +77,7 @@ export const images = {
    home38,
    home39,
    home40,
+   home41,
 };
 
 

@@ -25,7 +25,7 @@ const MotsPresident = () => {
             </header>
             <main className="content">
             <div className="lettrine-wrapper">
-                <img src={images.home28} alt="Microscope" className="image-flottante" />
+                <img src={images.home41} alt="Microscope" className="image-flottante" />
 
                 <p>
                     <span className="lettrine">C</span>
