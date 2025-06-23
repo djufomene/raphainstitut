@@ -30,17 +30,34 @@
       margin-bottom: -70px;
     }
   
-    .instagram div > img {
-      display: inline-block;
-      width: 43%;
-      height: 100%;
-      margin: 0.3rem 0.4rem;
-    }
+  .instagram {
+   margin: 0 auto;
+     max-width: 300px; // largeur max pour mieux contrôler l'apparence
 
-    h2{
-      color: #fff;
+  h2 {
+     text-align: center;
+    color: #ffffff;
+  }
+
+  .links {
+     display: flex;               // active flexbox
+     flex-direction: column;
+     gap: 1rem;  // espace entre les liens
+                     
+
+    a {
+      display: block;
+      text-decoration: overline;              // chaque <Link> occupe toute la ligne
+      margin-bottom: 0.5rem; 
+      color: #fff;     // espace entre les liens
+
+      &:hover {
+        color: #007BFF;
+      }
     }
-  
+  }
+}
+
     .follow {
         i {
         color: white;
@@ -50,6 +67,11 @@
         p{
             color: #ffffff;
         }
+      
+         h2 {
+          color: #ffffff;
+        }
+        
     }
   
     .moveUp {
@@ -129,6 +151,14 @@
       .container > div {
         padding: 1.5rem 0.9rem;
       }
+
+        .instagram {
+          margin: 0; // plus centré, maintenant aligné à gauche
+          max-width: none; // largeur libre
+           h2 {
+            text-align: left;
+          }
+        }
     }
   
     @media (max-width: 768px) {
@@ -137,10 +167,6 @@
        gap: 20px;
         
       }
-      
-        .instagram div > img {
-          width: 100%;
-        }
 
         .container > div {
           padding: 1rem 0.5rem 0rem 0rem;
@@ -150,12 +176,28 @@
           width: 100%;
         }
 
+         .instagram {
+          margin: 0; // plus centré, maintenant aligné à gauche
+          max-width: none; // largeur libre
+           h2 {
+            text-align: left;
+          }
+        }
+
     }
   
     @media (max-width: 520px) {
       .container > div {
         padding: 0rem 0.9rem !important;
       }
+
+        .instagram {
+          margin: 0; // plus centré, maintenant aligné à gauche
+          max-width: none; // largeur libre
+           h2 {
+            text-align: left;
+          }
+        }
     }
 
     @media screen and (max-width: 429px) {

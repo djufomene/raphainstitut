@@ -58,21 +58,15 @@ const Footer = () => {
 
         {/* 📌 Section Instagram avec affichage d'images */}
         <div className="instagram" data-aos="fade-left">
-          <h2>Liens utiles</h2>
-           <Link to="/" className="navbar__logo-link">Contact</Link>
-           <Link to="/" className="navbar__logo-link">Préinscription</Link>
-           <Link to="/" className="navbar__logo-link">Nos formations</Link>
-           <Link to="/" className="navbar__logo-link">Nos écoles</Link>
-           <Link to="/" className="navbar__logo-link">Contact</Link>
-
-          {/* <div className="flexRow">
-            <img src={images.home12} alt="insta1" />
-            <img src={images.home13} alt="insta2" />
+         
+          <div className="links">
+           <h2>Liens utiles</h2>
+           <Link to="/">Contact</Link>
+           <Link to="/">Préinscription</Link>
+           <Link to="/">Nos formations</Link>
+           <Link to="/">Nos écoles</Link>
+           <Link to="/">Contact</Link>
           </div>
-          <div className="flexRow">
-            <img src={images.home15} alt="insta4" />
-            <img src={images.home16} alt="insta5" />
-          </div> */}
         </div>
 
         {/* 📌 Section des réseaux sociaux */}
