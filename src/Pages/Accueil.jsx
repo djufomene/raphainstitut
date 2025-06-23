@@ -234,14 +234,14 @@ const Accueil = () => {
   //Fin Galérie
 
   // Début Partenaires
-      const imageList = [images.home7, images.home8, images.home5, images.home10, images.home11];
+      const imageList = [images.home7, images.home8, images.home5, images.home11];
     const settings = {
       infinite: true, // Défilement infini
       speed: 3000, // Vitesse de transition
       autoplay: true, // Démarrage automatique
       autoplaySpeed: 1000, // Pas d'arrêt entre les transitions
       cssEase: "linear", // Mouvement fluide
-      slidesToShow: 5, // Nombre d'images visibles
+      slidesToShow: 4, // Nombre d'images visibles
       slidesToScroll: 1, // Défilement image par image
       arrows: false, // Supprime les flèches de navigation
       dots: false, // Supprime les petits points en bas
