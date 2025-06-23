@@ -507,8 +507,7 @@ html, body {
       transition: all 0.3s ease;
 
       &.active {
-        border-bottom-color: $accent-color;
-        color: $accent-color;
+        border-bottom-color:rgb(134, 134, 231);        color: rgb(134, 134, 231);;
       }
 
       &:hover:not(.active) {
@@ -561,7 +560,7 @@ html, body {
 
     .event-date {
       display: block;
-      color: $accent-color;
+      color: rgb(166, 166, 174);
       font-weight: bold;
       margin-bottom: 15px;
     }
@@ -600,12 +599,12 @@ html, body {
 
   .premiere-title {
     font-size: 1rem;
-    color: #4CAF50;
+    color: rgb(134, 134, 231);
     
   }
 
   .second-title {
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid rgb(134, 134, 231);
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -625,7 +624,7 @@ html, body {
     background: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid rgb(134, 134, 231);
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -634,7 +633,7 @@ html, body {
 
     .icon {
       font-size: 2rem;
-      color: #4CAF50;
+      color: rgb(134, 134, 231);
       margin: 0px 20px -65px 0px;
     }
 
@@ -1322,10 +1321,10 @@ html, body {
 
   .premiere-title1 {
     font-size: 1rem;
-    color: #4CAF50; 
+    color: rgb(134, 134, 231); 
   }
   .second-title1 {
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid rgb(134, 134, 231);
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: -35px;
@@ -1483,7 +1482,7 @@ html, body {
     font-size: 2rem;
     font-weight: bold;
     margin: 35px 0px 60px;
-    border-left: 4px solid #4CAF50;
+    border-left: 4px solid rgb(134, 134, 231);
     padding-left: 18px; 
   }
 

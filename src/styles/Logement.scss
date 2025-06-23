@@ -88,7 +88,7 @@
                 .arrow {
                 cursor: pointer;
                 font-size: 18px;
-                background-color: rgb(237, 182, 237);
+                background-color: rgb(134, 134, 231);
                 text-align: center;
                 color: #337fcc;
                 transition: color 0.2s;
@@ -96,7 +96,7 @@
                 height: 25px;
 
                 &:hover {
-                    color: #3498db;
+                    color: #ffffff;
                 }
                 }
             }
@@ -125,9 +125,11 @@
             margin-top: 15px;
   
             span {
-              color: #8a74d8;
+                color: #486786;
+            
               font-size: 13px;
-              background-color:#87cdfc;
+              background-color: rgb(134, 134, 231);
+;
               padding: 7px 10px 7px 10px;
             }
   

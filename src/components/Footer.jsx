@@ -1,6 +1,7 @@
 import "../styles/Footer.scss";
 import React, { useState, useEffect } from "react"; // Importation de React et des hooks useState, useEffect
 import { images } from "../autres/data"; // Importation des images depuis un fichier de données
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   // État local pour gérer l'affichage du bouton "Remonter en haut"
@@ -57,15 +58,21 @@ const Footer = () => {
 
         {/* 📌 Section Instagram avec affichage d'images */}
         <div className="instagram" data-aos="fade-left">
-          <h2>Instagram</h2>
-          <div className="flexRow">
+          <h2>Liens utiles</h2>
+           <Link to="/" className="navbar__logo-link">Contact</Link>
+           <Link to="/" className="navbar__logo-link">Préinscription</Link>
+           <Link to="/" className="navbar__logo-link">Nos formations</Link>
+           <Link to="/" className="navbar__logo-link">Nos écoles</Link>
+           <Link to="/" className="navbar__logo-link">Contact</Link>
+
+          {/* <div className="flexRow">
             <img src={images.home12} alt="insta1" />
             <img src={images.home13} alt="insta2" />
           </div>
           <div className="flexRow">
             <img src={images.home15} alt="insta4" />
             <img src={images.home16} alt="insta5" />
-          </div>
+          </div> */}
         </div>
 
         {/* 📌 Section des réseaux sociaux */}

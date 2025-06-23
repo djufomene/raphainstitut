@@ -462,7 +462,7 @@ const Accueil = () => {
                 <div className="content">
                   <h2>NOUVELLE RENTRÉE ACADÉMIQUE 2025 - 2026</h2>
                   <p>
-                    Les inscriptions à l'institut supérieur Rapha (RHI) sont ouvertes à partir du <span className="font">8 août 2025.</span> <br />
+                    Les inscriptions à l'institut supérieur Rapha (RHI) sont ouvertes à partir de <span className="font">Octobre 2025.</span> <br />
                     Ensemble vers la réussite ! Notre établissement vous attend pour une année pleine d'apprentissage et d'opportunités.
                   </p>
                   

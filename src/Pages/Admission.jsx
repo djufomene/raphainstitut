@@ -22,7 +22,7 @@ const Admission = () => {
   const etapes = [
     {
       titre: "ETAPE 01",
-      contenu: `Je paie les frais correspondants au nombre de formations choisies...`
+      contenu: `Je paie les frais correspondants à la formations choisie...`
     },
     { titre: "ETAPE 02", contenu: "Contenu de l'étape 2..." },
     { titre: "ETAPE 03", contenu: "Contenu de l'étape 3..." },
@@ -65,11 +65,11 @@ const Admission = () => {
     <div className='content'>
       <section className="concours-section">
         <div className="concours-header">
-          <h3>A PROPOS DU CONCOURS</h3>
-          <h1>Admissions aux concours</h1>
+          <h3>A PROPOS DE L'ADMISSIONS</h3>
+          <h1>Admissions à RHI</h1>
         </div>
         <div className="concours-content">
-          <p>L’Institut Ucac-Icam forme des ingénieurs et des techniciens supérieurs sur les campus de Pointe-Noire au Congo et de Douala au Cameroun. Une formation généraliste pour des hommes et des femmes techniquement compétents et humainement responsables, au service des entreprises.</p>
+          <p>L’Institut Supérieur Rapha forme des ingénieurs, des techniciens supérieurs et des infirmiers. Une formation généraliste pour des hommes et des femmes techniquement compétents et humainement responsables, au service des entreprises.</p>
         </div>
       </section>
 
