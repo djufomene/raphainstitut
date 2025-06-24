@@ -15,8 +15,6 @@ import { actualites } from "../autres/data"; // adapte le chemin si besoin
 
 
 
-
-
 const Accueil = () => {
  
    const navigate = useNavigate();
@@ -271,45 +269,18 @@ const Accueil = () => {
             {/* Contenu principal */}
             <div className="hero-content">
                 <h1 className="main-title">
-                  <span className="letter-animate">B</span>
-                  <span className="letter-animate">i</span>
-                  <span className="letter-animate">e</span>
-                  <span className="letter-animate">n</span>
-                  <span className="letter-animate">v</span>
-                  <span className="letter-animate">e</span>
-                  <span className="letter-animate">n</span>
-                  <span className="letter-animate">u</span>
-                  <span className="letter-animate">e</span>
-                  <span> </span>
-                  <span className="letter-animate">à</span>
-                  <span> </span>
-                  <span className="letter-animate">l</span>
-                  <span className="letter-animate">'</span>
-                  <span className="letter-animate">I</span>
-                  <span className="letter-animate">n</span>
-                  <span className="letter-animate">s</span>
-                  <span className="letter-animate">t</span>
-                  <span className="letter-animate">i</span>
-                  <span className="letter-animate">t</span>
-                  <span className="letter-animate">u</span>
-                  <span className="letter-animate">t</span>
-                  <span> </span>
-                  <span className="letter-animate">S</span>
-                  <span className="letter-animate">u</span>
-                  <span className="letter-animate">p</span>
-                  <span className="letter-animate">é</span>
-                  <span className="letter-animate">r</span>
-                  <span className="letter-animate">i</span>
-                  <span className="letter-animate">e</span>
-                  <span className="letter-animate">u</span>
-                  <span className="letter-animate">r</span>
-                  <span> </span>
-                  <span className="letter-animate">R</span>
-                  <span className="letter-animate">a</span>
-                  <span className="letter-animate">p</span>
-                  <span className="letter-animate">h</span>
-                  <span className="letter-animate">a</span>
-                </h1>
+  {[..."Bienvenue à l'Institut Supérieur Rapha"].map((letter, index) => (
+    letter === ' ' 
+      ? <span key={index}>&nbsp;</span>
+      : <span 
+          key={index} 
+          className="letter-animate"
+          translate="no" // Ajout ici
+        >
+          {letter}
+        </span>
+  ))}
+</h1>
                 
                 <p className="subtitle animate-subtitle">
                 Excellence Académique • Innovation • Recherche
