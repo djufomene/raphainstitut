@@ -7,110 +7,110 @@ import { images } from '../autres/data';
 import "../styles/InscriptionDetail.scss";
 
 export default function InscriptionDetail() {
-  const { type } = useParams(); // récupère le type depuis l’URL
+  const { type } = useParams();
   const [selectedFil, setSelectedFil] = useState("");
-  const [currentStep, setCurrentStep] = useState(0); // Étape 0 pour cette page
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
+  const [currentStep, setCurrentStep] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleCategoryClick = (filName) => {
     setSelectedFil(filName);
+    setSelectedCategory("");
+  };
+
+  const handleCategorySelection = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const handleTimeChange = (e) => {
+    setSelectedTime(e.target.value);
   };
 
   const handleNext = () => {
-    // Logique de navigation vers l'étape suivante
-    setCurrentStep(1); // Passe à l'étape suivante
-    navigate("/form-personal", {
-        state: {
-          selectedFil,
-          type
-        }
-      });
-      };
+    if (!selectedFil) {
+      setErrorMessage("Veuillez sélectionner une catégorie principale.");
+      return;
+    }
+    if (!selectedCategory) {
+      setErrorMessage("Veuillez sélectionner une spécialité.");
+      return;
+    }
+    if (!selectedTime) {
+      setErrorMessage("Veuillez sélectionner un horaire (jour ou soir).");
+      return;
+    }
 
-  const handlePrevious = () => {
-    navigate(-1); // Retour à la page précédente
+    setErrorMessage("");
+    setCurrentStep(1);
+    navigate("/form-personal", {
+      state: {
+        selectedFil,
+        type
+      }
+    });
   };
 
-  //pour gérer automatiquement la date au niveau du footer 
+  const handlePrevious = () => {
+    navigate(-1);
+  };
+
   const currentYear = new Date().getFullYear();
 
   return (
-
     <div>
-        <ProgressBar currentStep={currentStep} /> {/* Barre à 25% */}
-        <div className="container1">
-            {/* Colonne gauche */}
-            <div className="colonne-gauche">
-                <h1>Veuillez sélectionner votre catégorie.</h1>
-                <p className="para">Sélectionnez le domaine d’étude qui vous intéresse</p>
+      <ProgressBar currentStep={currentStep} />
+      <div className="container1">
+        <div className="colonne-gauche">
+          <h1>Veuillez sélectionner votre catégorie.</h1>
+          <p className="para">Sélectionnez le domaine d’étude qui vous intéresse</p>
 
-                <div className="ligne-images">
-                <div className="image-container" onClick={() => handleCategoryClick("fil1")}>
-                    <img src={images.home40} alt="Microscope" className="image-flottante" />
-                    <p>Sciences Médico-sanitaire</p>
-                </div>
-                <div className="image-container" onClick={() => handleCategoryClick("fil3")}>
-                    <img src={images.home40} alt="Microscope" className="image-flottante" />
-                    <p>Science et Gestion</p>
-                </div>
-                <div className="image-container" onClick={() => handleCategoryClick("fil2")}>
-                    <img src={images.home40} alt="Microscope" className="image-flottante" />
-                    <p>Génie Informatique</p>
-                </div>
-                </div>
+          <div className="ligne-images">
+            <div className="image-container" onClick={() => handleCategoryClick("fil1")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Sciences Médico-sanitaire</p> </div>
+            <div className="image-container" onClick={() => handleCategoryClick("fil3")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Science et Gestion</p> </div>
+            <div className="image-container" onClick={() => handleCategoryClick("fil2")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Génie Informatique</p> </div>
+          </div>
 
-                <div className="ligne-images">
-                <div className="image-container" onClick={() => handleCategoryClick("fil4")}>
-                    <img src={images.home40} alt="Microscope" className="image-flottante" />
-                    <p>Génie des Télécommunications et Réseaux</p>
-                </div>
-                <div className="image-container" onClick={() => handleCategoryClick("fil5")}>
-                    <img src={images.home40} alt="Microscope" className="image-flottante" />
-                    <p>Communication</p>
-                </div>
-                </div>
+          <div className="ligne-images">
+            <div className="image-container" onClick={() => handleCategoryClick("fil4")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Génie des Télécommunications et Réseaux</p> </div>
+            <div className="image-container" onClick={() => handleCategoryClick("fil5")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Communication</p> </div>
+          </div>
 
-                <div className="group">
-
-                    <h4>Formation en cour du :</h4>
-                    <dir className="radio-group">
-                        <label className="radio-option">
-                        <input type="radio" name="reponse" value="oui"  />
-                        Jour
-                        </label>
-
-                        <label className="radio-option">
-                        <input type="radio" name="reponse" value="non"  />
-                        Soir
-                        </label>
-                    </dir>
-
-                    <div className="boutons">
-                        <input type="button" className="previous action-button-previous" value="Pécedent"  onClick={handlePrevious} />
-                        <input type="button" className="next action-button-next" value="Suivant"  onClick={handleNext} />
-                    </div>
-                </div>
-
+          <div className="group">
+            <h4>Formation en cour du :</h4>
+            <div className="radio-group">
+              <label className="radio-option">
+                <input type="radio" name="reponse" value="jour" onChange={handleTimeChange} /> Jour
+              </label>
+              <label className="radio-option">
+                <input type="radio" name="reponse" value="soir" onChange={handleTimeChange} /> Soir
+              </label>
             </div>
 
-            {/* Colonne droite */}
-            <div className="colonne-droite">
-                {!selectedFil ? (
-                <h5 id="status">Veuillez sélectionner une catégorie</h5>
-                ) : (
-                <CategoryForm fil={selectedFil} type={type} />
-                )}
-            </div>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
 
+            <div className="boutons">
+              <input type="button" className="previous action-button-previous" value="Pécedent" onClick={handlePrevious} />
+              <input type="button"   className={`next action-button-next ${!(selectedFil && selectedCategory && selectedTime) ? "disabled" : ""}`} value="Suivant" onClick={handleNext} disabled={!(selectedFil && selectedCategory && selectedTime) } />
+            </div>
+          </div>
         </div>
-        <Footer />
+
+        <div className="colonne-droite">
+          {!selectedFil ? (
+            <h5 id="status">Veuillez sélectionner une catégorie</h5>
+          ) : (
+            <CategoryForm fil={selectedFil} type={type} onSelectCategory={handleCategorySelection} />
+          )}
+        </div>
+      </div>
+      <Footer />
     </div>
-    
   );
 }
 
-// Composant interne
-const CategoryForm = ({ fil, type }) => {
+const CategoryForm = ({ fil, type, onSelectCategory }) => {
   const categoriesByType = {
     BTS: {
       fil1: ["Infirmier BTS", "Kiné BTS"],
@@ -133,21 +133,10 @@ const CategoryForm = ({ fil, type }) => {
         "Science pharmaceutique", "Odontostomatologie", "Délégué médical",
         "Auxiliaire de vie", "Auxiliaire de pharmacie"
       ],
-      fil2: [
-        "Gestion du système informatique", "Infographie et web design"
-      ],
-      fil3: [
-        "Assurance", "Banque", "Commerce international", "Communication des organisations",
-        "Comptabilité informatisée de gestion", "Douane et transit", "Droit des affaires et de l'entreprise",
-        "Gestion de la qualité", "Gestion fiscale", "Logistique et transport",
-        "Marketing commerce vente", "Ressources humaines"
-      ],
-      fil4: [
-        "Télécommunication", "Réseau et sécurité informatique", "Hygiène sécurité et environnement"
-      ],
-      fil5: [
-        "Journalisme", "E-commerce et marketing numérique"
-      ]
+      fil2: ["Gestion du système informatique", "Infographie et web design"],
+      fil3: ["Assurance", "Banque", "Commerce international", "Communication des organisations", "Comptabilité informatisée de gestion", "Douane et transit", "Droit des affaires et de l'entreprise", "Gestion de la qualité", "Gestion fiscale", "Logistique et transport", "Marketing commerce vente", "Ressources humaines"],
+      fil4: ["Télécommunication", "Réseau et sécurité informatique", "Hygiène sécurité et environnement"],
+      fil5: ["Journalisme", "E-commerce et marketing numérique"]
     }
   };
 
@@ -158,7 +147,7 @@ const CategoryForm = ({ fil, type }) => {
       <h4>{fil.replace("fil", "Catégorie ")} sélectionnée - {type}</h4>
       {categories[fil]?.map((item, index) => (
         <label key={index}>
-          <input type="radio" name="option" value={item} />
+          <input type="radio" name="option" value={item} onChange={() => onSelectCategory(item)} />
           {item}
         </label>
       ))}

@@ -1,5 +1,6 @@
 // src/components/FormPreviousEducation.jsx
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 import Footer from '../components/FooterInscription';
 import "../styles/FormPrecedenteEducation.scss";
@@ -7,16 +8,44 @@ import "../styles/FormPrecedenteEducation.scss";
 export default function FormPrecedenteEducation() {
   const navigate = useNavigate();
 
+  const [formData, setFormData] = useState({
+    lastDiploma: "",
+    graduationYear: "",
+    lastInstitution: "",
+    candidateStatus: "",
+    diplomaFile: null,
+    birthCertificate: null
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData(prev => ({ ...prev, [name]: files[0] }));
+  };
+
+  const isFormValid = () => {
+    return (
+      formData.lastDiploma.trim() !== "" &&
+      formData.graduationYear.trim() !== "" &&
+      formData.lastInstitution.trim() !== "" &&
+      formData.candidateStatus.trim() !== "" &&
+      formData.diplomaFile !== null &&
+      formData.birthCertificate !== null
+    );
+  };
+
   const handlePrevious = () => {
     navigate(-1);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/confirmation"); // Remplace par la route suivante si elle existe
+    navigate("/confirmation"); // Route suivante
   };
-//pour gérer automatiquement la date au niveau du footer 
-  const currentYear = new Date().getFullYear();
 
   return (
     <div className="form-previous-container">
@@ -33,22 +62,52 @@ export default function FormPrecedenteEducation() {
             <div className="input-row">
               <div className="input-field">
                 <label htmlFor="lastDiploma">Dernier Diplôme *</label>
-                <input type="text" id="lastDiploma" name="lastDiploma" placeholder="Ex. Bac C, BTS Commerce, HND..." required />
+                <input
+                  type="text"
+                  id="lastDiploma"
+                  name="lastDiploma"
+                  placeholder="Ex. Bac C, BTS Commerce, HND..."
+                  value={formData.lastDiploma}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div className="input-field">
                 <label htmlFor="graduationYear">Année d'obtention *</label>
-                <input type="text" id="graduationYear" name="graduationYear" placeholder="Ex. 1991, 2018, ..." required />
+                <input
+                  type="text"
+                  id="graduationYear"
+                  name="graduationYear"
+                  placeholder="Ex. 1991, 2018, ..."
+                  value={formData.graduationYear}
+                  onChange={handleChange}
+                  required
+                />
               </div>
             </div>
 
             <div className="input-row">
               <div className="input-field">
                 <label htmlFor="lastInstitution">Dernier Établissement *</label>
-                <input type="text" id="lastInstitution" name="lastInstitution" placeholder="Ex. Institut Supérieur Rapha,..." required />
+                <input
+                  type="text"
+                  id="lastInstitution"
+                  name="lastInstitution"
+                  placeholder="Ex. Institut Supérieur Rapha, ..."
+                  value={formData.lastInstitution}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div className="input-field">
                 <label htmlFor="candidateStatus">Statut du candidat *</label>
-                <select id="candidateStatus" name="candidateStatus" required>
+                <select
+                  id="candidateStatus"
+                  name="candidateStatus"
+                  value={formData.candidateStatus}
+                  onChange={handleChange}
+                  required
+                >
                   <option value="">Sélectionnez un statut</option>
                   <option value="Nouveau">Nouveau candidat</option>
                   <option value="Ancien">Ancien candidat</option>
@@ -63,7 +122,14 @@ export default function FormPrecedenteEducation() {
                 Copie Certifiée du Dernier diplôme <br />
                 <span>Déposez le fichier ici ou cliquez pour le télécharger. PNG, JPG ou PDF sont acceptés.</span>
               </label>
-              <input type="file" id="diplomaFile" accept=".png,.jpg,.jpeg,.pdf" required />
+              <input
+                type="file"
+                id="diplomaFile"
+                name="diplomaFile"
+                accept=".png,.jpg,.jpeg,.pdf"
+                onChange={handleFileChange}
+                required
+              />
             </div>
 
             <div className="upload-field">
@@ -71,7 +137,14 @@ export default function FormPrecedenteEducation() {
                 Copie Certifiée de l'Acte de naissance <br />
                 <span>Déposez le fichier ici ou cliquez pour le télécharger. PNG, JPG ou PDF sont acceptés.</span>
               </label>
-              <input type="file" id="birthCertificate" accept=".png,.jpg,.jpeg,.pdf" required />
+              <input
+                type="file"
+                id="birthCertificate"
+                name="birthCertificate"
+                accept=".png,.jpg,.jpeg,.pdf"
+                onChange={handleFileChange}
+                required
+              />
             </div>
           </div>
         </div>
@@ -86,12 +159,15 @@ export default function FormPrecedenteEducation() {
           ></textarea>
         </div>
 
-
         <div className="boutons">
           <button type="button" className="previous" onClick={handlePrevious}>
             Précédent
           </button>
-          <button type="submit" className="next">
+          <button
+            type="submit"
+            className={`next ${!isFormValid() ? "disabled" : ""}`}
+            disabled={!isFormValid()}
+          >
             Suivant
           </button>
         </div>

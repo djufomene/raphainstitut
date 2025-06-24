@@ -131,11 +131,10 @@
         }
   
         &.next {
-          background-color: #3498db;
+          background-color: #3212c0;
           color: white;
           
           &:hover {
-            background-color: #2980b9;
             transform: translateY(-2px);
           }
         }
@@ -143,6 +142,14 @@
     }
   }
 
+button.next:disabled {
+  background-color:  #3498db !important;   // Couleur grise forcée
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+  
+}
+
+ 
 
   @media (max-width: 1024px) {
     .form-personal-container {

@@ -101,14 +101,20 @@
         margin-top: 25px;
         .next{
             width: 100px;
-            background: #7760e0;
+            background: #3212c0;
             font-weight: bold;
             color: white;
             border: 0 none;
             border-radius: 0px;
             cursor: pointer;
-            padding: 10px 5px;
             margin: 10px 5px 10px 0px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            &.disabled {
+              background-color: #9e9dde; // gris clair
+              color: #ffffff;
+              cursor: not-allowed;
+            }
         }
     
         .previous{
@@ -129,6 +135,16 @@
        
       }
   }
+
+  .action-button-next:disabled  {
+  &.disabled {
+    background-color: #cccccc; // gris clair
+    color: #666666; 
+  }
+}
+
+
+
 
 
   @media (max-width: 768px) {

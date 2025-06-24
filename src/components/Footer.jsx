@@ -30,9 +30,9 @@ const Footer = () => {
           <br />
           <i className="fas fa-map-marker"></i> Adresse : Kotto/Douala, Cameroun
           <br />
-          <i className="fas fa-phone"></i> Tel : +237 697532784
+          <i className="fas fa-phone"></i> Tel : (+237) 691572495/650664504
           <br />
-          <i className="fas fa-envelope"></i> Gmail : buiercompany@gmail.com
+          <i className="fas fa-envelope"></i> Gmail : Raphainstitut@gmail.com
           <br />
           <i className="fas fa-address-book"></i> B.P xxxx
           <br />

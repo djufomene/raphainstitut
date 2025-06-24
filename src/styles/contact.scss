@@ -61,7 +61,7 @@ $font-heading: 'Montserrat', sans-serif;
       max-width: 800px;
       width: 100%;
       margin: 0 auto;
-      padding: 20px;
+      margin-top: 60px;
       text-align: center; // ✅ Pour centrer le texte
 
       
@@ -91,12 +91,11 @@ $font-heading: 'Montserrat', sans-serif;
  @media (max-width: 768px) {
   .contact-hero {
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     .hero-content {
       margin: 0 auto;
-      text-align: center;
+      margin-top: 60px;
+
     }
   }
 }
@@ -109,7 +108,8 @@ $font-heading: 'Montserrat', sans-serif;
 
     .hero-content {
       margin: 0 auto;
-      text-align: center;
+      margin-top: 60px;
+
     }
   }
 }

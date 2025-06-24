@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { images } from '../autres/data';
 import { FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../styles/SalleInfo.scss";
 
 
@@ -30,10 +31,11 @@ export default function SalleInformatique() {
        <section className="header">
           <div className="logo">
               <span className="home-logo">
-                  Home <FaHome />
+                <Link to="/laboratoires" className="labo-lien">
+                Nos Laboratoires <FaHome />
+                </Link> 
               </span>
           </div>
-          <div className="separator" />
           <div className="title">Salle d'informatique</div>
         </section>
 

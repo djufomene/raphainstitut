@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import '../styles/DetailLabo.scss';
 import { images } from '../autres/data';
 import { labos } from '../autres/data';
+import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const animationClasses = ['fade-up', 'slide-left', 'slide-right', 'zoom-in', 'flip'];
 
@@ -40,13 +41,12 @@ const DetailLabo = () => {
     <div className="header">
       <div className="logo">
           <span className="home-logo">
-            
           <Link to="/laboratoires" className="labo-lien">
-           Nos Laboratoires
-          </Link>
+            Nos Laboratoires <FaHome />
+          </Link> 
           </span>
       </div>
-      <div className="separator" />
+      
       <div className="title">Instruments Médicaux</div>
     </div>
       {labos.map((labo, index) => (

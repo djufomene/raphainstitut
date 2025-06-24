@@ -71,10 +71,10 @@ const Contact = () => {
     <motion.div className="contact-page" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 
       <div className="contact-hero">
-        <motion.div className="hero-content" initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
+        <div className="hero-content" initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
           <h1>Contactez-nous</h1>
           <p>RHI <span>&gt;</span>Contactez RHI</p>
-        </motion.div>
+        </div>
       </div>
 
       <motion.div className="contact-container" variants={containerVariants} initial="hidden" animate="visible">
@@ -98,7 +98,7 @@ const Contact = () => {
             <div className="icon-circle"><i className="fas fa-envelope"></i></div>
             <div>
               <h3>Email</h3>
-              <p>contact@universite.fr</p>
+              <p>Raphainstitut@gmail.com</p>
             </div>
           </div>
           <div className="social-links">
@@ -170,11 +170,11 @@ const Contact = () => {
           <div className="transport-options">
             <div className="transport-item">
               <i className="fas fa-subway"></i>
-              <span>Métro: Ligne 4 - Station Université</span>
+              <span>Bus: Ligne 1 - Station pk14</span>
             </div>
             <div className="transport-item">
               <i className="fas fa-bus"></i>
-              <span>Bus: 38, 82, 84</span>
+              <span>Bus: 1, 3, 5</span>
             </div>
           </div>
         </div>

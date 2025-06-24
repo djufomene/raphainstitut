@@ -88,7 +88,6 @@
         padding: 0.75rem 1.5rem;
         font-weight: bold;
         border: none;
-        
         cursor: pointer;
       }
   
@@ -104,12 +103,17 @@
       }
   
       .next {
-        background-color: #3498db;
+        background-color: #3212c0;
         color: white;
       }
     }
   }
 
+button.next:disabled {
+  background-color: #3498db !important;
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+}
 
 
   @media (max-width: 1024px) {
@@ -248,5 +252,21 @@
     }
   }
   
+@keyframes blinkError {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+  font-weight: bold;
+  animation: blinkError 1.2s ease-in-out 2; // clignote 2 fois
+  text-align: center;
+}
 
   
