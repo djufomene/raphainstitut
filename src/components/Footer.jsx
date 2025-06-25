@@ -76,8 +76,10 @@ const Footer = () => {
 
           <div className="main">
             <div className="icon fb">
-              <i className="fab fa-facebook"></i>
-              <span>Facebook</span>
+                <a href="https://www.facebook.com/share/1AcZvC44Rq/https://www.facebook.com/share/1AcZvC44Rq/ " target="_blank" rel="noopener noreferrer" className="icon fb">
+                  <i className="fab fa-facebook"></i>
+                  <span>Facebook</span>
+                </a>
             </div>
 
             <div className="icon twt">
