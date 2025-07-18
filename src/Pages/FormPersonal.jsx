@@ -7,6 +7,10 @@ import "../styles/FormPersonal.scss";
 export default function FormPersonal() {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Récupère données de l'étape précédente (type, selectedFil, selectedCategory, selectedTime)
+  const previousData = location.state || {};
+
   const [formData, setFormData] = useState({
     gender: "",
     lastName: "",
@@ -15,8 +19,6 @@ export default function FormPersonal() {
     birthDate: "",
     birthPlace: "",
     email: "",
-    nationality: "",
-    region: "",
     fatherName: "",
     fatherOccupation: "",
     fatherPhone: "",
@@ -32,7 +34,14 @@ export default function FormPersonal() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/FormPrecedenteEducation"); // Étape suivante
+
+    // Envoie les données cumulées à la page suivante
+    navigate("/FormPrecedenteEducation", {
+      state: {
+        ...previousData,    // données issues de la page précédente
+        ...formData // données personnelles saisies ici
+      }
+    });
   };
 
   const handlePrevious = () => {
@@ -49,13 +58,13 @@ export default function FormPersonal() {
       "birthPlace",
       "email"
     ];
-    return requiredFields.every(field => formData[field].trim() !== "");
+    return requiredFields.every(field => formData[field]?.trim() !== "");
   };
 
   return (
     <div>
       <ProgressBar currentStep={1} />
-      <div className="form-personal-container">  
+      <div className="form-personal-container">
         <form onSubmit={handleSubmit}>
           <h1>Informations Personnelles</h1>
           <p className="description-text">
@@ -63,7 +72,8 @@ export default function FormPersonal() {
           </p>
           <p className="instruction-text">
             Veuillez remplir tous les champs obligatoires marqués d'un *
-          </p>        
+          </p>
+
           {/* Civilité */}
           <div className="form-group">
             <h4>Civilité *</h4>
@@ -175,7 +185,8 @@ export default function FormPersonal() {
               </div>
             </div>
           </div>
-          
+
+          {/* Parents / Tuteurs */}
           <div className="form-group">
             <h4>Parents / Tuteurs</h4>
             <div className="input-row">

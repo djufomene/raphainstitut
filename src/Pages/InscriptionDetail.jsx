@@ -15,6 +15,23 @@ export default function InscriptionDetail() {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
+  const domainOptions = {
+    BTS: [
+      { label: "Sciences Médico-sanitaire", value: "Sciences Médico-sanitaire" },
+      { label: "Commerce et Gestion", value: "Commerce et Gestion" },
+      { label: "Génie Informatique & Télécommunication", value: "Génie Informatique & Télécommunication" },
+      { label: "Génie Industriel", value: "Génie Industriel" },
+      { label: "Agro-Pastorale", value: "Agro-Pastorale" }
+    ],
+    HND: [
+      { label: "Medical and Health Sciences", value: "Medical and Health Sciences" },
+      { label: "Business and Management", value: "Business and Management" },
+      { label: "Computer and Telecommunication Engineering", value: "Computer and Telecommunication Engineering" },
+      { label: "Industrial Engineering", value: "Industrial Engineering" },
+      { label: "Agro-Pastoral Studies", value: "Agro-Pastoral Studies" }
+    ]
+  };
+
   const handleCategoryClick = (filName) => {
     setSelectedFil(filName);
     setSelectedCategory("");
@@ -44,9 +61,12 @@ export default function InscriptionDetail() {
 
     setErrorMessage("");
     setCurrentStep(1);
+
     navigate("/form-personal", {
       state: {
         selectedFil,
+        selectedCategory,
+        selectedTime,
         type
       }
     });
@@ -56,8 +76,6 @@ export default function InscriptionDetail() {
     navigate(-1);
   };
 
-  const currentYear = new Date().getFullYear();
-
   return (
     <div>
       <ProgressBar currentStep={currentStep} />
@@ -66,33 +84,66 @@ export default function InscriptionDetail() {
           <h1>Veuillez sélectionner votre catégorie.</h1>
           <p className="para">Sélectionnez le domaine d’étude qui vous intéresse</p>
 
-          <div className="ligne-images">
-            <div className="image-container" onClick={() => handleCategoryClick("fil1")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Sciences Médico-sanitaire</p> </div>
-            <div className="image-container" onClick={() => handleCategoryClick("fil3")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Science et Gestion</p> </div>
-            <div className="image-container" onClick={() => handleCategoryClick("fil2")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Génie Informatique</p> </div>
+          <div className="ligne-images ligne-1">
+            {domainOptions[type]?.slice(0, 3).map((item, index) => (
+              <div
+                className={`image-container ${selectedFil === item.value ? "selected" : ""}`}
+                key={index}
+                onClick={() => handleCategoryClick(item.value)}
+              >
+                <img src={images.home40} alt="Icon" className="image-flottante" />
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="ligne-images">
-            <div className="image-container" onClick={() => handleCategoryClick("fil4")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Génie des Télécommunications et Réseaux</p> </div>
-            <div className="image-container" onClick={() => handleCategoryClick("fil5")}> <img src={images.home40} alt="Microscope" className="image-flottante" /> <p>Communication</p> </div>
+          <div className="ligne-images ligne-2">
+            {domainOptions[type]?.slice(3).map((item, index) => (
+              <div
+                className={`image-container ${selectedFil === item.value ? "selected" : ""}`}
+                key={index + 3}
+                onClick={() => handleCategoryClick(item.value)}
+              >
+                <img src={images.home40} alt="Icon" className="image-flottante" />
+                <p>{item.label}</p>
+              </div>
+            ))}
           </div>
 
           <div className="group">
-            <h4>Formation en cour du :</h4>
+            <h4>Formation en cours du :</h4>
             <div className="radio-group">
               <label className="radio-option">
-                <input type="radio" name="reponse" value="jour" onChange={handleTimeChange} /> Jour
+                <input
+                  type="radio"
+                  name="reponse"
+                  value="jour"
+                  checked={selectedTime === "jour"}
+                  onChange={handleTimeChange}
+                /> Jour
               </label>
               <label className="radio-option">
-                <input type="radio" name="reponse" value="soir" onChange={handleTimeChange} /> Soir
+                <input
+                  type="radio"
+                  name="reponse"
+                  value="soir"
+                  checked={selectedTime === "soir"}
+                  onChange={handleTimeChange}
+                /> Soir
               </label>
             </div>
 
             {errorMessage && <p className="error-message">{errorMessage}</p>}
 
             <div className="boutons">
-              <input type="button" className="previous action-button-previous" value="Pécedent" onClick={handlePrevious} />
-              <input type="button"   className={`next action-button-next ${!(selectedFil && selectedCategory && selectedTime) ? "disabled" : ""}`} value="Suivant" onClick={handleNext} disabled={!(selectedFil && selectedCategory && selectedTime) } />
+              <input type="button" className="previous action-button-previous" value="Précédent" onClick={handlePrevious} />
+              <input
+                type="button"
+                className={`next action-button-next ${!(selectedFil && selectedCategory && selectedTime) ? "disabled" : ""}`}
+                value="Suivant"
+                onClick={handleNext}
+                disabled={!(selectedFil && selectedCategory && selectedTime)}
+              />
             </div>
           </div>
         </div>
@@ -101,7 +152,7 @@ export default function InscriptionDetail() {
           {!selectedFil ? (
             <h5 id="status">Veuillez sélectionner une catégorie</h5>
           ) : (
-            <CategoryForm fil={selectedFil} type={type} onSelectCategory={handleCategorySelection} />
+            <CategoryForm fil={selectedFil} type={type} onSelectCategory={handleCategorySelection} selectedCategory={selectedCategory} />
           )}
         </div>
       </div>
@@ -110,33 +161,122 @@ export default function InscriptionDetail() {
   );
 }
 
-const CategoryForm = ({ fil, type, onSelectCategory }) => {
+const CategoryForm = ({ fil, type, onSelectCategory, selectedCategory }) => {
   const categoriesByType = {
     BTS: {
-      fil1: ["Infirmier BTS", "Kiné BTS"],
-      fil2: ["Développement BTS", "Web Design BTS"],
-      fil3: ["Commerce BTS", "Marketing BTS"],
-      fil4: ["Télécom BTS", "Réseaux BTS"],
-      fil5: ["Journalisme BTS", "E-commerce BTS"]
-    },
-    HND: {
-      fil1: ["Infirmier HND", "Laboratoire HND"],
-      fil2: ["Système HND", "Design HND"],
-      fil3: ["Gestion HND", "Transport HND"],
-      fil4: ["Télécom HND", "Sécurité HND"],
-      fil5: ["Communication HND", "Marketing Numérique HND"]
-    },
-    Licences: {
-      fil1: [
-        "Science infirmière", "Kinésithéraphie", "Sage femme / Maïeuticien",
-        "Analyse médicale et technique de laboratoire", "Imagerie médicale et radiologie",
-        "Science pharmaceutique", "Odontostomatologie", "Délégué médical",
-        "Auxiliaire de vie", "Auxiliaire de pharmacie"
+      "Sciences Médico-sanitaire": [
+        "Science infirmière",
+        "Kinésithéraphie",
+        "Sage femme / Maïeuticien",
+        "Analyse médicale et technique de laboratoire",
+        "Imagerie médicale et Radiologie",
+        "Science pharmaceutique",
+        "Odontostomatologie",
+        "Opticien lunetier"
       ],
-      fil2: ["Gestion du système informatique", "Infographie et web design"],
-      fil3: ["Assurance", "Banque", "Commerce international", "Communication des organisations", "Comptabilité informatisée de gestion", "Douane et transit", "Droit des affaires et de l'entreprise", "Gestion de la qualité", "Gestion fiscale", "Logistique et transport", "Marketing commerce vente", "Ressources humaines"],
-      fil4: ["Télécommunication", "Réseau et sécurité informatique", "Hygiène sécurité et environnement"],
-      fil5: ["Journalisme", "E-commerce et marketing numérique"]
+      "Commerce et Gestion": [
+        "Gestion et comptabilité d'entreprise",
+        "Gestion des projet",
+        "Ressources humaines",
+        "Transport et logistique",
+        "Douane et transit",
+        "Commerce international",
+        "Infirmier HND",
+        "Banque et finance",
+        "Assurance",
+        "E-commerce",
+        "Comptabilité finance",
+        "Gestion de la qualité",
+        "Gestion des ONG"
+      ],
+      "Génie Informatique & Télécommunication": [
+        "Génie logiciel",
+        "Réseau et sécurité",
+        "Télécommunications ",
+        "Maintenance des systèmes informatiques ",
+        "Informatique industrielle et automatisme",
+        "Journalisme ",
+        "Communication des organisations"
+      ],
+      "Génie Industriel": [
+        "Bâtiment",
+        "Travaux publique",
+        "Géomètre topographe",
+        "Installation sanitaire",
+        "Froid et climatisation ",
+        "Energie renouvelable",
+        "Mécatronique",
+        "Maintenance après vente automobile",
+        "Maintenance industrielle et productive",
+        "Construction mécanique",
+        "Construction métallique",
+        "Chaudronnerie et soudure"
+      ],
+      "Agro-Pastorale": [
+        "Production végétale",
+        "Production animale",
+        "Entrepreneuriat agro-pastorale ",
+        "Technique commerciale agricole",
+        "Conseil agro-pastorale"
+      ]
+    },
+
+    HND: {
+      "Medical and Health Sciences": [
+        "Nursing Science",
+        "Physiotherapy",
+        "Midwifery / Male Midwife",
+        "Medical Analysis and Laboratory Techniques",
+        "Medical Imaging and Radiology",
+        "Pharmaceutical Science",
+        "Odontostomatology",
+        "Optician"
+      ],
+      "Business and Management": [
+        "Business Management and Accounting",
+        "Project Management",
+        "Human Resources",
+        "Transport and Logistics",
+        "Customs and Transit",
+        "International Trade",
+        "Nursing HND",
+        "Banking and Finance",
+        "Insurance",
+        "E-commerce",
+        "Accounting and Finance",
+        "Quality Management",
+        "NGO Management"
+      ],
+      "Computer and Telecommunication Engineering": [
+        "Software Engineering",
+        "Networks and Security",
+        "Telecommunications",
+        "Computer Systems Maintenance",
+        "Industrial Computing and Automation",
+        "Journalism",
+        "Organizational Communication"
+      ],
+      "Industrial Engineering": [
+        "Construction",
+        "Public Works",
+        "Surveying and Topography",
+        "Sanitary Installation",
+        "Refrigeration and Air Conditioning",
+        "Renewable Energy",
+        "Mechatronics",
+        "Automotive After-Sales Maintenance",
+        "Industrial and Production Maintenance",
+        "Mechanical Construction",
+        "Metal Construction",
+        "Boilermaking and Welding"
+      ],
+      "Agro-Pastoral Studies": [
+        "Crop Production",
+        "Animal Production",
+        "Agro-pastoral Entrepreneurship",
+        "Agricultural Sales Techniques",
+        "Agro-pastoral Consulting"
+      ]
     }
   };
 
@@ -144,10 +284,16 @@ const CategoryForm = ({ fil, type, onSelectCategory }) => {
 
   return (
     <div className={fil}>
-      <h4>{fil.replace("fil", "Catégorie ")} sélectionnée - {type}</h4>
+      <h4>{fil}</h4>
       {categories[fil]?.map((item, index) => (
-        <label key={index}>
-          <input type="radio" name="option" value={item} onChange={() => onSelectCategory(item)} />
+        <label key={index} className={selectedCategory === item ? "selected" : ""}>
+          <input
+            type="radio"
+            name="option"
+            value={item}
+            checked={selectedCategory === item}
+            onChange={() => onSelectCategory(item)}
+          />
           {item}
         </label>
       ))}

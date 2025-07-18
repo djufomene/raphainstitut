@@ -26,7 +26,7 @@ const EcoleDedail = () => {
 
   const description = schoolData?.description1 || `Les spécialités proposées couvrent un large éventail de domaines professionnels...`;
 
-  const filters = ["HND", "BTS", "Licence & Master", "BACHELOR", "TOUTES LES FILIÈRES"];
+  const filters = ["BTS", "HND", "Licence & Master", "BACHELOR", "TOUTES LES FILIÈRES"];
 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter === activeFilter ? null : filter);

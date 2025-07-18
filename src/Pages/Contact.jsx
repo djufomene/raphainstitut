@@ -49,7 +49,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     emailjs.sendForm(
-      "service_9el1edb ",
+      "service_uhuvh67",
       "template_c8gtkqc",
       formRef.current,
       'UEskgPRVfNfOXQ72O'      
@@ -138,6 +138,12 @@ const Contact = () => {
               <input type="email" id="user_email" name="user_email" value={formData.user_email} onChange={handleChange} required />
               <i className="fas fa-envelope"></i>
             </div>
+            <div className="form-group">
+              <label htmlFor="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required/>
+              <i className="fas fa-phone"></i>
+            </div>
+
 
             <div className="form-group">
               <label htmlFor="message">Message</label>

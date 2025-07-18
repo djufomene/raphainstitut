@@ -219,9 +219,12 @@ h1, h2, h3, h4 {
 
 .schools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // auto adaptatif
   gap: 30px;
+  justify-items: center; // centre chaque carte
+  padding: 0 20px; // pour respirer un peu en petit écran
 }
+
 
 .school-card {
   background: white;
@@ -229,6 +232,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
   @include card-shadow;
   transition: transform 0.3s ease;
+ 
 
   .school-header {
     padding: 20px;
@@ -283,6 +287,18 @@ h1, h2, h3, h4 {
       color: $accent-color;
     }
   }
+
+  @media (max-width: 500px) {
+  .schools-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .school-card {
+    max-width: 100%;
+  }
+}
+
 }
 
 /* Programmes */

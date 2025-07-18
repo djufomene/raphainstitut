@@ -45,7 +45,8 @@ const programs = [
   "Analyse Médicale et Technique de Laboratoire",
   "Imagerie Médicale et Radiologie",
   "Science Pharmaceutique",
-  "Odontostomatolie"
+  "Odontostomatolie",
+  "opticien lunetier"
 ];
 
 const programs1 = [
@@ -74,10 +75,35 @@ const programs2 = [
   "Ressources Humaines (RH)"
 ];
 
+const programs3 = [
+  "Bâtiment",
+  "Travaux publique",
+  "Géomètre topographe",
+  "Installation sanitaire",
+  "Froid et climatisation",
+  "Energie renouvelable",
+  "Mécatronique",
+  "Maintenance après vente automobile",
+  "Maintenance industrielle et productive",
+  "Construction mécanique",
+  "Construction métallique",
+  "Chaudronnerie et soudure"
+];
+
+const programs4 = [
+  "Production végétale",
+  "Production animale",
+  "Entrepreneuriat agro-pastorale",
+  "Technique commerciale agricole",
+  "Conseil agro-pastorale"
+];
+
 const allPrograms = [
   ...programs.map(p => ({ title: p, category: "Sciences Médico-sanitaire" })),
   ...programs1.map(p => ({ title: p, category: "Informatique & Communication" })),
-  ...programs2.map(p => ({ title: p, category: "Gestion & Commerce" }))
+  ...programs2.map(p => ({ title: p, category: "Gestion & Commerce" })),
+  ...programs3.map(p => ({ title: p, category: "Génie Industriel" })),
+  ...programs4.map(p => ({ title: p, category: "Agro-Pastorale" }))
 ];
 
 const items = [
@@ -189,6 +215,40 @@ const NosFormations = () => {
               <h2>Gestion & Commerce</h2>
               <div className="program-grid">
                 {programs2.map((title, index) => (
+                  <div className="card" key={index}>
+                    <div className="card-left">
+                      <img src={images.home11} alt="RHI Logo" className="logo" />
+                    </div>
+                    <div className="card-right">
+                      <h3>{title}</h3>
+                      <Link to={`/formations/${slugify(title)}`} className="btn">En savoir plus</Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="titel1">
+              <h2>Génie Industriel</h2>
+              <div className="program-grid">
+                {programs3.map((title, index) => (
+                  <div className="card" key={index}>
+                    <div className="card-left">
+                      <img src={images.home11} alt="RHI Logo" className="logo" />
+                    </div>
+                    <div className="card-right">
+                      <h3>{title}</h3>
+                      <Link to={`/formations/${slugify(title)}`} className="btn">En savoir plus</Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="titel1">
+              <h2>Agro-Pastorale</h2>
+              <div className="program-grid">
+                {programs4.map((title, index) => (
                   <div className="card" key={index}>
                     <div className="card-left">
                       <img src={images.home11} alt="RHI Logo" className="logo" />

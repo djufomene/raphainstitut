@@ -9,15 +9,15 @@ import home8 from '../assets/images/home8.jpg';
 import home9 from '../assets/images/home9.jpg';
 import home10 from '../assets/images/home10.jpg';
 import home11 from '../assets/images/home11.png';
-import home12 from '../assets/images/home12.png';
-import home13 from '../assets/images/home13.png';
-import home14 from '../assets/images/home14.png';
-import home15 from '../assets/images/home15.png';
+import home12 from '../assets/images/home12.jpg';
+import home13 from '../assets/images/home13.jpg';
+import home14 from '../assets/images/home14.jpg';
+import home15 from '../assets/images/home15.jpg';
 import home16 from '../assets/images/home16.jpg';
 import home17 from '../assets/images/home17.jpg';
 import home20 from '../assets/images/home20.png';
 import home21 from '../assets/images/home21.png';
-import home22 from '../assets/images/home22.png';
+import home22 from '../assets/images/home22.jpeg';
 import home23 from '../assets/images/home23.jpg';
 import home24 from '../assets/images/home24.jpg';
 import home25 from '../assets/images/home25.jpg';
@@ -37,7 +37,9 @@ import home38 from '../assets/images/home38.jpg';
 import home39 from '../assets/images/home39.jpg';
 import home40 from '../assets/images/home40.png';
 import home41 from '../assets/images/home41.jpg';
-
+import home42 from '../assets/images/home42.jpg';
+import home43 from '../assets/images/home43.jpg';
+import home44 from '../assets/images/home44.jpg';
 export const images = {
    home1,
    home2,
@@ -78,6 +80,9 @@ export const images = {
    home39,
    home40,
    home41,
+   home42,
+   home43,
+   home44,
 };
 
 
@@ -141,8 +146,8 @@ export const formationData = {
       "Infographie et web design"
     ]
   },
-  "Science et Gestion": {
-    title: "Science et Gestion",
+  "Commerce et Gestion": {
+    title: "Commerce et Gestion",
     options: [
       "Assurance",
       "Banque",
@@ -185,41 +190,27 @@ export const actualites = [
       date: "12 Oct, 2024",
       slug: "laureats-ug",
       contenu: "Les soutenances des rapports de fin d’études en BTS, HND se sont récemment tenues à l’Institut Supérieur Rapha (RIH). À cette occasion, les étudiants ont exposé avec succès leurs travaux devant des jurys composés d’experts et d’enseignants, illustrant ainsi leurs compétences et leur engagement. \n\nLes présentations ont couvert une grande diversité de thèmes actuels, touchant des secteurs tels que la conduite de projet, les études de marché, les innovations technologiques et les enjeux du développement durable. Chaque exposé a mis en évidence les savoirs acquis ainsi que l’effort constant fourni durant la période de stage. \n\nL’établissement félicite vivement les étudiants pour la pertinence de leurs travaux et leur attitude professionnelle remarquable. Leur implication et leur ténacité font la renommée de RHI, car ils ont brillamment relevé les exigences du parcours, comme en témoignent la qualité et la clarté de leurs présentations. \n\nL’Institut Supérieur Rapha exprime également sa profonde gratitude à ses partenaires professionnels pour leur accompagnement et leur appui, éléments clés dans le succès de cette étape importante pour les étudiants.",
-      images: [images.home24, images.home24, images.home24, images.home24],
+      images: [images.home16, images.home42, images.home43, images.home44],
     },
     {
       id: "2",
       titre: "Visite officielle de l’Université de Ngaoundéré au campus RHI",
-      date: "18 Oct, 2024",
-      slug: "partenariat-hopital",
-      contenu: "Un nouveau partenariat a été signé avec l’hôpital central pour renforcer...",
-      images: [images.home24, images.home24],
+      date: "30 Avril 2025",
+      slug: "partenariat-RHI",
+      contenu: "L’Institut Supérieur Rapha (RHI) a eu l’honneur d’accueillir une délégation officielle de l’Université de Ngaoundéré. Cette visite s’inscrit dans une dynamique de rapprochement et d’échanges interuniversitaires. Elle a réuni plusieurs responsables académiques autour d’un objectif commun : l’excellence dans la formation. \n\nAu programme de la visite figuraient des rencontres avec les responsables de l’institut, des visites guidées et des présentations de filières. Les représentants de l’Université de Ngaoundéré ont pu découvrir les infrastructures modernes du campus RHI. Les échanges ont porté sur la qualité de l’enseignement et les perspectives de collaboration. \n\nCette rencontre marque le début d’un partenariat prometteur entre les deux institutions. Des projets conjoints en recherche, mobilité académique et innovation sont envisagés. RHI se félicite de cette ouverture qui renforce sa place dans le paysage universitaire camerounais.",
+      images: [images.home1, images.home2, images.home4, images.home10],
 
     },
     {
       id: "3",
-      titre: "Séminaire IA et santé numérique",
-      date: "25 Oct, 2024",
-      slug: "seminaire-ia",
-      contenu: "Ce séminaire a permis aux étudiants de découvrir les enjeux de l’IA en santé...",
-      image: images.home24,
+      titre: "Remise des bourses scolaires",
+      date: "21 juin 2025",
+      slug: "Remise-des-bourses",
+      contenu: "Une cérémonie de remise des bourses scolaires s’est tenue au sein du collège MINFANG. Un montant total de 3 000 000 FCFA a été attribué aux élèves de Terminale méritants. L'évènement a rassemblé enseignants, parents, élèves et autorités éducatives locales. \n\nCette initiative vise à récompenser l’excellence académique et encourager la persévérance scolaire. Les bénéficiaires ont été sélectionnés selon des critères de performance et d'engagement. Chaque élève a reçu une enveloppe financière destinée à soutenir sa scolarité. \n\nLes responsables de l’établissement ont exprimé leur satisfaction face à cet acte de solidarité. Ils ont salué l'engagement des partenaires ayant contribué à la constitution de cette cagnotte. Des discours empreints de fierté et de reconnaissance ont ponctué la cérémonie. \n\nLes élèves bénéficiaires, visiblement émus, ont exprimé leur gratitude et leur motivation renouvelée. Ils ont promis de redoubler d’efforts pour honorer cette marque de confiance. L’évènement s’est clôturé dans une ambiance festive, marquée par des chants et des applaudissements.",
+      images: [images.home12, images.home13, images.home14, images.home15],
+
     },
-    {
-      id: "4",
-      titre: "Retour en images sur la journée sportive",
-      date: "28 Oct, 2024",
-      slug: "journee-sportive",
-      contenu: "La journée sportive annuelle a été un succès avec une grande participation...",
-      image: images.home24,
-    },
-    {
-      id: "5",
-      titre: "Atelier sur la cybersécurité",
-      date: "30 Oct, 2024",
-      slug: "atelier-cyber",
-      contenu: "Un atelier de sensibilisation à la cybersécurité a été animé par des experts...",
-      image: images.home24,
-    },
+    
   ];
 
  

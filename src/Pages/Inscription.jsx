@@ -6,11 +6,11 @@ import ProgressBar from "../components/ProgressBar"; // Import ajouté
 import "../styles/Inscription.scss";
 
 const options = [
+  "BTS",
+  "HND",
   "Licences Professionnelles",
   "Licences Academiques",
   "Bachelor Degree",
-  "BTS",
-  "HND",
   "Certifications",
   "Licence Technologique",
   "Master Professionnel",

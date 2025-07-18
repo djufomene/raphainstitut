@@ -117,6 +117,15 @@ const Accueil = () => {
 
    const events = {
     upcoming: [
+
+       {
+        id: 3,
+        title: "Remise des bourses scolaires",
+        date: "21 juin 2025",
+        description: "Les élèves de Terminale du collège MINFANG ont bénéficié d'une remise de bourses scolaires d'une valeur totale de 3 000 000 FCFA.",
+        image: images.home3
+      },
+
       {
         id: 1,
         title: "Soutenances des rapports de stage en BTS-HND ",
@@ -124,25 +133,18 @@ const Accueil = () => {
         description: "Soutenances des rapports de stage à l'institut Supérieur Rapha.",
         image: images.home25
       },
+      
       {
         id: 2,
         title: "Visite officielle de l’Université de Ngaoundéré au campus RHI",
         date: "30 Avril 2025",
         description: "Visite officielle de l’Université de Ngaoundéré au campus RHI.",
         image: images.home23
-      },
-
-      {
-        id: 3,
-        title: "Conférence sur l'IA",
-        date: "20 Décembre 2023",
-        description: "Interventions d'experts internationaux sur les dernières tendances en IA.",
-        image: images.home22
       }
     ],
     past: [
       {
-        id: 3,
+        id: 4,
         title: "Forum des Métiers",
         date: "15 Mars 2023",
         description: "Rencontre avec des professionnels de divers secteurs.",
@@ -158,7 +160,7 @@ const Accueil = () => {
     const admissionsData = [
       {
         title: "BTS-HND",
-        description: "Il se prépare généralement en 2 ans après le baccalauréat"
+        description: "Il se prépare généralement en 2 ans pour les filières de gestion, technique industrielle, informatique Agro-pastorale et 3 ans pour les filières de santé après l'optention du baccalauréat"
       },
       {
         title: " Licence Académique",
@@ -194,18 +196,18 @@ const Accueil = () => {
 
   const carouselSlides = [
       {
-        title: "Formation numérique",
-        description: "Des modules interactifs et accessibles.",
+        title: "Le laboratoire de biochimie",
+        description: "Conçu pour la formation et l’innovation, le laboratoire de biochimie de RHI soutient la recherche appliquée en sciences de la santé.",
         image: images.home24,
       },
       {
-        title: "Références automatisées",
-        description: "Gagnez du temps avec Zotero et Mendeley.",
+        title: "Salle d'informatique",
+        description: "Cette salle offre aux apprenants un environnement propice à la maîtrise des outils de développement logiciel et des technologies réseau.",
         image: images.home22,
       },
       {
-        title: "Analyse de données",
-        description: "Utilisez Excel et R pour explorer vos résultats.",
+        title: " Visite officielle de l’Université de Ngaoundéré ",
+        description: "Les responsables des deux institutions ont échangé sur des projets de collaboration académique.",
         image: images.home23,
       },
     ];
@@ -474,7 +476,7 @@ const Accueil = () => {
                 <div className="content">
                   <h2>NOUVELLE RENTRÉE ACADÉMIQUE 2025 - 2026</h2>
                   <p>
-                    Les inscriptions à l'institut supérieur Rapha (RHI) sont ouvertes à dès maintenant pour la rentrée <span className="font">Octobre 2025.</span> <br />
+                    Les inscriptions à l'institut supérieur Rapha (RHI) sont ouvertes à dès maintenant pour la rentrée <span className="font">Octobre 2025. en cour de jour & soir</span> <br />
                     Ensemble vers la réussite ! Notre établissement vous attend pour une année pleine d'apprentissage et d'opportunités.
                   </p>
                   
@@ -611,19 +613,19 @@ const Accueil = () => {
 
                 <div className="stats-section" style={sectionStyle}>
                   <div className="stat">
-                    <h1><CountUp start={0} end={220} duration={2} separator="," />K+</h1>
+                    <h1><CountUp start={0} end={220} duration={7} separator="," />+</h1>
                     <p>Cours</p>
                   </div>
                   <div className="stat">
-                    <h1><CountUp start={0} end={5000} duration={2} />M+</h1>
+                    <h1><CountUp start={0} end={3000} duration={7} />+</h1>
                     <p>Etudiants</p>
                   </div>
                   <div className="stat">
-                    <h1><CountUp start={0} end={100} duration={2} />%</h1>
-                    <p>Satisfaction</p>
+                    <h1><CountUp start={0} end={94} duration={7} />%</h1>
+                    <p> Réussite </p>
                   </div>
                   <div className="stat">
-                    <h1><CountUp start={0} end={150} duration={2} separator="," />K+</h1>
+                    <h1><CountUp start={0} end={110} duration={7} separator="," />+</h1>
                     <p>Enseignants Qualifiés</p>
                   </div>
                 </div>

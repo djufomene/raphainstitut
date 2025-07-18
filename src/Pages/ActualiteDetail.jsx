@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { actualites } from "../autres/data"; // adapte le chemin si besoin
-
 import "../styles/ActualiteDetail.scss";
 
 

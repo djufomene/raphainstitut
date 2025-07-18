@@ -1,12 +1,17 @@
-// src/components/FormPreviousEducation.jsx
-import { useNavigate } from "react-router-dom";
+// src/components/FormPrecedenteEducation.jsx
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 import Footer from '../components/FooterInscription';
 import "../styles/FormPrecedenteEducation.scss";
+import sendEmail from '../utils/sendEmail';
 
 export default function FormPrecedenteEducation() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Récupérer toutes les données des étapes précédentes
+  const previousData = location.state || {};
 
   const [formData, setFormData] = useState({
     lastDiploma: "",
@@ -14,7 +19,8 @@ export default function FormPrecedenteEducation() {
     lastInstitution: "",
     candidateStatus: "",
     diplomaFile: null,
-    birthCertificate: null
+    birthCertificate: null,
+    motivationLetter: ""
   });
 
   const handleChange = (e) => {
@@ -42,9 +48,23 @@ export default function FormPrecedenteEducation() {
     navigate(-1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/confirmation"); // Route suivante
+
+    // Construire un objet complet avec toutes les données cumulées
+    const fullFormData = {
+      ...previousData,        // catégorie, type, données personnelles (personalData)
+      ...formData             // données de cette étape (incluant motivationLetter)
+    };
+
+    // Envoyer par email (assure-toi que sendEmail gère bien cet objet)
+    const success = await sendEmail(fullFormData);
+
+    if (success) {
+      navigate('/confirmation');
+    } else {
+      alert("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
+    }
   };
 
   return (
@@ -156,6 +176,8 @@ export default function FormPrecedenteEducation() {
             name="motivationLetter"
             placeholder="Rédiger votre demande..."
             rows="5"
+            value={formData.motivationLetter}
+            onChange={handleChange}
           ></textarea>
         </div>
 
