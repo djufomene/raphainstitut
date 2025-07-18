@@ -10,7 +10,6 @@ export default function FormPrecedenteEducation() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Récupérer toutes les données des étapes précédentes
   const previousData = location.state || {};
 
   const [formData, setFormData] = useState({
@@ -23,6 +22,8 @@ export default function FormPrecedenteEducation() {
     motivationLetter: ""
   });
 
+  const [fileError, setFileError] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -30,7 +31,11 @@ export default function FormPrecedenteEducation() {
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
-    setFormData(prev => ({ ...prev, [name]: files[0] }));
+    const file = files[0];
+    if (!file) return;
+
+    // On ne bloque rien ici
+    setFormData(prev => ({ ...prev, [name]: file }));
   };
 
   const isFormValid = () => {
@@ -51,19 +56,47 @@ export default function FormPrecedenteEducation() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Construire un objet complet avec toutes les données cumulées
+    const validTypes = ["image/png", "image/jpeg", "image/jpg", "application/pdf"];
+    const maxSize = 2 * 1024 * 1024; // 2 Mo
+
+    // Vérification du fichier diplôme
+    if (formData.diplomaFile) {
+      if (!validTypes.includes(formData.diplomaFile.type)) {
+        setFileError("❌ Le fichier du diplôme doit être au format PDF, PNG, JPG ou JPEG.");
+        return;
+      }
+      if (formData.diplomaFile.size > maxSize) {
+        setFileError("❌ Le fichier du diplôme dépasse la taille maximale autorisée de 2 Mo.");
+        return;
+      }
+    }
+
+    // Vérification du fichier acte de naissance
+    if (formData.birthCertificate) {
+      if (!validTypes.includes(formData.birthCertificate.type)) {
+        setFileError("❌ Le fichier de l'acte de naissance doit être au format PDF, PNG, JPG ou JPEG.");
+        return;
+      }
+      if (formData.birthCertificate.size > maxSize) {
+        setFileError("❌ Le fichier de l'acte de naissance dépasse la taille maximale autorisée de 2 Mo.");
+        return;
+      }
+    }
+
+
+    setFileError(""); // Réinitialise l'erreur si tout est bon
+
     const fullFormData = {
-      ...previousData,        // catégorie, type, données personnelles (personalData)
-      ...formData             // données de cette étape (incluant motivationLetter)
+      ...previousData,
+      ...formData
     };
 
-    // Envoyer par email (assure-toi que sendEmail gère bien cet objet)
     const success = await sendEmail(fullFormData);
 
     if (success) {
       navigate('/confirmation');
     } else {
-      alert("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
+      setFileError("❌ Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
     }
   };
 
@@ -76,6 +109,9 @@ export default function FormPrecedenteEducation() {
         <p className="description-text">
           Renseignez les informations en rapport avec votre précédente formation vous donnant accès à la nouvelle que vous désirez poursuivre.
         </p>
+
+        {/* Message d'erreur affiché en haut du formulaire */}
+        {fileError && <p className="file-error-message-top">{fileError}</p>}
 
         <div className="form-columns">
           <div className="left-column">

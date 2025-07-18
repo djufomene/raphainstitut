@@ -261,12 +261,13 @@ button.next:disabled {
   }
 }
 
-.error-message {
+.file-error-message-top {
   color: red;
-  margin-top: 1rem;
-  font-weight: bold;
-  animation: blinkError 1.2s ease-in-out 2; // clignote 2 fois
-  text-align: center;
+  font-size: 1rem;
+  background-color: #ffe6e6;
+  padding: 20px;
+  border-left: 5px solid red;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 
-  
