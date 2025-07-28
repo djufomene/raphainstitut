@@ -1,3 +1,5 @@
+
+@use "sass:color";
 // Variables
 $primary-color: #2c3e50;
 $secondary-color: #3498db;
@@ -183,7 +185,7 @@ $font-heading: 'Montserrat', sans-serif;
 
     p {
       margin: 0;
-      color: lighten($dark-color, 20%);
+      color: color.adjust($dark-color, $lightness: 20%);
     }
   }
 
@@ -346,7 +348,7 @@ $font-heading: 'Montserrat', sans-serif;
       position: absolute;
       left: 15px;
       top: 40px;
-      color: lighten($dark-color, 40%);
+      color: color.adjust($dark-color, $lightness: 40%);
     }
   }
 
@@ -366,11 +368,11 @@ $font-heading: 'Montserrat', sans-serif;
     gap: 10px;
 
     &:hover {
-      background: darken($accent-color, 10%);
+      background: color.adjust($accent-color, $lightness: -10%);
     }
 
     &:disabled {
-      background: lighten($accent-color, 20%);
+      background: color.adjust($accent-color, $lightness: +20%);
       cursor: not-allowed;
     }
   }
@@ -422,7 +424,7 @@ $font-heading: 'Montserrat', sans-serif;
         align-items: center;
         gap: 12px;
         margin-bottom: 12px;
-        color: lighten($dark-color, 20%);
+        color: color.adjust($dark-color, $lightness: 20%);
         font-size: 0.95rem;
         
         i {

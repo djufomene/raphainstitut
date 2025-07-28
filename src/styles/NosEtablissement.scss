@@ -1,4 +1,6 @@
 
+@use "sass:color";
+
 /* Variables */
 $primary-color: #2c3e50;
 $secondary-color: #3498db;
@@ -143,7 +145,7 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
 
     &:hover {
-      background: darken($accent-color, 10%);
+      background: color.adjust($accent-color, $lightness: -10%);
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
@@ -255,7 +257,7 @@ h1, h2, h3, h4 {
   p {
     padding: 20px;
     margin: 0;
-    color: lighten($dark-color, 20%);
+    color: color.adjust($dark-color, $lightness: 20%);
   }
 
   .school-image {
@@ -411,7 +413,7 @@ h1, h2, h3, h4 {
 
     span {
       font-size: 0.9rem;
-      color: lighten($dark-color, 30%);
+      color: color.adjust($dark-color, $lightness: 30%);
     }
   }
 }
@@ -433,7 +435,7 @@ h1, h2, h3, h4 {
       transition: background 0.3s;
   
       &:hover {
-        background: darken($secondary-color, 10%);
+        background: color.adjust($secondary-color, $lightness: -10%);
       }
     }
   }

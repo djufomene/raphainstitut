@@ -88,21 +88,21 @@ const Accueil = () => {
     {
       icon: <FaBookOpen />, 
       title: "Formations diversifiées et adaptées au marché",
-      description: "RHI propose une large gamme de programmes dans des domaines tels que l'ingénierie, la gestion, l'informatique, et les sciences de la santé, conçus pour répondre aux besoins du marché actuel et futur."
+      description: "l'institut supérieur Rapha propose une large gamme de programmes dans des domaines tels que l'ingénierie, la gestion, informatique, les sciences de la santé et Agro-pastoral, conçus pour répondre aux besoins du marché actuel et futur."
     },
     {
       icon: <FaLightbulb />, 
       title: "Pédagogie pratique et innovante",
-      description: "Avec une approche axée sur la pratique, les étudiants bénéficient de stages, de projets concrets et d'un environnement d'apprentissage moderne pour renforcer leurs compétences."
+      description: "Avec une approche axée sur la pratique, les étudiants bénéficient des stages, des projets concrets et d'un environnement d'apprentissage moderne pour renforcer leurs compétences."
     },
     {
       icon: <FaUserGraduate />, 
       title: "Encadrement académique de qualité",
-      description: "RHI dispose d’un corps enseignant qualifié, composé d’experts nationaux et internationaux, offrant un accompagnement personnalisé et des formations de haut niveau."
+      description: "l'institut supérieur Rapha dispose d’un corps enseignant qualifié, composé d’experts nationaux et internationaux, offrant un accompagnement personnalisé et des formations de haut niveau."
     },
     {
       icon: <FaHandshake />, 
-      title: "Excellente insertion professionnelle",
+      title: "Insertion professionnelle",
       description: "Grâce à des partenariats avec des entreprises locales et internationales, RHI assure un fort taux d'employabilité pour ses diplômés, facilitant ainsi leur intégration sur le marché du travail."
     }
   ];
@@ -167,11 +167,11 @@ const Accueil = () => {
         description: "La Licence Académique est un diplôme universitaire de niveau Bac+3, délivré après trois années d’études supérieures. Elle fait partie du système LMD (Licence – Master – Doctorat)."
       },
       {
-        title: "Licence académique ",
+        title: "Licence Professionnelle  ",
         description: "La Licence Professionnelle est un diplôme universitaire de niveau Bac+3, conçu pour permettre une insertion rapide dans le monde du travail. Elle est accessible après un Bac+2."
       },
       {
-        title: "Master Professionnelle",
+        title: "Master Professionnel",
         description: "Professionnalisant, le master pro vise à rendre opérationnel les étudiants dès leur sortie de formation dans le supérieur."
       }
     ];
@@ -326,7 +326,7 @@ const Accueil = () => {
                 </h1> */}
                 
                 <p className="subtitle animate-subtitle">
-                Excellence Académique • Innovation • Recherche
+                Honneteté • Discipline • Loyauté  
                 </p>
                 
                 <div className="cta-buttons">
@@ -407,11 +407,11 @@ const Accueil = () => {
             >
               <h2>Visitez notre campus</h2>
               <p>
-                Découvrez à quoi ressemble vraiment la RHI en explorant nos environnements 
+                Découvrez à quoi ressemble vraiment l'institut supérieur Rapha en explorant nos environnements 
                 d’apprentissage et en écoutant directement nos étudiants.
               </p>
               <p>
-                Nous proposons des visites en personne des campus de Douala et 
+                Nous proposons des visites en personne des campus de Douala
                .Vous pouvez également découvrir tous nos campus grâce 
                 à nos visites virtuelles immersives.
               </p>
@@ -476,7 +476,7 @@ const Accueil = () => {
                 <div className="content">
                   <h2>NOUVELLE RENTRÉE ACADÉMIQUE 2025 - 2026</h2>
                   <p>
-                    Les inscriptions à l'institut supérieur Rapha (RHI) sont ouvertes à dès maintenant pour la rentrée <span className="font">Octobre 2025. en cour de jour & soir</span> <br />
+                    Les inscriptions à l'institut supérieur Rapha sont ouvertes dès maintenant pour la rentrée <span className="font">Octobre 2025. en cours de jour & soir</span> <br />
                     Ensemble vers la réussite ! Notre établissement vous attend pour une année pleine d'apprentissage et d'opportunités.
                   </p>
                   
@@ -549,7 +549,7 @@ const Accueil = () => {
   
                   <section className="admissions-section">
                     <div className="left-content">
-                      <button className="system-btn">Le Système LDM</button>
+                      <button className="system-btn">Le Système LMD</button>
                       <h2>
                         En savoir plus sur nos <span>Admissions</span>
                       </h2>
@@ -583,7 +583,7 @@ const Accueil = () => {
                       <section className="departments-section">
                         <a href="#">Les Départements</a>
                         <div className="departments-content">
-                          <p>Santé, Informatique, GC, Industrielle et Agropastorale</p>
+                          <p>Santé, Informatique, GC, Industrielle et Agro-pastorale</p>
                         </div>
                       </section> 
                     </div>
@@ -661,7 +661,7 @@ const Accueil = () => {
                {/* Début Partenaires */}
 
               <section id="partenaires">
-                    <div className="titre">NOS PARTENAIRE</div>
+                    <div className="titre">NOS PARTENAIRES</div>
                     <div className="patner" style={{ width: "100%", margin: "auto" }}>
                       <Slider {...settings}>
                         {imageList.map((image, index) => (

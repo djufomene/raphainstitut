@@ -23,9 +23,6 @@ import FormPersonal from "./Pages/FormPersonal";
 import FormPrecedenteEducation from "./Pages/FormPrecedenteEducation";
 import Confirmation from "./Pages/Confirmation.jsx";
 
-
-
-
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Layout avec header et footer

@@ -1,3 +1,5 @@
+
+@use "sass:color";
 .content{
 margin-top: 100px;
 
@@ -202,7 +204,7 @@ margin-top: 100px;
           
           &:hover {
             background-color: #f0f0f0;
-            color: darken(#006400, 10%);
+            color: color.adjust(#006400, $lightness: -10%);
           }
         }
   

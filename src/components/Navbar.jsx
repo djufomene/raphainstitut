@@ -24,7 +24,7 @@ const Navbar = () => {
       name: 'Université', 
       path: '#',
       submenu: [
-        { name: 'Mots du Président', path: '/MotsPresident' },
+        { name: 'Mot du Président', path: '/MotsPresident' },
         { name: 'Nos Laboratoires', path: '/laboratoires' },
         { name: 'Logement', path: '/logement' },
         { name: 'Localisation', path: '/localisation' },

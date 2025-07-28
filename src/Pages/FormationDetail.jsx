@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { formations } from '../autres/formationsData';
 import DownloadButton from './DownloadButton';
-import "../styles/Detail.scss";
+import "../styles/FormationDetail.scss";
 
 const FormationDetail = () => {
   const { id } = useParams();
@@ -18,7 +18,8 @@ const FormationDetail = () => {
       { id: 'analyse-medicale', title: "Analyse Médicale et Technique de Laboratoire" },
       { id: 'imagerie-medicale', title: "Imagerie Médicale et Radiologie" },
       { id: 'science-pharmaceutique', title: "Science Pharmaceutique" },
-      { id: 'odontostomatologie', title: "Odontostomatologie" }
+      { id: 'Odontostomatologie', title: "Odontostomatologie" },
+      { id: 'Opticien-lunetier', title: "Opticien lunetier" }
     ],
     "Informatique & Communication": [
       { id: 'journalisme', title: "Journalisme" },
@@ -43,7 +44,31 @@ const FormationDetail = () => {
       { id: 'logistique-transport', title: "Logistique et Transport (GLT)" },
       { id: 'marketing-vente', title: "Marketing Commerce Vente (MCV)" },
       { id: 'ressources-humaines', title: "Ressources Humaines (RH)" }
-    ]
+    ],
+
+    "Génie Industriel": [
+      { id: 'Bâtiment', title: "Bâtiment" },
+      { id: 'Travaux-publique', title: "Travaux publique" },
+      { id: 'Géomètre-topographe', title: "Géomètre topographe" },
+      { id: 'Installation-sanitaire', title: "Installation sanitaire" },
+      { id: 'Froid-climatisation', title: "Froid et climatisation" },
+      { id: 'Energie-renouvelable', title: "Energie renouvelable" },
+      { id: 'Mécatronique', title: "Mécatronique" },
+      { id: 'Maintenance-après-vente-automobile', title: "Maintenance après vente automobile"},
+      { id: 'Maintenance-industrielle-productive', title: "Maintenance industrielle et productive" },
+      { id: 'Construction-mécanique', title: "Construction mécanique" },
+      { id: 'Construction-métallique', title: "Construction métallique" },
+      { id: 'Chaudronnerie-soudure', title: "Chaudronnerie et soudure" }
+    ],
+
+    "Agro Pastorale": [
+      { id: 'Production-végétale', title: "Production végétale" },
+      { id: 'Production-animale', title: "Production animale" },
+      { id: 'Entrepreneuriat-agro-pastorale', title: "Entrepreneuriat agro-pastorale" },
+      { id: 'Technique-commerciale-agricole', title: "Technique commerciale agricole" },
+      { id: 'Conseil-agro-pastorale', title: "Conseil agro-pastorale" },
+      { id: 'Energie-renouvelable', title: "Energie renouvelable" }
+    ],
   };
 
   const similarFormations = allFormationsByCategory[formation.category]?.filter(f => f.id !== id) || [];

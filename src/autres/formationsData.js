@@ -80,7 +80,7 @@ export const formations = [
         ]
       }
     ]
-  }, // ✅ virgule importante ici !
+  }, 
 
   {
     id: 'kinesitherapie',
@@ -605,7 +605,7 @@ export const formations = [
   },
 
   {
-    id: 'odontostomatologie',
+    id: 'Odontostomatologie',
     title: 'Odontostomatologie',
     category: 'Sciences Médico-sanitaire',
     content: [
@@ -644,6 +644,99 @@ export const formations = [
     ]
   },
 
+  {
+    id: 'Opticien-lunetier',
+    title: 'Opticien lunetier',
+    category: 'Sciences Médico-sanitaire',
+    content: [
+      {
+        number: '01',
+        title: 'OBJECTIF DE LA FORMATION',
+        content: `La formation d’Opticien-Lunetier forme des professionnels capables 
+        d'assurer la correction visuelle des patients à travers le choix, la fabrication, 
+        l’ajustement et la vente de lunettes ou de lentilles. Elle combine des connaissances
+         en optique, santé visuelle, commerce et relation client. Grâce à une approche 
+         équilibrée entre théorie, pratique en atelier et stages, l’étudiant développe 
+         les compétences techniques et humaines indispensables pour travailler en autonomie 
+         dans un magasin d’optique ou en collaboration avec des professionnels de la santé.`
+      },
+      {
+        number: '02',
+        title: 'COMPÉTENCES RECHERCHÉES',
+        content: {
+          generiques: {
+            titre: "• Compétences génériques",
+            items: [
+              "Travailler en équipe et communiquer efficacement",
+              "Gérer la relation client avec professionnalisme",
+              "Utiliser les outils numériques liés à la profession",
+              "Appliquer des procédures qualité et sécurité",
+              "Organiser son temps de travail et ses priorités",
+              "Rechercher l'information technique ou médicale utile",
+              "S’adapter aux évolutions technologiques et scientifiques",
+              "Agir de manière éthique et responsable"
+            ]
+          },
+          specifiques: {
+            titre: "• Compétences spécifiques",
+            items: [
+              "Réaliser un examen de vue non médical (réfraction)",
+              "Choisir et adapter les verres correcteurs selon l'ordonnance",
+              "Fabriquer, monter et ajuster des lunettes en atelier",
+              "Conseiller le client dans le choix de la monture",
+              "Réaliser la prise de mesure pour un confort optimal",
+              "Assurer le suivi post-vente (réglages, réparations)",
+              "Maîtriser les techniques de taillage et d’assemblage",
+              "Appliquer les normes d’optique et de santé visuelle",
+              "Gérer les stocks et les commandes de produits"
+            ]
+          }
+        }
+      },
+
+      {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Opticien en magasin d’optique",
+            "Responsable de point de vente",
+            "Monteur-lunetier en atelier",
+            "Technicien en laboratoire d’optique",
+            "Conseiller technique en matériel optique",
+            "Répétiteur ou formateur en école d’optique",
+            "Commercial en optique-lunetterie",
+            "Créateur ou repreneur de magasin d’optique"
+          ]
+        },
+
+        {
+          number: '04',
+          title: 'DURÉE DE LA FORMATION',
+          content: `La formation en Opticien-Lunetier s’étend sur deux ans 
+          dans le cadre d’un BTS ou HND. Elle inclut des enseignements en 
+          optique géométrique et physique, anatomie de l’œil, physiologie
+           de la vision, techniques de vente et gestion. Des ateliers 
+           pratiques permettent l’apprentissage du montage de lunettes, de 
+           la manipulation des verres et de l’utilisation des instruments de
+            mesure visuelle. Des stages professionnels sont prévus chaque année 
+            pour permettre l’intégration progressive dans le monde du travail.`
+        },
+
+        {
+          number: "05",
+          title: "Approches Pédagogiques",
+          content: [
+            "Ateliers pratiques de montage et d’ajustement de lunettes",
+            "Études de cas en relation client et conseil",
+            "Mises en situation réelle en laboratoire et en boutique",
+            "Visites pédagogiques chez des fournisseurs ou opticiens",
+            "Simulations de gestion commerciale et de stock",
+            "Stages pratiques en entreprise encadrés par des professionnels"
+          ]
+        }
+    ]
+  },
+
     {
       id: "journalisme",
       title: "Journalisme",
@@ -669,7 +762,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: {
-              titre: "Compétences Génériques",
+              titre: "• Compétences Génériques",
               items: [
                  "Maîtrise des techniques d’écriture journalistique ",
                  "Capacité d’analyse et de synthèse des événements, avec un regard critique sur l’actualité.",
@@ -685,7 +778,7 @@ export const formations = [
                 ]
             },
             specifiques: {
-              titre: "Compétences Spécifiques",
+              titre: "• Compétences Spécifiques",
               items: ["Rédiger des articles pour la presse écrite, radio, télévision et médias numériques.",
                      "Réaliser des interviews, reportages, enquêtes et analyses.",
                      "Maîtriser les outils numériques et les plateformes de diffusion en ligne.",
@@ -757,7 +850,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Maîtrise des principes de base des systèmes de télécommunication.",
                 "Connaissance des normes et des réglementations du secteur des télécommunications.",
@@ -774,7 +867,7 @@ export const formations = [
 
               ] },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Maîtrise des technologies de transmission de données (fibre optique, DSL, etc.).",
                 "Conception et installation de réseaux locaux et étendus.",
@@ -837,6 +930,94 @@ export const formations = [
     },
 
     {
+      id: "reseau-securite",
+      title: "Réseau et Sécurité informatique",
+      category: "Informatique & Communication",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Réseaux et Sécurité prépare des techniciens capables de concevoir, configurer, administrer et sécuriser des réseaux informatiques d’entreprises ou d’organisations. Elle répond aux besoins croissants de protection des données et de continuité des services numériques. Grâce à une combinaison de théorie, de pratique et de stages professionnels, les apprenants développent des compétences essentielles pour intervenir sur des infrastructures modernes, tout en assurant leur sécurité face aux cybermenaces, aux pannes et aux intrusions."
+        },
+
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Analyser un besoin technique et proposer une solution adaptée",
+                "Travailler en équipe et en autonomie",
+                "Utiliser efficacement les outils numériques et logiciels professionnels",
+                "Résoudre des problèmes techniques avec méthode",
+                "Mettre en œuvre une veille technologique",
+                "Appliquer les règles de sécurité et de confidentialité",
+                "Gérer un projet technique de manière structurée",
+                "Documenter ses travaux de manière claire et professionnelle",
+                "Adapter ses actions aux évolutions technologiques"
+
+              ] },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+               "Concevoir une architecture réseau adaptée à une organisation",
+               "Installer, configurer et administrer des serveurs (Linux/Windows)",
+               "Mettre en œuvre une politique de sécurité réseau (pare-feu, VPN, etc.)",
+               "Assurer la sécurité des postes clients et des données",
+               "Diagnostiquer les dysfonctionnements réseau et les corriger",
+               "Implémenter des VLANs, routage, commutation et NAT",
+               "Mettre en place des systèmes de détection d’intrusion (IDS/IPS)",
+               "Gérer les droits d’accès et les comptes utilisateurs",
+               "Effectuer des sauvegardes et restaurations sécurisées",
+               "Utiliser des outils d’analyse de trafic et de performance réseau"
+              ] }
+          }
+        },
+
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien réseau",
+            "Administrateur systèmes et réseaux",
+            "Technicien en cybersécurité",
+            "Assistant ingénieur sécurité informatique",
+            "Support technique en environnement réseau",
+            "Consultant en réseau et sécurité",
+            "Responsable informatique en PME",
+            "Formateur en réseau et sécurité"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "DURÉE DE LA FORMATION",
+          content:  `La formation en Réseaux et Sécurité dure deux ans, dans le
+           cadre d’un BTS ou HND. Elle alterne cours théoriques, travaux pratiques 
+           et stages professionnels. Le programme comprend des modules sur les systèmes 
+           d’exploitation, la configuration des équipements réseau, la cybersécurité, 
+           les protocoles de communication, la gestion des incidents, et l’administration
+            de serveurs. Un stage en entreprise est prévu chaque année afin de favoriser
+             l’immersion professionnelle et la maîtrise des outils réels du métier.`
+        },
+
+        {
+          number: "05",
+          title: "APPROCHES PÉDAGOGIQUES",
+          content: [
+            "Apprentissage par projets (infrastructure réseau, audits de sécurité, etc.)",
+            "Simulations et virtualisation d’environnements réseau",
+            "Travaux pratiques en salle spécialisée (serveurs, routeurs, firewalls)",
+            "Cours interactifs et études de cas réels",
+            "Stage en entreprise et retour d’expérience en classe",
+            "Veille technologique et présentation de solutions innovantes"
+          ]
+        }
+      ]
+    },
+
+    {
       id: "gestion-systeme-information",
       title: "Gestion-Systeme-Information",
       category: "Informatique & Communication",
@@ -851,7 +1032,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: {
-               titre: "Compétences Génériques", 
+               titre: "• Compétences Génériques", 
                items: [
                 "Analyse des besoins d’information d’une organisation.",
                 "Gestion de projets informatiques.",
@@ -868,7 +1049,7 @@ export const formations = [
                ] 
               },
             specifiques: { 
-              titre: "Compétences Spécifiques",
+              titre: "• Compétences Spécifiques",
                items: [
                 " Conception et déploiement des systèmes d’information.",
                 "Gestion des bases de données relationnelles et non relationnelles.",
@@ -943,7 +1124,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Création d’illustrations numériques.",
                 "Conception de maquettes et prototypes web",
@@ -961,7 +1142,7 @@ export const formations = [
                 "Rédaction et documentation des projets de design"
               ] },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
                items: [
                 "Conception et création de sites web responsives.",
                 "Maîtrise des langages de programmation front-end (HTML, CSS, JavaScript).",
@@ -1035,7 +1216,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Créativité et innovation",
                 "Analyse critique des données",
@@ -1053,7 +1234,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Gestion de boutique en ligne (Shopify, WooCommerce)",
                 "SEO (Optimisation pour les moteurs de recherche)",
@@ -1090,7 +1271,7 @@ export const formations = [
           ]
         },
 
-{
+        {
           number: "04",
           title: "Durée de la Formation",
           content: "La formation s’étend sur 6 à 12 mois, avec un mix de cours théoriques, d’ateliers pratiques, de projets concrets et de stages en entreprise pour une immersion professionnelle optimale."
@@ -1129,7 +1310,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques",
+              titre: "• Compétences Génériques",
                items: [
                 "Résolution de problèmes",
                 "Travail en équipe",
@@ -1147,7 +1328,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Lecture de schémas techniques biomédicaux",
                 "Diagnostic des pannes sur appareils médicaux",
@@ -1217,7 +1398,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Sens des responsabilités",
                 "Rigueur et méthode",
@@ -1235,7 +1416,7 @@ export const formations = [
               ] 
             },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
                items: [
                 " Évaluation des risques professionnels (document unique)",
                 "Conformité aux normes ISO 45001 et ISO 14001",
@@ -1307,7 +1488,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: {
-              titre: "Compétences Génériques",
+              titre: "• Compétences Génériques",
               items: [
                 "Analyse et synthèse d'informations complexes",
                  "Négociation et persuasion",
@@ -1326,7 +1507,7 @@ export const formations = [
                 ]
             },
             specifiques: {
-              titre: "Compétences Spécifiques",
+              titre: "• Compétences Spécifiques",
               items: [
                 "Maîtrise des produits d'assurance dommages",
                  "Expertise en assurance de personnes",
@@ -1397,7 +1578,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: {
-               titre: "Compétences Génériques", 
+               titre: "• Compétences Génériques", 
                items: [
                 "Excellente communication client",
                 "Capacité d'analyse financière",
@@ -1416,7 +1597,7 @@ export const formations = [
               ] 
             },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
                items: [
                 "Gestion de compte client",
                 "Analyse de solvabilité",
@@ -1489,7 +1670,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Maîtrise des langues étrangères (anglais + 2e langue)",
                 "Adaptabilité interculturelle",
@@ -1508,7 +1689,7 @@ export const formations = [
               ] 
             },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
               items: [
                 "Techniques de prospection export",
                 "Maîtrise des Incoterms 2020",
@@ -1581,7 +1762,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Excellente expression écrite et orale",
                 "Créativité et innovation",
@@ -1599,7 +1780,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Stratégie de communication globale",
                 "Conception de supports print et digital",
@@ -1669,7 +1850,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Rigueur et précision",
                 "Sens de l'organisation",
@@ -1686,7 +1867,7 @@ export const formations = [
               ]
              },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Saisie comptable informatisée",
                 "Établissement des documents fiscaux",
@@ -1756,7 +1937,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Maîtrise des langues étrangères",
                 "Sens de l'organisation",
@@ -1771,7 +1952,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Maîtrise du code des douanes",
                 "Classification tarifaire (SH)",
@@ -1845,7 +2026,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Rigoureuse analyse juridique",
                 "Maîtrise de la documentation légale",
@@ -1864,7 +2045,7 @@ export const formations = [
               ]
              },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
                items: [
                 "Droit des sociétés (création, modification, dissolution)",
                 "Droit fiscal des entreprises",
@@ -1938,7 +2119,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Rigoureuse analyse des processus",
                 "Excellente organisation méthodique",
@@ -1957,7 +2138,7 @@ export const formations = [
               ] 
             },
             specifiques: {
-               titre: "Compétences Spécifiques", 
+               titre: "• Compétences Spécifiques", 
               items: [
                "Maîtrise des normes ISO 9001",
                 "Audit qualité interne",
@@ -2033,7 +2214,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Analyse rigoureuse des textes fiscaux",
                 "Rédaction précise de documents fiscaux",
@@ -2052,7 +2233,7 @@ export const formations = [
               ]
              },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Maîtrise du Code Général des Impôts",
                 "Fiscalité des sociétés (IS, CVAE)",
@@ -2122,7 +2303,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Organisation et planification rigoureuse",
                 "Faire preuve de rigueur dans l'organisation du travail et une capacité de réactivité et de créativité ",
@@ -2139,7 +2320,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Gestion des stocks et inventaires",
                 "Optimisation des tournées",
@@ -2212,7 +2393,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Sens commercial développé",
                 "Excellente communication verbale",
@@ -2230,7 +2411,7 @@ export const formations = [
               ] 
             },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
              
                 "Gestion de portefeuille clients",
@@ -2299,7 +2480,7 @@ export const formations = [
           title: "Compétences visées",
           content: {
             generiques: { 
-              titre: "Compétences Génériques", 
+              titre: "• Compétences Génériques", 
               items: [
                 "Excellente communication interpersonnelle",
                 "Discrétion et éthique professionnelle",
@@ -2317,7 +2498,7 @@ export const formations = [
                  ]
              },
             specifiques: { 
-              titre: "Compétences Spécifiques", 
+              titre: "• Compétences Spécifiques", 
               items: [
                 "Gestion des paies et déclarations sociales",
                 "Conduite de processus de recrutement",
@@ -2369,5 +2550,1412 @@ export const formations = [
         }
       ]
     },
+
+     {
+      id: "Bâtiment",
+      title: "Bâtiment",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en bâtiment prépare les étudiants aux métiers de la construction, de la rénovation et de la gestion de chantiers. Elle couvre les techniques de maçonnerie, de lecture de plans, d’utilisation de matériaux, ainsi que les normes de sécurité et d’urbanisme. Les apprenants acquièrent des compétences pratiques et théoriques pour intégrer le secteur du bâtiment, en tant que techniciens, chefs d’équipe ou entrepreneurs. Cette formation offre de nombreuses perspectives dans un domaine en constante évolution et essentiel au développement des infrastructures."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communication efficace (orale et écrite)",
+                "Travail en équipe",
+                "Gestion du temps",
+                "Sens de l’organisation",
+                "Résolution de problèmes",
+                "Autonomie et esprit d’initiative",
+                "Capacité d’adaptation",
+                "Respect des consignes et des règles de sécurité",
+                "Lecture et interprétation de documents techniques",
+                "Rigueur et précision dans l’exécution des tâches",
+                "Esprit d'initiative"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Lire et interpréter des plans et schémas techniques",
+                "Réalisation de travaux de maçonnerie (fondations, murs, dalles)",
+                "Utilisation des outils et équipements de chantier",
+                "Application des techniques de coffrage et de ferraillage",
+                "Pose de revêtements (carrelage, peinture, plâtrerie)",
+                "Mise en œuvre des matériaux de construction (béton, briques, bois)",
+                "Installation de structures métalliques ou en bois",
+                "Maîtrise des normes de construction et de sécurité",
+                "Contrôle de la qualité des ouvrages réalisés",
+                "Organisation et suivi des travaux sur un chantier"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Entrepreneur en BTP",
+            "Chef de chantier",
+            "Ouvrier polyvalent du bâtiment",
+            "Dessinateur en bâtiment",
+            "Maçon",
+            "Technicien en bâtiment",
+            "Conducteur de travaux"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en bâtiment s’étend généralement sur une durée de deux. Elle alterne des enseignements théoriques dispensés en centre de formation et des périodes de stage ou d’apprentissage en entreprise, permettant aux apprenants d’acquérir une solide expérience pratique sur le terrain. Cette durée est pensée pour permettre une maîtrise progressive des compétences techniques, organisationnelles et réglementaires essentielles aux métiers du bâtiment."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "L’approche par compétences",
+            "L’apprentissage par projet ",
+            "La formation en alternance",
+            "Les mises en situation professionnelle",
+            "L’utilisation des outils numériques"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Travaux-publique",
+      title: "Travaux publique",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Travaux Publics forme des professionnels capables de concevoir, construire et entretenir des infrastructures telles que routes, ponts, réseaux d’eau, ou encore ouvrages d’assainissement. Elle allie connaissances techniques, maîtrise des matériaux et gestion de chantier. Les apprenants acquièrent des compétences pratiques et théoriques indispensables pour évoluer dans un secteur dynamique et essentiel au développement des territoires. Cette formation offre de nombreuses opportunités dans le domaine de la construction et des infrastructures publiques."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Travailler en équipe sur un chantier",
+                "Respecter les règles de sécurité et de prévention",
+                "Communiquer efficacement à l’oral et à l’écrit",
+                "Résoudre des problèmes techniques",
+                "Organiser son travail de manière autonome",
+                "S’adapter à différents environnements de travail",
+                "Utiliser les outils numériques de base",
+                "Gérer le temps et les priorités",
+                "Développer une conscience professionnelle et écologique"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Réaliser des travaux de terrassement et de nivellement",
+                "Construire et entretenir les voiries et réseaux divers (VRD)",
+                "Maîtriser l’utilisation des engins de chantier",
+                "Mettre en œuvre les matériaux (béton, enrobés, etc.)",
+                "Poser des canalisations et réseaux d’assainissement",
+                "Lire des plans topographiques et les exploiter sur le terrain",
+                "Contrôler la qualité des ouvrages réalisés",
+                "Appliquer les normes techniques et réglementaires en vigueur",
+                "Organiser un chantier de travaux publics",
+                "Utiliser des logiciels spécifiques (AutoCAD, Covadis, etc.)"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Conducteur(trice) de travaux publics",
+            "Technicien(ne) en voirie et réseaux divers (VRD)",
+            "Chef(fe) de chantier",
+            "Canalisateur(trice)",
+            "Opérateur(trice) d’engins de chantier",
+            "Dessinateur(trice) en bureau d’études",
+            "Agent de maîtrise dans une collectivité locale"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Travaux Publics dure généralement de deux à trois ans, selon le niveau visé (CAP, Bac Pro, BTS). Elle combine des enseignements théoriques, techniques et pratiques, avec des périodes en entreprise sous forme de stages ou d’alternance. Cette durée permet d’acquérir les compétences indispensables à la conduite et à la réalisation des ouvrages de travaux publics. Elle favorise une immersion progressive dans le monde professionnel et garantit une employabilité rapide à la sortie de la formation."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Alternance théorie/pratique",
+            "Pédagogie par projet",
+            "Utilisation de maquettes et plans réels",
+            "Apprentissage sur simulateurs d’engins ",
+            "Visites de chantiers et interventions de professionnels"
+          ]
+        }
+      ]
+    },
+    
+
+    {
+      id: "Géomètre-topographe",
+      title: "Géomètre topographe",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "Présentation de la formation en Géomètre-topographe (80 mots). La formation en Géomètre-topographe prépare les apprenants à mesurer, analyser et représenter les éléments d’un terrain ou d’un espace construit. Elle allie précision, rigueur et technologies avancées (GPS, drones, logiciels DAO). Ce métier est au cœur de nombreux projets d’aménagement, de construction et de gestion foncière. Les étudiants acquièrent des compétences techniques solides, ainsi qu'une bonne maîtrise des outils numériques. Cette formation ouvre la voie à une carrière dans les secteurs du bâtiment, des travaux publics, ou de la cartographie."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "Compétences Génériques", 
+              items: [
+                "Travailler en équipe sur le terrain ou en bureau d’études",
+                "Lire et interpréter des plans topographiques",
+                "Maîtriser la communication orale et écrite",
+                "Utiliser des outils numériques professionnels",
+                "Respecter les normes de qualité et de sécurité",
+                "Gérer son temps et ses priorités",
+                "Résoudre des problèmes techniques et méthodologiques",
+                "Gérer le temps et les priorités"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "Compétences Spécifiques", 
+              items: [
+                "Réaliser des relevés topographiques de précisiont",
+                "Utiliser des instruments de mesure (théodolite, GPS, station totale, niveau)",
+                "Exploiter des données géospatiales",
+                "Effectuer des levés fonciers et cadastraux",
+                "Établir des documents techniques pour les projets d’aménagement",
+                "Réaliser des implantations d’ouvrages",
+                "Interpréter les résultats de mesures et les vérifier",
+                "Utiliser des logiciels spécifiques (AutoCAD, Covadis, etc.)"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Géomètre-topographe",
+            "Technicien(ne) SIG (Systèmes d’Information Géographique)",
+            "Dessinateur(trice) DAO/CAO",
+            "Cadastreur(se)",
+            "Technicien(ne) en bureau d'études",
+            "Assistant(e) d'ingénieur en BTP",
+            "Expert(e) foncier(ère) (avec expérience ou spécialisation)"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Géomètre-topographe s’étale généralement sur deux à trois ans, en fonction du niveau visé (BEP, Bac Pro, BTS ou équivalent). Elle comprend des cours théoriques, des travaux pratiques et des stages en entreprise. Cette durée permet aux apprenants de maîtriser les instruments de mesure, les logiciels spécialisés ainsi que les bases juridiques liées à la propriété foncière. L’alternance entre théorie et terrain favorise l’acquisition de compétences solides et directement applicables dans le monde professionnel."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Sorties topographiques sur le terrain",
+            "Travaux pratiques en atelier ou laboratoire ",
+            "Études de cas et projets d’aménagement réels",
+            "Visites de bureaux d’études, cadastres ou chantiers",
+            "Simulations et travaux en binôme ou équipe : pour développer la collaboration et la rigueur."
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Installation-sanitaire",
+      title: "Installation sanitaire",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Installation-sanitaire forme des professionnels capables de concevoir, installer, entretenir et réparer les systèmes de distribution d’eau potable, d’évacuation des eaux usées, et d’équipements sanitaires. Elle met l’accent sur la maîtrise des techniques de plomberie, le respect des normes d’hygiène et de sécurité, et la lecture de plans. Très pratique, cette formation prépare les apprenants à intervenir sur des chantiers de construction neuve, de rénovation ou de maintenance dans les secteurs résidentiels, industriels et publics."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Lire et interpréter des plans et schémas techniques",
+                "Travailler en autonomie ou en équipe",
+                "Respecter les règles de sécurité et d’hygiène",
+                "S’organiser efficacement sur un chantier",
+                "Gérer le temps et respecter les délais",
+                "Utiliser des outils et équipements de manière appropriée",
+                "Communiquer efficacement avec les clients et collègues",
+                "Suivre les consignes et procédures",
+                "Être rigoureux et professionnel dans l’exécution du travail"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Installer des équipements sanitaires (lavabos, douches, WC, chauffe-eaux)",
+                "Réaliser des réseaux d’alimentation et d’évacuation d’eau",
+                "Effectuer des soudures et des raccordements",
+                "Poser des canalisations en PVC, cuivre, PER, multicouche",
+                "Détecter et réparer les fuites ou dysfonctionnements",
+                "Réaliser des tests d’étanchéité et de pression",
+                "Assurer l’entretien préventif des installations",
+                "Conseiller les clients sur les solutions techniques et économiques"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Installateur(trice) sanitaire",
+            "Technicien(ne) de maintenance en plomberie",
+            "Monteur(se) en installations thermiques",
+            "Chef(fe) d’équipe en plomberie (après expérience)",
+            "Technicien(ne) en entreprise de BTP ou d’entretien immobilier",
+            "Ouvrier(ère) du bâtiment (spécialité plomberie-sanitaire)",
+            "Plombier(ère)"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Installation-sanitaire dure généralement de 1 à 2 ans, selon le niveau (Certificat ou Diplôme Professionnel, CAP, Bac Pro, ou équivalent). Elle alterne cours théoriques et pratiques en atelier, avec des périodes de stage en entreprise pour une immersion concrète sur le terrain. Cette durée permet d’acquérir les connaissances techniques, les gestes professionnels et les normes réglementaires nécessaires pour exercer dans les domaines du bâtiment, de la rénovation et de la maintenance."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Ateliers pratiques de plomberie et soudure",
+            "Études de cas réels",
+            "Mises en situation sur maquettes et chantiers école",
+            "Visites de chantiers et entreprises partenaires",
+            "Utilisation de supports visuels et schémas techniques"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Froid-climatisation",
+      title: "Froid et climatisation",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Froid-climatisation prépare des techniciens capables d’installer, entretenir et dépanner des systèmes frigorifiques et de climatisation. Elle couvre les principes du froid industriel, commercial et domestique, ainsi que les systèmes de climatisation et de ventilation. L'accent est mis sur la maîtrise des normes environnementales et de sécurité, la lecture de plans techniques et la régulation thermique. Très demandée, cette formation conduit à des emplois dans divers secteurs : bâtiment, commerce, industrie ou services."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Appliquer les règles d’hygiène, de sécurité et environnementales",
+                "Travailler en autonomie ou en équipe",
+                "Gérer efficacement son temps de travail",
+                "Communiquer avec les clients et les collègues",
+                "Résoudre des pannes ou dysfonctionnements",
+                "Organiser et planifier une intervention",
+                "Suivre des procédures et des protocoles techniques",
+                "S’adapter à différents environnements de travail",
+                "Être rigoureux et précis dans les interventions"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Installer des systèmes de froid commercial, domestique et industriel",
+                "Monter et raccorder les équipements frigorifiques",
+                "Assurer l’entretien préventif des installations",
+                "Manipuler les fluides frigorigènes dans le respect des normes",
+                "Régler les paramètres de température et d’humidité",
+                "Contrôler l’étanchéité des circuits frigorifiques",
+                "Lire des plans d’installation et des notices techniques",
+                "Appliquer les réglementations en vigueur (F-Gaz, sécurité électrique, etc.)"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Frigoriste",
+            "Installateur(trice) de systèmes de froid industriel",
+            "Climaticien(ne)",
+            "Technicien(ne) en froid commercial",
+            "Monteur(se) en équipements thermiques",
+            "Chef(fe) d’équipe maintenance (avec expérience)",
+            "Entrepreneur en froid et climatisation"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Froid-climatisation s’étend généralement sur 1 à 2 ans, selon le niveau visé (CAP, Bac Pro, Brevet de Technicien ou équivalent). Elle alterne cours théoriques, travaux pratiques en atelier et périodes de stage en entreprise. Cette durée permet aux apprenants d’acquérir les fondamentaux techniques du froid et de la climatisation, de maîtriser les outils et matériaux spécifiques, ainsi que de respecter les normes environnementales et sécuritaires exigées par la profession."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques en atelier de froid et climatisation",
+            "Études de cas techniques et diagnostics de pannes",
+            "Mises en situation réelle sur chantiers école ou en entreprise",
+            "Utilisation de logiciels de régulation thermique",
+            "Visites techniques de sites industriels ou commerciaux",
+            "Cours interactifs avec supports visuels et vidéos techniques"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Energie-renouvelable",
+      title: "Energie renouvelable",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formatiechniciens capables d’installer, entretenir et dépanner des systèmes frigorifiques et de climatisation. Elle couvre les principes du froid industriel, commercial et domestique, ainsi que les systèmes de climatisation et de ventilation. L'accent est mis sur la maîtrise des normes environnementales et de sécurité, la lecture de plans techniques et la régulation thermique. Très demandée, cette formation conduit à des emplois dans divers secteurs : bâtiment, commerce, industrie ou services."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Appliquer les règles d’hygiène, de sécurité et environnementales",
+                "Travailler en autonomie ou en équipe",
+                "Gérer efficacement son temps de travail",
+                "Communiquer avec les clients et les collègues",
+                "Résoudre des pannes ou dysfonctionnements",
+                "Organiser et planifier une intervention",
+                "Suivre des procédures et des protocoles techniques",
+                "S’adapter à différents environnements de travail",
+                "Être rigoureux et précis dans les interventions"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Installer des panneaux solaires photovoltaïques et thermiques",
+                "Dimensionner un système solaire ou éolien",
+                "Mettre en service et optimiser les performances d’une installation",
+                "Intégrer un système renouvelable à un réseau électrique ou thermique",
+                "Maîtriser les logiciels de simulation énergétique",
+                "Réaliser un audit énergétique d’un bâtiment",
+                "Sélectionner les composants adaptés aux besoins d’un site",
+                "Promouvoir les énergies renouvelables auprès des usagers"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien en énergie solaire",
+            "Installateur de systèmes photovoltaïques",
+            "Chargé de maintenance d’installations solaires ou éoliennes",
+            "Assistant d’ingénieur en efficacité énergétique",
+            "Électricien spécialisé en autoconsommation",
+            "Entrepreneur en énergies renouvelables",
+            "Chef de chantier en installation thermique"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Énergie Renouvelable s’étale sur 1 à 2 ans, selon le diplôme visé (CAP, BTS, Licence professionnelle, etc.). Elle alterne des enseignements théoriques (électricité, thermique, environnement, réglementation) avec des travaux pratiques sur maquettes et équipements réels. Des stages en entreprise permettent aux apprenants de mettre en œuvre leurs compétences sur le terrain."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques sur équipements solaires, éoliens et hydrauliques",
+            "Simulation de dimensionnement et d’optimisation énergétique",
+            "Études de cas sur des projets durables réels",
+            "Stages en entreprise et immersion professionnelle",
+            "Cours interactifs et démonstrations en laboratoire",
+            "Participation à des ateliers et séminaires sur l’énergie verte"
+          ]
+        }
+      ]
+    },
+
+    
+
+    {
+      id: "Mécatronique",
+      title: "Mécatronique",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Mécatronique prépare des techniciens polyvalents capables d'intervenir à l’interface entre la mécanique, l’électronique, l’automatique et l’informatique industrielle. Elle vise à concevoir, installer, programmer, entretenir et réparer des systèmes automatisés complexes. Grâce à une approche multidisciplinaire, les apprenants développent des compétences techniques pointues, adaptées aux secteurs de l’industrie 4.0. Cette formation répond aux besoins croissants d'automatisation dans les domaines industriels, robotiques, automobiles, aéronautiques et de l’électromécanique."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Travailler en équipe multidisciplinaire",
+                "Appliquer les règles de sécurité au travail",
+                "Planifier des tâches de maintenance ou d’intervention",
+                "Analyser un problème technique et proposer des solutions",
+                "Utiliser des logiciels de CAO/DAO et de simulation",
+                "S’adapter aux nouvelles technologies",
+                "Gérer les priorités et respecter les délais",
+                "Être rigoureux et méthodique dans l’exécution des tâches"
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Concevoir des systèmes mécatroniques intégrant plusieurs disciplines",
+                "Programmer des automates programmables industriels (API/PLC)",
+                "Diagnostiquer et réparer des pannes électromécaniques",
+                "Assembler et tester des systèmes robotisés",
+                "Intégrer des capteurs, actionneurs et interfaces de commande",
+                "Utiliser des logiciels de supervision (SCADA, HMI)",
+                "Réaliser la maintenance préventive et corrective de systèmes automatisés",
+                "Lire et modifier un programme en langage ladder ou structuré",
+                "Optimiser la performance énergétique des systèmes automatisés",
+                "Intervenir sur des systèmes électropneumatiques et électrohydrauliques"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien en automatisme",
+            "Technicien de maintenance industrielle",
+            "Roboticien",
+            "Intégrateur de systèmes mécatroniques",
+            "Opérateur en ligne automatisée",
+            "Développeur en systèmes embarqués",
+            "Contrôleur qualité en production automatisée"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Mécatronique s’étale généralement sur 2 ans pour un diplôme de type BTS ou HND. Elle comprend des enseignements théoriques en mécanique, électronique, programmation et contrôle/commande, ainsi que de nombreux travaux pratiques en laboratoire. Des périodes de stage en entreprise permettent de renforcer l’expérience terrain. Cette durée permet aux étudiants de développer les compétences techniques et professionnelles nécessaires pour intégrer efficacement le secteur industriel ou technologique."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Projets intégrés combinant mécanique, électronique et programmation",
+            "Simulations virtuelles de systèmes automatisés",
+            "Travaux pratiques sur bancs didactiques et robots industriels",
+            "Apprentissage par problèmes (Problem-Based Learning)",
+            "Stages pratiques en milieu industriel",
+            "Cours interactifs appuyés par des démonstrations techniques"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Maintenance-après-vente-automobile",
+      title: "Maintenance après-vente automobile",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Maintenance Après-Vente Automobile forme des techniciens capables d’assurer l’entretien, le diagnostic, la réparation et le suivi des véhicules automobiles modernes. Elle intègre les nouvelles technologies embarquées, l’électronique automobile et les méthodes de gestion de la relation client. Cette formation allie savoir-faire technique et compétences commerciales, afin de répondre aux exigences du secteur automobile, notamment dans les garages, concessions, et centres de services techniques agréés."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communiquer efficacement avec l’équipe et la clientèle",
+                "Travailler dans le respect des règles d’hygiène et de sécurité",
+                "Gérer son temps et ses priorités",
+                "Faire preuve de rigueur et de précision",
+                "Utiliser des outils informatiques de diagnostic",
+                "Travailler en autonomie ou en équipe",
+                "Rédiger des rapports d'intervention clairs",
+                "Respecter les normes environnementales",
+                "Adapter ses compétences aux évolutions technologiques"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Réaliser la maintenance préventive et corrective des véhicules",
+                "Diagnostiquer les pannes mécaniques, électriques ou électroniques",
+                "Utiliser des outils de diagnostic électronique automobile",
+                "Interpréter les codes défauts et schémas de câblage",
+                "Contrôler et régler les systèmes de freinage, direction, suspension",
+                "Entretenir les moteurs thermiques, hybrides ou électriques",
+                "Gérer la réception et le suivi des véhicules clients",
+                "Remplacer et paramétrer les pièces et systèmes défectueux"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien de maintenance automobile",
+            "Chef d’atelier ou de garage",
+            "Technicien en diagnostic électronique",
+            "Réceptionnaire après-vente",
+            "Mécanicien automobile spécialisé",
+            "Mécanicien automobile spécialisé",
+            "Responsable SAV dans une concession"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Maintenance Après-Vente Automobile s’étend sur 2 années, avec des cours théoriques et pratiques répartis entre enseignements techniques, diagnostics, électronique embarquée et gestion de la relation client. Elle comprend également plusieurs périodes de stage en entreprise pour consolider les compétences sur le terrain. Cette durée permet aux étudiants de devenir opérationnels dès la fin de la formation, et de s’adapter aux exigences des nouvelles générations de véhicules."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques en atelier sur véhicules réels",
+            "Études de cas de diagnostics et de pannes réelles",
+            "Utilisation de simulateurs et bancs de test électroniques",
+            "Projets collaboratifs de réparation avec gestion client simulée",
+            "Stages en concessions ou centres techniques agréés",
+            "Visites pédagogiques chez des constructeurs ou équipementiers"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Maintenance-industrielle-productive",
+      title: "Maintenance industrielle productive",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Maintenance Industrielle Productive forme des techniciens capables d'assurer la continuité de production des équipements industriels. Elle allie des compétences en mécanique, électricité, automatisme et hydraulique afin d’intervenir efficacement en cas de panne ou pour des opérations préventives. Ce programme répond aux besoins croissants des industries en personnels qualifiés pour maintenir et optimiser leurs outils de production, dans le respect des normes de sécurité, de qualité et de performance énergétique."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Lire et interpréter des plans, schémas et notices techniques",
+                "Utiliser les logiciels de GMAO (Gestion de Maintenance Assistée par Ordinateur)",
+                "Appliquer les règles de sécurité et de prévention des risques",
+                "Travailler efficacement en équipe pluridisciplinaire",
+                "S’adapter aux nouvelles technologies industrielles",
+                "Gérer les priorités en situation d’urgence",
+                "Respecter les procédures qualité",
+                "Analyser les performances des équipements",
+                "Planifier et organiser les activités de maintenance"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Diagnostiquer des pannes sur des équipements industriels",
+                "Réaliser la maintenance préventive et corrective",
+                "Intervenir sur des systèmes automatisés (PLC, capteurs, actionneurs)",
+                "Effectuer des travaux de maintenance en électricité industrielle",
+                "Régler des systèmes mécaniques, hydrauliques et pneumatiques",
+                "Interpréter des résultats de tests de fonctionnement",
+                "Mettre à jour la documentation technique après intervention",
+                "Réaliser des opérations de lubrification, de graissage, de remplacement",
+                "Former les opérateurs à l’entretien de premier niveau"
+                
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien de maintenance industrielle",
+            "Responsable maintenance",
+            "Technicien en automatisme industriel",
+            "Responsable GMAO",
+            "Électromécanicien industriel",
+            "Consultant en amélioration des performances industrielles",
+            "Technicien de service après-vente industriel"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Maintenance Industrielle Productive s’étale sur 2 ans, incluant des cours théoriques, des travaux pratiques et des stages en entreprise. Elle est structurée pour permettre une montée en compétences progressive dans les domaines de la mécanique, de l’électrotechnique, de l'automatisme et de la gestion de maintenance. L’alternance entre école et terrain garantit une excellente insertion professionnelle à l’issue de la formation."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques sur équipements industriels réels",
+            "Mises en situation de diagnostic de pannes",
+            "Études de cas de maintenance prédictive et corrective",
+            "Utilisation de logiciels GMAO et de simulation",
+            "Projets de groupe axés sur l’amélioration continue",
+            "Stages en milieu industriel pour immersion professionnelle"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Construction-mécanique",
+      title: "Construction mécanique",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Construction Mécanique prépare des techniciens capables de concevoir, fabriquer, assembler et contrôler des pièces ou ensembles mécaniques utilisés dans les industries. Elle combine des enseignements en dessin technique, résistance des matériaux, fabrication assistée par ordinateur (FAO), et procédés d’usinage. Grâce à cette formation polyvalente, les apprenants développent des compétences en conception et en production industrielle, répondant aux besoins croissants de l’industrie mécanique, de l’aéronautique, de l’automobile, et de la fabrication de machines."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Lire et interpréter des plans techniques",
+                "Utiliser les outils numériques et logiciels de conception",
+                "Communiquer efficacement dans un contexte professionnel",
+                "Analyser un cahier des charges technique",
+                "Utiliser des logiciels techniques (CAO/DAO)",
+                "Suivre des procédures de qualité",
+                "Travailler en équipe et en atelier",
+                "Gérer son temps et ses priorités"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Réaliser des dessins techniques 2D/3D avec des logiciels de CAO (SolidWorks, AutoCAD)",
+                "Dimensionner des pièces mécaniques selon les contraintes fonctionnelles",
+                "Choisir les matériaux et procédés de fabrication adaptés",
+                "Mettre en œuvre les procédés de soudage, usinage, ajustage",
+                "Vérifier la conformité des pièces fabriquées (contrôle qualité)",
+                "Monter, assembler et ajuster des systèmes mécaniques",
+                "Utiliser des machines-outils conventionnelles ou à commande numérique",
+                "Concevoir et assembler des systèmes mécaniques complexes"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien en bureau d'études mécaniques",
+            "Dessinateur industriel",
+            "Technicien de fabrication ou de production",
+            "Contrôleur qualité en mécanique",
+            "Chef d’atelier mécanique",
+            "Technicien en maintenance de machines industrielles",
+            "Responsable de ligne de production"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Construction Mécanique se déroule généralement sur 2 années, avec une alternance entre cours théoriques (résistance des matériaux, conception mécanique, métrologie), travaux pratiques en atelier et stages en entreprise. Cette durée permet aux étudiants d'acquérir les bases scientifiques et techniques nécessaires pour concevoir et réaliser des pièces mécaniques complexes dans un environnement industriel, en conformité avec les normes et standards internationaux."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Utilisation de logiciels de CAO/DAO et FAO",
+            "Études de cas industriels réels",
+            "Projets de conception et réalisation d’ensembles mécaniques",
+            "Immersion professionnelle via des stages en atelier",
+            "Visites d’usines et rencontres avec des professionnels du secteur",
+            "Évaluations par compétences et présentations de projets"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Construction-métallique",
+      title: "Construction métallique",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Construction Métallique forme des techniciens qualifiés dans la conception, la fabrication, l’assemblage et la maintenance des structures métalliques (charpentes, passerelles, hangars, etc.). Elle combine des connaissances en dessin technique, résistance des matériaux, soudure, montage et sécurité sur chantier. Le diplômé peut intervenir à toutes les étapes d’un projet métallique, de l’étude à la mise en œuvre sur site, en respectant les normes de qualité et de sécurité propres au secteur du bâtiment et de l’industrie."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communiquer efficacement en milieu professionnel",
+                "Appliquer les règles de sécurité et de prévention des risques",
+                "Organiser son travail selon les consignes données",
+                "S’adapter à différents environnements de travail",
+                "Gérer les priorités et respecter les délais",
+                "Appliquer les procédures qualité",
+                "Faire preuve de rigueur et de précision"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Réaliser des dessins techniques de structures métalliques",
+                "Maîtriser les techniques de soudure et d’assemblage",
+                "Monter les structures sur chantier dans le respect des normes",
+                "Vérifier l’alignement, la verticalité et la stabilité des structures",
+                "Réaliser des contrôles qualité des assemblages",
+                "Lire et interpréter des schémas de montage et d’atelier",
+                "Préparer, découper et façonner les pièces métalliques",
+                "Choisir les matériaux métalliques adaptés aux projets"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Charpentier métallique",
+            "Dessinateur en construction métallique",
+            "Monteur en structures métalliques",
+            "Soudeur qualifié",
+            "Technicien de bureau d’études",
+            "Conducteur de travaux en charpente métallique",
+            "Chef d’équipe en montage métallique"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Construction Métallique dure deux ans pour un BTS, HND ou équivalent. Elle allie des enseignements théoriques (mécanique des structures, lecture de plans, résistance des matériaux) et des cours pratiques en atelier (soudure, assemblage, montage). Elle inclut également un ou plusieurs stages en entreprise, essentiels pour l’insertion professionnelle. Cette durée permet au diplômé de maîtriser l’ensemble des compétences nécessaires pour évoluer dans les secteurs du bâtiment, des travaux publics et de l’industrie."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques en atelier de soudure et montage",
+            "Projets tutorés de conception de structures métalliques",
+            "Études de cas réels issus du BTP ou de l’industrie",
+            "Stages en entreprise pour immersion professionnelle",
+            "Visites de chantiers et d’usines de fabrication métallique",
+            "Utilisation de logiciels DAO/CAO (Autodesk, Tekla)"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Chaudronnerie-soudure",
+      title: "Chaudronnerie soudure",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Chaudronnerie-Soudure prépare des techniciens capables de fabriquer, assembler, souder et entretenir des structures métalliques complexes. Elle combine des compétences en lecture de plans, traçage, découpe, pliage, formage et soudure. Les apprenants sont formés aux normes de sécurité, à la maîtrise des matériaux et aux procédés industriels modernes. Cette formation répond aux besoins des secteurs industriels, navals, pétroliers, énergétiques et de la construction métallique. Elle ouvre de solides perspectives d’emploi et d’évolution technique."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Résoudre des problèmes techniques courants",
+                "Travailler avec précision et minutie",
+                "Suivre les consignes d’un supérieur hiérarchique",
+                "S’adapter aux nouvelles technologies de production",
+                "Gérer son temps et organiser son travail"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Lire et exploiter un plan de chaudronnerie",
+                "Tracer et découper des pièces métalliques avec précision",
+                "Fabriquer des éléments de tuyauterie ou de réservoirs",
+                "Choisir et utiliser les procédés de soudure adaptés (MIG, TIG, à l’arc…)",
+                "Assembler des ensembles mécano-soudés",
+                "Réaliser des contrôles dimensionnels et visuels",
+                "Assurer la maintenance de premier niveau des outils",
+                "Appliquer les traitements thermiques nécessaires"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Soudeur industriel",
+            "Chaudronnier-tôlier",
+            "Monteur en installations métalliques",
+            "Tuyauteur industriel",
+            "Opérateur en construction navale ou pétrolière",
+            "Contrôleur qualité en chaudronnerie",
+            "Technicien en maintenance d’équipements métalliques"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Chaudronnerie-Soudure s’étale généralement sur deux ans pour un BTS ou HND. Elle se compose de cours théoriques (lecture de plans, résistance des matériaux, sécurité) et de nombreux travaux pratiques en atelier (soudure, fabrication, assemblage). Des stages en entreprise permettent de développer une réelle expérience de terrain. Cette durée vise à garantir l’acquisition complète des compétences techniques et professionnelles exigées par les industries mécaniques, pétrochimiques ou de construction."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Immersion en entreprise à travers des stages professionnalisants",
+            "Études de cas industriels concrets",
+            "Visites d’usines, chantiers et entreprises partenaires",
+            "Projets encadrés de fabrication de structures réelles",
+            "Utilisation de logiciels de conception assistée (CAO/DAO)"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Production-végétale",
+      title: "Production végétale",
+      category: "Agro Pastorale",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Production Végétale vise à former des techniciens compétents dans les domaines de l’agriculture, du maraîchage, de l’arboriculture et de la gestion des cultures. Elle combine des connaissances agronomiques, des techniques de culture, de fertilisation, d’irrigation et de protection phytosanitaire. Les apprenants sont également formés à la gestion durable des ressources naturelles. Ce programme répond aux besoins croissants de la sécurité alimentaire, de la valorisation agricole et de l’innovation dans les systèmes de production."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Travailler en autonomie et en équipe",
+                "Utiliser les outils numériques pour le suivi des cultures",
+                "Gérer son temps et planifier les activités agricoles",
+                "Résoudre des problèmes techniques en milieu rural",
+                "Conduire un projet de culture",
+                "Respecter l’environnement et les pratiques durables"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Récolter, conditionner et stocker les produits végétaux",
+                "Identifier et traiter les maladies et ravageurs",
+                "Identifier les besoins agronomiques des plantes",
+                "Préparer le sol selon les techniques adaptées",
+                "Réaliser des semis, plantations et repiquages",
+                "Gérer l’irrigation et la fertilisation des cultures",
+                "Appliquer les traitements phytosanitaires de manière raisonnée",
+                "Identifier et traiter les maladies et ravageurs"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien agricole",
+            "Responsable de production végétale",
+            "Agent de vulgarisation agricole",
+            "Conseiller en agriculture durable",
+            "Chef d’exploitation maraîchère ou fruitière",
+            "Responsable d’atelier semencier",
+            "Assistant en recherche agronomique"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Production Végétale dure deux ans, généralement dans le cadre d’un BTS ou HND. Elle comprend des cours théoriques (agronomie, phytotechnie, fertilisation, économie agricole), des travaux pratiques sur des parcelles expérimentales et des visites de fermes. Des stages en exploitation agricole sont intégrés au cursus pour renforcer l’expérience professionnelle des apprenants et favoriser leur insertion dans le monde rural ou les entreprises du secteur agroalimentaire."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Travaux pratiques sur parcelles agricoles",
+            "Visites de fermes, coopératives et exploitations partenaires",
+            "Stages professionnels en milieu rural ou agricoleMises en situation de conduite de culture",
+            "Projets de suivi de cultures et diagnostic phytosanitaire",
+            "Mises en situation de conduite de culture"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Production-animale",
+      title: "Production animale",
+      category: "Génie Industriel",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Production Animale forme des techniciens capables de gérer l’élevage des animaux domestiques (bovins, ovins, caprins, volailles, porcs, etc.) de manière rentable et durable. Elle couvre l’alimentation, la reproduction, la santé animale, l’aménagement des bâtiments d’élevage et la commercialisation des produits. Les apprenants développent aussi des compétences en gestion d’exploitation, biosécurité et bien-être animal. Cette formation répond aux besoins croissants de sécurité alimentaire, d’autosuffisance en produits animaux et de modernisation de l’élevage."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Travailler en équipe et communiquer efficacement",
+                "Gérer un projet ou une exploitation",
+                "Utiliser des outils numériques pour le suivi d’élevage",
+                "Planifier les activités d’élevage selon les cycles biologiques",
+                "Appliquer des solutions pratiques aux problèmes d’élevage",
+                "Analyser des données techniques et économiques",
+                "Promouvoir les bonnes pratiques agricoles"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Identifier les races animales selon leur aptitude (lait, viande, œufs)",
+                "Assurer l’alimentation rationnelle des animaux",
+                "Gérer la reproduction et la sélection génétique",
+                "Diagnostiquer et traiter les maladies animales courantes",
+                "Appliquer les règles de biosécurité dans l’élevage",
+                "Aménager les bâtiments d’élevage selon les normes",
+                "Assurer le suivi de croissance et de performance zootechnique",
+                "Conseiller les éleveurs sur les choix techniques"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien d’élevage",
+            "Gestionnaire de ferme agro-pastorale",
+            "Conseiller en santé animale",
+            "Technico-commercial en intrants zootechniques",
+            "Assistant vétérinaire en élevage",
+            "Animateur de projets en élevage communautaire",
+            "Chef d’exploitation d’élevage intégré"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Production Animale s’étale sur deux années académiques, généralement dans le cadre d’un BTS ou HND. Elle comprend des enseignements théoriques (zootechnie, nutrition animale, pathologie, génétique, économie d’élevage), des travaux pratiques en ferme-école et des stages en milieu réel d’élevage. Les apprenants alternent entre apprentissage en classe, manipulation des animaux, gestion des équipements et immersion dans des structures d’élevage pour développer des compétences concrètes et directement applicables."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Pratique sur animaux en ferme-école",
+            "Études de cas d’exploitations locales",
+            "Stages professionnels en élevage",
+            "Simulation de conduite d’exploitation animale",
+            "Conférences de vétérinaires et professionnels",
+            "Utilisation de logiciels de gestion d’élevage"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Entrepreneuriat-agro-pastorale",
+      title: "Entrepreneuriat agro pastorale",
+      category: "Agro Pastorale",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Entrepreneuriat Agro-pastoral vise à former des jeunes entrepreneurs capables de créer, gérer et développer des entreprises agricoles et d’élevage rentables. Elle combine les compétences techniques de production agricole et animale avec les bases de la gestion, du marketing, de la transformation et de la commercialisation. L’objectif est de promouvoir l’auto-emploi, l’innovation locale, la sécurité alimentaire et le développement durable à travers une approche intégrée, pratique et adaptée au contexte socio-économique africain."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Utiliser les TIC dans la gestion de l’activité",
+                "Prendre des décisions stratégiques",
+                "Résoudre des problèmes complexes",
+                "Développer une vision entrepreneuriale",
+                "Analyser les besoins du marché",
+                "Adapter l’entreprise aux évolutions du secteur"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Élaborer un plan d’affaires agro-pastoral",
+                "Créer et gérer une microentreprise agricole ou d’élevage",
+                "Réaliser des activités de maraîchage, de pisciculture, d’aviculture ou d’embouche",
+                "Gérer les intrants et les cycles de production",
+                "Transformer les produits agricoles ou animaux",
+                "Identifier les sources de financement adaptées",
+                "Mettre en œuvre des stratégies de marketing et de vente",
+                "Appliquer les normes d’hygiène, sécurité et environnement"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Entrepreneur agricole ou d’élevage",
+            "Promoteur de start-up agroalimentaire",
+            "Responsable de coopérative agro-pastorale",
+            "Formateur en entrepreneuriat rural",
+            "Consultant en projets agropastoraux",
+            "Technico-commercial en intrants agricoles",
+            "Animateur de projet de développement rural"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Entrepreneuriat Agro-pastoral se déroule sur deux années académiques dans le cadre d’un BTS ou HND. Elle alterne cours théoriques, ateliers pratiques, incubations de microprojets, visites de fermes-modèles et stages sur le terrain. Elle permet aux étudiants de développer un projet personnel réel ou simulé, de l’idéation à la mise en œuvre, en intégrant à la fois les techniques agricoles/élevage, la gestion d’entreprise, la comptabilité, et le marketing."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Apprentissage par projet (Business Plan réel)",
+            "Incubation d’idées dans un espace entrepreneurial",
+            "Travaux pratiques sur les sites agricoles et fermes-écoles",
+            "Témoignages d'entrepreneurs du secteur rural",
+            "jeux de rôle et simulations de négociation commerciale"
+          ]
+        }
+      ]
+    },
+
+    {
+      id: "Technique-commerciale-agricole",
+      title: "Technique commerciale agricole",
+      category: "Agro Pastorale",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Technique Commerciale Agricole forme des professionnels aptes à gérer la commercialisation des produits agricoles, à développer des stratégies marketing adaptées au secteur agroalimentaire et à accompagner les producteurs dans la valorisation de leurs productions. Elle allie compétences techniques agricoles et savoir-faire commercial, pour répondre aux exigences du marché et promouvoir les circuits courts et durables. Les diplômés sont préparés à optimiser les ventes, négocier avec les clients et gérer les relations commerciales dans un environnement rural ou urbain."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communiquer efficacement en milieu professionnel",
+                "Gérer un projet commercial de A à Z",
+                "Utiliser les outils numériques de gestion et de communication",
+                "Analyser les besoins du marché et la concurrence",
+                "Prendre des décisions commerciales adaptées",
+                "Résoudre des problèmes complexes en contexte agricole",
+                "Respecter l’éthique et la réglementation commerciale"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Élaborer des stratégies marketing pour les produits agricoles",
+                "Conseiller les producteurs sur la valorisation de leurs produits",
+                "Organiser des campagnes de promotion et de communication",
+                "Maîtriser les techniques de négociation commerciale",
+                "Analyser les indicateurs de performance commerciale",
+                "Assurer la relation client et le service après-vente",
+                "Suivre la logistique et la gestion des stocks",
+                "Appliquer les règles de qualité et de certification agroalimentaire"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technico-commercial agricole",
+            "Conseiller en marketing rural",
+            "Responsable des ventes en entreprise agroalimentaire",
+            "Gestionnaire de circuits courts de distribution",
+            "Chargé de promotion des produits agricoles",
+            "Consultant en commerce agricole",
+            "Responsable logistique agroalimentaire"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Technique Commerciale Agricole se déroule sur deux années au niveau BTS ou HND, avec un équilibre entre cours théoriques, ateliers pratiques, études de marché, projets commerciaux et stages en entreprise. Cette durée permet aux étudiants de maîtriser les techniques de vente, le marketing agroalimentaire, ainsi que la gestion des relations clients, tout en acquérant une bonne connaissance des filières agricoles et des enjeux économiques du secteur."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Utilisation d’outils numériques et logiciels de gestion commerciale",
+            "Apprentissage par projet commercial réel ou simulé",
+            "Ateliers pratiques de négociation et communication",
+            "Études de cas sur des marchés agricoles locaux et internationaux",
+            "Conférences et échanges avec professionnels du secteur",
+            "Stages en entreprise et terrain commercial"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Conseil-agro-pastorale",
+      title: "Conseil agro pastorale",
+      category: "Agro Pastorale",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Conseil Agro-Pastoral prépare des spécialistes capables d’accompagner les exploitants agricoles et éleveurs dans l’amélioration de leurs pratiques. Elle combine des savoirs techniques en agriculture et élevage avec des compétences en communication, planification et développement rural. Les étudiants apprennent à diagnostiquer les besoins, proposer des solutions durables et faciliter l’adoption de techniques modernes. Cette formation vise à renforcer l’encadrement des acteurs du monde rural pour accroître la productivité et la résilience des systèmes agro-pastoraux."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communiquer clairement et efficacement avec différents publics",
+                "Travailler en équipe multidisciplinaire et en milieu rural",
+                "Animer des ateliers et groupes de travail participatifs",
+                "Animer des ateliers et groupes de travail participatifs",
+                "Utiliser les outils numériques pour la planification et le suivi",
+                "Identifier les problèmes et proposer des solutions pratiques",
+                "Prendre des décisions de manière collaborative",
+                "Organiser et gérer son temps de travail sur le terrain",
+                "Adapter son discours aux réalités socioculturelles",
+                "Collecter et analyser des données de terrain"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Évaluer les systèmes de production agro-pastoraux",
+                "Élaborer des plans de développement pour exploitations rurales",
+                "Accompagner la transition agroécologique",
+                "Mettre en œuvre des techniques durables de culture et d’élevage",
+                "Former les agriculteurs/éleveurs à de nouvelles pratiques",
+                "Réaliser des diagnostics agraires et zootechniques",
+                "Assurer la médiation entre institutions et producteurs",
+                "Promouvoir l’utilisation des intrants adaptés et maîtrisés"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Conseiller agro-pastoral dans un projet de développement rural",
+            "Agent d’encadrement dans une ONG agricole",
+            "Animateur de coopérative agro-pastorale",
+            "Technicien dans les services de vulgarisation agricole",
+            "Formateur en agriculture durable",
+            "Coordinateur de projet agricole communautaire",
+            "Consultant indépendant en accompagnement rural"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Conseil Agro-Pastoral s’étale sur deux années, généralement dans un cadre BTS ou HND. Elle alterne des cours théoriques sur les systèmes agricoles et d’élevage, des exercices pratiques sur le terrain, et des stages en milieu rural ou au sein de structures d’appui au développement. Cette durée permet une immersion progressive dans les réalités du monde agro-pastoral, avec une spécialisation axée sur l’encadrement, la vulgarisation, le développement durable et la participation communautaire."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Méthode participative et apprentissage par l’expérience",
+            "Travaux pratiques sur des exploitations agricoles locales",
+            "Simulation de missions de conseil sur le terrain",
+            "Études de cas et résolutions de problèmes réels",
+            "Stages en organisations de développement rural ou ONG",
+            "Utilisation de supports audiovisuels et d’outils numériques d’aide au conseil"
+          ]
+        }
+      ]
+    },
+
+     {
+      id: "Energie-renouvelable",
+      title: "Energie renouvelable",
+      category: "Agro Pastorale",
+      content: [
+        {
+          number: "01",
+          title: "Présentation de la formation",
+          content: "La formation en Énergie Renouvelable vise à former des techniciens capables de concevoir, installer, entretenir et gérer des systèmes utilisant des sources d’énergie propres et durables : solaire, éolienne, biomasse ou hydraulique. Elle répond à la demande croissante en solutions énergétiques écologiques, adaptées aux milieux urbains comme ruraux. Les diplômés jouent un rôle essentiel dans la transition énergétique, en proposant des alternatives aux énergies fossiles pour un développement économique durable et respectueux de l’environnement."
+        },
+        {
+          number: "02",
+          title: "Compétences visées",
+          content: {
+            generiques: { 
+              titre: "• Compétences Génériques", 
+              items: [
+                "Communiquer efficacement en contexte professionnel",
+                "Travailler en équipe et en autonomie",
+                "Analyser un besoin technique et proposer une solution adaptée",
+                "Respecter les normes de sécurité et d’environnement",
+                "Gérer un projet technique de bout en bout",
+                "Organiser un chantier et coordonner les tâches"
+                
+                 ]
+             },
+            specifiques: { 
+              titre: "• Compétences Spécifiques", 
+              items: [
+                "Dimensionner des systèmes éoliens adaptés à un site donné",
+                "Concevoir des installations solaires photovoltaïques et thermiques",
+                "Installer et maintenir des équipements d’énergie renouvelable",
+                "Diagnostiquer les pannes et assurer la maintenance des installations",
+                "Intégrer les énergies renouvelables dans des réseaux hybrides",
+                "Réaliser des audits énergétiques et proposer des solutions d’optimisation",
+                "Assurer la veille technologique sur les innovations en énergies vertes",
+                "Appliquer les réglementations nationales et internationales en énergie"
+              ]
+             }
+          }
+        },
+        {
+          number: "03",
+          title: "Débouchés",
+          content: [
+            "Technicien en installation solaire photovoltaïque",
+            "Agent de maintenance en énergies renouvelables",
+            "Conseiller en transition énergétique",
+            "Installateur de systèmes hybrides (solaire-diesel, solaire-batterie)",
+            "Responsable d’unité de production d’énergie verte",
+            "Auditeur énergétique en PME ou ONG",
+            "Entrepreneur dans le domaine des énergies renouvelables"
+          ]
+        },
+
+        {
+          number: "04",
+          title: "Durée de la Formation",
+          content: "La formation en Énergie Renouvelable se déroule sur deux années, dans le cadre d’un BTS ou HND. Elle comprend des cours théoriques sur les différents types d’énergies vertes, leur fonctionnement, les normes techniques et les principes de durabilité. Elle est renforcée par des travaux pratiques intensifs en laboratoire et en entreprise. Des stages en milieu professionnel permettent aux étudiants de se confronter aux réalités du terrain et de développer des compétences pratiques et opérationnelles."
+        },
+
+        {
+          number: "05",
+          title: " Approches Pédagogiques",
+          content: [
+            "Apprentissage par projet (projets de terrain en énergie solaire, etc.)",
+            "Travaux pratiques et expérimentations en laboratoire",
+            "Visites techniques et stages professionnels encadrés",
+            "Cours interactifs avec études de cas réels",
+            "Simulations numériques et modélisation de systèmes énergétiques",
+            "Séminaires avec professionnels du secteur des énergies renouvelables"
+          ]
+        }
+      ]
+    },
+
 
 ];

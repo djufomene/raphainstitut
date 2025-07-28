@@ -1,3 +1,4 @@
+@use "sass:color";
 body{
     margin: 0 auto;
     padding: 0;
@@ -12,6 +13,7 @@ $transition-speed: 0.3s;
 $navbar-height: 60px;
 $navbar-height-scrolled: 60px;
 $mobile-breakpoint: 992px;
+
 
 // Mixins
 @mixin flex-center {
@@ -175,7 +177,7 @@ $mobile-breakpoint: 992px;
     @include transition;
 
     &:hover {
-      background-color: darken($secondary-color, 10%);
+      background-color: color.adjust($secondary-color, $lightness: -10%);
       transform: translateY(-2px);
     }
   }

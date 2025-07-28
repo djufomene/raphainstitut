@@ -12,7 +12,8 @@ const slugify = (title) => {
     "Analyse Médicale et Technique de Laboratoire": "analyse-medicale",
     "Imagerie Médicale et Radiologie": "imagerie-medicale",
     "Science Pharmaceutique": "science-pharmaceutique",
-    "Odontostomatolie": "odontostomatolie",
+    "Odontostomatologie": "Odontostomatologie",
+    "Opticien lunetier": "Opticien-lunetier",
     "Journalisme": "journalisme",
     "Télécommunication": "telecommunication",
     "Réseau et Sécurité informatique": "reseau-securite",
@@ -32,7 +33,24 @@ const slugify = (title) => {
     "Gestion Fiscale (GF)": "gestion-fiscale",
     "Logistique et Transport (GLT)": "logistique-transport",
     "Marketing Commerce Vente (MCV)": "marketing-vente",
-    "Ressources Humaines (RH)": "ressources-humaines"
+    "Ressources Humaines (RH)": "ressources-humaines",
+    "Bâtiment": "Bâtiment",
+    "Travaux publique": "Travaux-publique",
+    "Géomètre topographe": "Géomètre-topographe",
+    "Installation sanitaire": "Installation-sanitaire",
+    "Froid et climatisation": "Froid-climatisation",
+    "Energie renouvelable": "Energie-renouvelable",
+    "Mécatronique": "Mécatronique",
+    "Maintenance après vente automobile": "Maintenance-après-vente-automobile",
+    "Maintenance industrielle et productive":  "Maintenance-industrielle-productive",
+    "Construction mécanique": "Construction-mécanique",
+    "Construction métallique": "Construction-métallique",
+    "Chaudronnerie et soudure": "Chaudronnerie-soudure",
+    "Production végétale": "Production-végétale",
+    "Production animale": "Production-animale",
+    "Entrepreneuriat agro-pastorale": "Entrepreneuriat-agro-pastorale",
+    "Technique commerciale agricole": "Technique-commerciale-agricole",
+    "Conseil agro-pastorale": "Conseil-agro-pastorale" 
   };
   return slugs[title] || title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
 };
@@ -46,7 +64,7 @@ const programs = [
   "Imagerie Médicale et Radiologie",
   "Science Pharmaceutique",
   "Odontostomatolie",
-  "opticien lunetier"
+  "Opticien lunetier"
 ];
 
 const programs1 = [

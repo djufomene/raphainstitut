@@ -24,7 +24,7 @@ export default function SalleInformatique() {
                 ></iframe>
             </div>
             <div className="hero-overlay">
-                <h1>Découvrez Notre Salle d'Informatique Moderne</h1>
+                <h1>Découvrez Notre laboratoire d'Informatique Moderne</h1>
                 <p>Un espace conçu pour apprendre, créer et innover</p>
             </div>
        </header>
@@ -36,15 +36,15 @@ export default function SalleInformatique() {
                 </Link> 
               </span>
           </div>
-          <div className="title">Salle d'informatique</div>
+          <div className="title">Laboratoire d'informatique</div>
         </section>
 
       {/* Section présentation */}
       <section className="presentation">
-        <h2>Présentation de la Salle</h2>
+        <h2>Présentation du laboratoire</h2>
         <p>
-          Notre salle d'informatique est équipée pour répondre aux besoins
-          pédagogiques actuels : 40 postes connectés, environnement climatisé,
+          Notre laboratoire d'informatique est équipée pour répondre aux besoins
+          pédagogiques actuels : 50 postes connectés, environnement climatisé,
           logiciels professionnels et accès internet haut débit.
         </p>
       </section>
@@ -67,7 +67,7 @@ export default function SalleInformatique() {
 
       {/* Usages */}
       <section className="usages">
-        <h2>Usages de la Salle</h2>
+        <h2>Usages du laboratoire</h2>
         <p>
           Cours pratiques, ateliers de programmation, projets étudiants,
           hackathons, examens en ligne et plus encore sont régulièrement
@@ -92,7 +92,7 @@ export default function SalleInformatique() {
       <section className="temoignages">
         <h2>Témoignages</h2>
         <blockquote>
-          “Grâce à cette salle, j’ai développé mes compétences en développement
+          “Grâce à ce laboratoire, j’ai développé mes compétences en développement
           web.” – Étienne, 2e année Informatique
         </blockquote>
         <blockquote>

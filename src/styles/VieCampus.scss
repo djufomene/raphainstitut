@@ -1,3 +1,5 @@
+@use "sass:color"; 
+
 // Variables
 $primary-color: #2c3e50;
 $secondary-color: #0055a5;
@@ -124,7 +126,7 @@ $text-color: #333;
   h1 {
     font-size: 2.5rem;
     margin: 60px 15px 0px;
-    color: darken($primary-color, 10%);
+    color: color.adjust($primary-color, $lightness: -10%);
     
     @media (max-width: 1200px) {
       font-size: 2.3rem;
@@ -146,7 +148,7 @@ $text-color: #333;
     font-size: 1.10rem;
     line-height: 1.6;
     max-width: 800px;
-    color: lighten($text-color, 10%);
+    color: color.adjust($text-color, $lightness: 10%);
     
     @media (max-width: 992px) {
       font-size: 1.15rem;
@@ -294,7 +296,7 @@ $text-color: #333;
       }
 
       &:hover {
-        background-color: darken($secondary-color, 10%);
+      background-color: color.adjust($secondary-color, $lightness: -10%);
       }
 
       .arrow {

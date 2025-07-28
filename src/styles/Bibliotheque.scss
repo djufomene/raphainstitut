@@ -1,9 +1,12 @@
+@use "sass:color"; 
+
 // Variables
 $primary-color: #2c3e50;
 $secondary-color: #3498db;
 $light-color: #ecf0f1;
 $dark-color: #2c3e50;
 $accent-color: #e74c3c;
+
 
 // Mixins
 @mixin flex-center {
@@ -36,7 +39,7 @@ $accent-color: #e74c3c;
   // Hero Section
   .hero-section {
     background: linear-gradient(rgba($primary-color, 0.8), rgba($primary-color, 0.8)), 
-                url('/bibliotheque-hero.jpg') center/cover no-repeat;
+                url('/src/assets/images/home5.jpg') center/cover no-repeat;
     color: $light-color;
     height: 60vh;
     min-height: 600px;
@@ -84,8 +87,7 @@ $accent-color: #e74c3c;
           transition: all 0.3s ease;
 
           &:hover {
-            background-color: darken($accent-color, 10%);
-          }
+            background-color: color.adjust($primary-color, $lightness: -10%);          }
         }
 
          // Animation des icônes
@@ -205,7 +207,7 @@ $accent-color: #e74c3c;
       }
       
       p {
-        color: lighten($dark-color, 20%);
+        color: color.adjust($dark-color, $lightness: +20%);
         font-size: 0.9rem;
       }
     }
@@ -292,7 +294,7 @@ $accent-color: #e74c3c;
             transition: background-color 0.3s;
 
             &:hover {
-              background-color: darken($accent-color, 10%);
+              background-color: color.adjust($accent-color, $lightness: -10%);
             }
           }
         }
